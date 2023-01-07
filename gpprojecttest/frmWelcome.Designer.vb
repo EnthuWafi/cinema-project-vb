@@ -24,18 +24,18 @@ Partial Class frmWelcome
     Private Sub InitializeComponent()
         Me.mnuMain = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.STAFFMODEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New System.Windows.Forms.Label()
-        Me.btnSignIn = New System.Windows.Forms.Button()
+        Me.btnSignUp = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.lblMain2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.STAFFMODEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMain.SuspendLayout()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -57,11 +57,17 @@ Partial Class frmWelcome
         Me.mnuFile.Size = New System.Drawing.Size(37, 20)
         Me.mnuFile.Text = "File"
         '
+        'STAFFMODEToolStripMenuItem
+        '
+        Me.STAFFMODEToolStripMenuItem.Name = "STAFFMODEToolStripMenuItem"
+        Me.STAFFMODEToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
+        Me.STAFFMODEToolStripMenuItem.Text = "&Staff Path"
+        '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
+        Me.mnuExit.Size = New System.Drawing.Size(130, 22)
         Me.mnuExit.Text = "E&xit"
         '
         'mnuHelp
@@ -89,17 +95,17 @@ Partial Class frmWelcome
         Me.lblWelcome.TabIndex = 1
         Me.lblWelcome.Text = "WELCOME TO"
         '
-        'btnSignIn
+        'btnSignUp
         '
-        Me.btnSignIn.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSignIn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSignIn.Location = New System.Drawing.Point(324, 174)
-        Me.btnSignIn.Name = "btnSignIn"
-        Me.btnSignIn.Size = New System.Drawing.Size(147, 54)
-        Me.btnSignIn.TabIndex = 4
-        Me.btnSignIn.Text = "SIGN UP"
-        Me.btnSignIn.UseVisualStyleBackColor = False
+        Me.btnSignUp.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnSignUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSignUp.Location = New System.Drawing.Point(324, 174)
+        Me.btnSignUp.Name = "btnSignUp"
+        Me.btnSignUp.Size = New System.Drawing.Size(147, 54)
+        Me.btnSignUp.TabIndex = 4
+        Me.btnSignUp.Text = "SIGN UP"
+        Me.btnSignUp.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -154,7 +160,7 @@ Partial Class frmWelcome
         Me.GroupBox1.Controls.Add(Me.picGTA)
         Me.GroupBox1.Controls.Add(Me.btnLogin)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.btnSignIn)
+        Me.GroupBox1.Controls.Add(Me.btnSignUp)
         Me.GroupBox1.Location = New System.Drawing.Point(56, 87)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(577, 317)
@@ -170,12 +176,6 @@ Partial Class frmWelcome
         Me.Label2.Size = New System.Drawing.Size(65, 13)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "version 1.01"
-        '
-        'STAFFMODEToolStripMenuItem
-        '
-        Me.STAFFMODEToolStripMenuItem.Name = "STAFFMODEToolStripMenuItem"
-        Me.STAFFMODEToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.STAFFMODEToolStripMenuItem.Text = "&Staff Path"
         '
         'frmWelcome
         '
@@ -206,7 +206,7 @@ Partial Class frmWelcome
     Friend WithEvents mnuHelp As ToolStripMenuItem
     Friend WithEvents mnuAbout As ToolStripMenuItem
     Friend WithEvents lblWelcome As Label
-    Friend WithEvents btnSignIn As Button
+    Friend WithEvents btnSignUp As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents picGTA As PictureBox

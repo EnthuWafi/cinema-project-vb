@@ -1,30 +1,59 @@
 Public Class frmLoginX
+    Dim myMain As frmMain
+    Dim mySignUp As frmSignUpX
 
-    ' TODO: Insert code to perform custom authentication using the provided username and password 
-    ' (See https://go.microsoft.com/fwlink/?LinkId=35339).  
-    ' The custom principal can then be attached to the current thread's principal as follows: 
-    '     My.User.CurrentPrincipal = CustomPrincipal
-    ' where CustomPrincipal is the IPrincipal implementation used to perform authentication. 
-    ' Subsequently, My.User will return identity information encapsulated in the CustomPrincipal object
-    ' such as the username, display name, etc.
+    Private Sub frmLoginX_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'CinemadbDataSet.customers' table. You can move, or remove it, as needed.
+        Me.CustomersTableAdapter.Fill(Me.CinemadbDataSet.customers)
+        mySignUp = New frmSignUpX
+    End Sub
 
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Dim frmMain As frmMain = New frmMain
+    Private Sub btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
+        'check username and password
+        Me.Validate()
 
+        'data table
+        Dim dt As New cinemadbDataSet.customersDataTable
+
+        Me.CustomersTableAdapter.SearchCustomer(dt, txtUsername.Text, txtPassword.Text)
+
+        If dt.Rows.Count() <= 0 Then
+            MessageBox.Show("Invalid Username or Password", "Error!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Exclamation)
+            Return
+        End If
+
+
+        'success
+        MessageBox.Show("Login Successful!", "Success!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information)
         Me.Hide()
-        frmMain.ShowDialog()
+
+        'new main forms
+        myMain = New frmMain
+        myMain.ShowDialog()
+        myMain.Dispose()
+
         Me.Close()
     End Sub
 
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+    Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         Me.Close()
     End Sub
 
     Private Sub lnkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkRegister.LinkClicked
-        Dim frmSignUp As frmSignUpX = New frmSignUpX
-
         Me.Hide()
-        frmSignUp.ShowDialog()
+        mySignUp.ShowDialog()
         Me.Close()
+    End Sub
+
+    Private Sub frmLoginX_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+
+    End Sub
+
+
+    Private Sub frmLoginX_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        txtUsername.Clear()
+        txtPassword.Clear()
     End Sub
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmSignUpX
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class frmSignUpX
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txtFName = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
@@ -44,14 +45,21 @@ Partial Class frmSignUpX
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSignUp = New System.Windows.Forms.Button()
+        Me.CustomersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
+        Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
+        Me.CustomersTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.customersTableAdapter()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtFName
         '
+        Me.txtFName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_fname", True))
         Me.txtFName.Location = New System.Drawing.Point(112, 43)
         Me.txtFName.MaxLength = 50
         Me.txtFName.Name = "txtFName"
@@ -90,6 +98,7 @@ Partial Class frmSignUpX
         '
         'txtAddress
         '
+        Me.txtAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "address", True))
         Me.txtAddress.Location = New System.Drawing.Point(106, 71)
         Me.txtAddress.MaxLength = 12
         Me.txtAddress.Name = "txtAddress"
@@ -107,6 +116,7 @@ Partial Class frmSignUpX
         '
         'txtPhone
         '
+        Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "phone_number", True))
         Me.txtPhone.Location = New System.Drawing.Point(106, 33)
         Me.txtPhone.MaxLength = 12
         Me.txtPhone.Name = "txtPhone"
@@ -133,6 +143,7 @@ Partial Class frmSignUpX
         '
         'txtEmail
         '
+        Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "email", True))
         Me.txtEmail.Location = New System.Drawing.Point(112, 115)
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
@@ -150,6 +161,7 @@ Partial Class frmSignUpX
         '
         'txtLName
         '
+        Me.txtLName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_lname", True))
         Me.txtLName.Location = New System.Drawing.Point(112, 79)
         Me.txtLName.MaxLength = 50
         Me.txtLName.Name = "txtLName"
@@ -197,6 +209,7 @@ Partial Class frmSignUpX
         '
         'txtUsername
         '
+        Me.txtUsername.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_username", True))
         Me.txtUsername.Location = New System.Drawing.Point(84, 43)
         Me.txtUsername.MaxLength = 10
         Me.txtUsername.Name = "txtUsername"
@@ -214,6 +227,7 @@ Partial Class frmSignUpX
         '
         'txtPassword
         '
+        Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_password", True))
         Me.txtPassword.Location = New System.Drawing.Point(85, 100)
         Me.txtPassword.MaxLength = 50
         Me.txtPassword.Name = "txtPassword"
@@ -266,6 +280,26 @@ Partial Class frmSignUpX
         Me.btnSignUp.Text = "Sign Up"
         Me.btnSignUp.UseVisualStyleBackColor = True
         '
+        'CustomersBindingSource
+        '
+        Me.CustomersBindingSource.DataMember = "customers"
+        Me.CustomersBindingSource.DataSource = Me.CinemadbDataSet
+        '
+        'CinemadbDataSet
+        '
+        Me.CinemadbDataSet.DataSetName = "cinemadbDataSet"
+        Me.CinemadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.customersTableAdapter = Me.CustomersTableAdapter
+        Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'CustomersTableAdapter
+        '
+        Me.CustomersTableAdapter.ClearBeforeFill = True
+        '
         'frmSignUpX
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -286,6 +320,8 @@ Partial Class frmSignUpX
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -312,4 +348,8 @@ Partial Class frmSignUpX
     Friend WithEvents Label9 As Label
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSignUp As Button
+    Friend WithEvents CinemadbDataSet As cinemadbDataSet
+    Friend WithEvents CustomersBindingSource As BindingSource
+    Friend WithEvents TableAdapterManager As cinemadbDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CustomersTableAdapter As cinemadbDataSetTableAdapters.customersTableAdapter
 End Class

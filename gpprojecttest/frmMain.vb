@@ -1,6 +1,6 @@
 ﻿Public Class frmMain
     'keep track of current session
-    Private userID As String
+    Dim userID As String
 
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load

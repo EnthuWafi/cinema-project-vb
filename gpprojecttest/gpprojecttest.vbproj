@@ -73,6 +73,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cinemadbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cinemadbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cinemadbDataSet.vb">
+      <DependentUpon>cinemadbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmLoginX.Designer.vb">
       <DependentUpon>frmLoginX.vb</DependentUpon>
     </Compile>
@@ -156,6 +164,7 @@
     <Compile Include="splashScreenCinema.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmLoginX.resx">
@@ -199,6 +208,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="cinemadbDataSet.xsc">
+      <DependentUpon>cinemadbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cinemadbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cinemadbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cinemadbDataSet.xss">
+      <DependentUpon>cinemadbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
