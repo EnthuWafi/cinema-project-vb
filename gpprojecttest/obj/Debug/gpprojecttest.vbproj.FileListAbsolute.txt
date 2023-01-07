@@ -1,0 +1,37 @@
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.exe.config
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.exe
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.pdb
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.xml
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.vbprojAssemblyReference.cache
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmWelcome.resources
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmLogin.resources
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.Resources.resources
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.vbproj.GenerateResource.cache
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.vbproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.exe
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.xml
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.pdb
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmSignIn.resources
+C:\Users\USER\source\repos\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmAbout.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.exe.config
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.exe
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.pdb
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\bin\Debug\gpprojecttest.xml
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.vbprojAssemblyReference.cache
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmWelcome.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmLogin.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmAbout.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.Resources.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.vbproj.GenerateResource.cache
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.vbproj.CoreCompileInputs.cache
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.exe
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.xml
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.pdb
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmSignUp.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmLoginX.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmSignUpX.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmMain.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.splashScreenCinema.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmSeatSelection.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmPayment.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\gpprojecttest\gpprojecttest\obj\Debug\gpprojecttest.frmReceipt.resources
