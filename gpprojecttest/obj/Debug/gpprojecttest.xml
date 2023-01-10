@@ -22,6 +22,11 @@ gpprojecttest
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:gpprojecttest.My.Resources.Resources.avatar_the_way_of_water">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:gpprojecttest.My.Resources.Resources.cinema_red">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -32,7 +37,27 @@ gpprojecttest
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:gpprojecttest.My.Resources.Resources.image_placeholder">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.mat_kilau">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:gpprojecttest.My.Resources.Resources.netflix_img">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.the_martian">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.thor_love_and_thunder">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -47,7 +72,77 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:gpprojecttest.cinemadbDataSet.moviesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.auditoriumsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.showtimesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.purchase_lineDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.purchasesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.ticketsDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.ticket_priceDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:gpprojecttest.cinemadbDataSet.customersRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.moviesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.auditoriumsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.showtimesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.purchase_lineRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.purchasesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.ticketsRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.ticket_priceRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -57,7 +152,77 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:gpprojecttest.cinemadbDataSet.moviesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.auditoriumsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.showtimesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.purchase_lineRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.purchasesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.ticketsRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSet.ticket_priceRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:gpprojecttest.cinemadbDataSetTableAdapters.customersTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.moviesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.auditoriumsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.showtimesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.purchase_lineTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.purchasesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.ticketsTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.ticket_priceTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

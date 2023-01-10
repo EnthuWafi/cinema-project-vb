@@ -57,3 +57,4 @@ C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpp
 C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.exe
 C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.xml
 C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.pdb
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmListTickets.resources

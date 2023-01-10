@@ -173,9 +173,9 @@ Partial Class frmWelcome
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(493, 281)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(65, 13)
+        Me.Label2.Size = New System.Drawing.Size(59, 13)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "version 1.01"
+        Me.Label2.Text = "version 1.2"
         '
         'frmWelcome
         '

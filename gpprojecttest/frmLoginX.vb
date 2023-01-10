@@ -1,11 +1,14 @@
 Public Class frmLoginX
     Dim myMain As frmMain
-    Dim mySignUp As frmSignUpX
+    Public mySignUp As frmSignUpX
 
     Private Sub frmLoginX_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'CinemadbDataSet.customers' table. You can move, or remove it, as needed.
         Me.CustomersTableAdapter.Fill(Me.CinemadbDataSet.customers)
-        mySignUp = New frmSignUpX
+
+        'for convenience
+        txtUsername.Text = "user"
+        txtPassword.Text = "user"
     End Sub
 
     Private Sub btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
@@ -23,14 +26,25 @@ Public Class frmLoginX
             Return
         End If
 
-
         'success
-        MessageBox.Show("Login Successful!", "Success!", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information)
+
+        'make new user object
+        Dim strUserID, strUsername, strFName, strLName As String
+        strUserID = dt.Rows(0)("cust_id")
+        strUsername = dt.Rows(0)("cust_username")
+        strFName = dt.Rows(0)("cust_fname")
+        strLName = dt.Rows(0)("cust_lname")
+
+        Dim user As New User(strUserID, strUsername, strFName, strLName)
+        'hide current form
         Me.Hide()
 
-        'new main forms
-        myMain = New frmMain
+        'new main form
+        myMain = New frmMain(user)
+        'success msg
+        MessageBox.Show("Login Successful!", "Success!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information)
+
         myMain.ShowDialog()
         myMain.Dispose()
 
@@ -46,11 +60,6 @@ Public Class frmLoginX
         mySignUp.ShowDialog()
         Me.Close()
     End Sub
-
-    Private Sub frmLoginX_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-
-    End Sub
-
 
     Private Sub frmLoginX_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         txtUsername.Clear()
