@@ -264,5 +264,26 @@
   <ItemGroup>
     <None Include="Resources\image-placeholder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interstellar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nanny_mcphee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the_hobbit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the_terminal.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the_war_games.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chef.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fight_club.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

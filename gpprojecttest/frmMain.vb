@@ -24,8 +24,7 @@ Public Class frmMain
         Me.Ticket_priceTableAdapter.Fill(Me.CinemadbDataSet.ticket_price)
         'TODO: This line of code loads data into the 'CinemadbDataSet.showtimes' table. You can move, or remove it, as needed.
         Me.ShowtimesTableAdapter.Fill(Me.CinemadbDataSet.showtimes)
-        'TODO: This line of code loads data into the 'CinemadbDataSet.tickets' table. You can move, or remove it, as needed.
-        Me.TicketsTableAdapter.Fill(Me.CinemadbDataSet.tickets)
+
 
         'set minimum date to "current" day
         dtpDate.MinDate = New DateTime(2023, 1, 9)
@@ -33,7 +32,7 @@ Public Class frmMain
         'focus on control
         ActiveControl = cboMovie
 
-
+        'should be disabled
     End Sub
 
     Private Sub btnSeatSelection_Click(sender As Object, e As EventArgs) Handles btnSeatSelection.Click
@@ -64,7 +63,16 @@ Public Class frmMain
     End Sub
 
     Private Sub btnProceed_Click(sender As Object, e As EventArgs) Handles btnProceed.Click
-        Dim myPayment As New frmPayment(Me)
+        'check for tickets
+        If ticketList.Count() <= 0 Then
+            'alert user
+            If MessageBox.Show("Are you sure you want to proceed?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.No Then
+                Return
+            End If
+        End If
+
+        Dim myPayment As New frmPayment(ticketList, user)
+        myPayment.setMain(Me)
 
         Me.Hide()
         myPayment.ShowDialog()
@@ -164,6 +172,7 @@ Public Class frmMain
         lblMovie.Text = "Movie: "
         lblPrice.Text = "Price: "
         lblSeat.Text = "Seat Number: "
+        MessageBox.Show("Ticket added.")
     End Sub
 
     Private Sub dtpDate_ValueChanged(sender As Object, e As EventArgs) Handles dtpDate.ValueChanged
@@ -195,18 +204,19 @@ Public Class frmMain
         End If
         errorProvider.SetError(cboMovie, "")
 
-        Dim dtTicket As New cinemadbDataSet.ticketsDataTable
-        TicketsTableAdapter.FillByShowtimeAndCategory(dtTicket, currentMovie.intShowtimeID, cboCategory.Text)
+        Dim dt As New cinemadbDataSet.showtimesDataTable
+        ShowtimesTableAdapter.FillByShowtimeAndCategory(dt, currentMovie.intShowtimeID, cboCategory.Text)
 
-        If dtTicket.Rows.Count = 0 Then
+        If dt.Rows.Count = 0 Then
             MessageBox.Show("Something went wrong.. Report this error.", "Oops!", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
 
         currentTicket = New PendingTicket
-        currentTicket.age_category = dtTicket.Rows(0)("age_category")
-        currentTicket.decPrice = dtTicket.Rows(0)("ticket_price")
-        currentTicket.intTicketID = dtTicket.Rows(0)("ticket_id")
+        currentTicket.age_category = dt.Rows(0)("age_category")
+        currentTicket.decPrice = dt.Rows(0)("ticket_price")
+        currentTicket.intShowtimeID = dt.Rows(0)("showtime_id")
+        currentTicket.movie = currentMovie
 
         lblPrice.Text = "Price: " & currentTicket.decPrice.ToString("C")
     End Sub

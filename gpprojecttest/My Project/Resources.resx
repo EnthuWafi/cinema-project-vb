@@ -142,4 +142,25 @@
   <data name="thor_love_and_thunder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Thor_Love_and_Thunder_poster.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="chef" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chef.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fight_club" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fight_club.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="interstellar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\interstellar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nanny_mcphee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nanny_mcphee.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="the_hobbit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the_hobbit.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="the_terminal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the_terminal.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="the_war_games" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the_war_games.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -46,7 +46,6 @@ Partial Class frmMain
         Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
         Me.ShowtimesTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.showtimesTableAdapter()
         Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
-        Me.TicketsTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.ticketsTableAdapter()
         Me.AuditoriumsTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.auditoriumsTableAdapter()
         Me.Ticket_priceTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.ticket_priceTableAdapter()
         Me.errorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
@@ -191,7 +190,7 @@ Partial Class frmMain
         Me.flpMovie.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.flpMovie.Location = New System.Drawing.Point(35, 88)
         Me.flpMovie.Name = "flpMovie"
-        Me.flpMovie.Padding = New System.Windows.Forms.Padding(6, 6, 6, 3)
+        Me.flpMovie.Padding = New System.Windows.Forms.Padding(3)
         Me.flpMovie.Size = New System.Drawing.Size(866, 303)
         Me.flpMovie.TabIndex = 6
         '
@@ -297,12 +296,7 @@ Partial Class frmMain
         Me.TableAdapterManager.purchasesTableAdapter = Nothing
         Me.TableAdapterManager.showtimesTableAdapter = Me.ShowtimesTableAdapter
         Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
-        Me.TableAdapterManager.ticketsTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'TicketsTableAdapter
-        '
-        Me.TicketsTableAdapter.ClearBeforeFill = True
         '
         'AuditoriumsTableAdapter
         '
@@ -368,7 +362,6 @@ Partial Class frmMain
     Friend WithEvents TableAdapterManager As cinemadbDataSetTableAdapters.TableAdapterManager
     Friend WithEvents dtpDate As DateTimePicker
     Friend WithEvents Label6 As Label
-    Friend WithEvents TicketsTableAdapter As cinemadbDataSetTableAdapters.ticketsTableAdapter
     Friend WithEvents lblPrice As Label
     Friend WithEvents lblMovie As Label
     Friend WithEvents AuditoriumsTableAdapter As cinemadbDataSetTableAdapters.auditoriumsTableAdapter

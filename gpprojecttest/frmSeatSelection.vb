@@ -31,7 +31,7 @@
         'check using pending ticketList
         For i = 0 To ticketList.Count - 1
             Dim temp As PendingTicket = ticketList(i)
-            If (temp.intTicketID = ticket.intTicketID) Then
+            If (temp.intShowtimeID = ticket.intShowtimeID) Then
                 Dim rButton As RadioButton = grpSeatSelection.Controls.OfType(Of RadioButton).FirstOrDefault(Function(r) r.Text = temp.intSeatNumber.ToString)
 
                 rButton.Enabled = False
@@ -64,7 +64,6 @@
         ticket = New PendingTicket
         ticket.intSeatNumber = intSeatNumber
 
-        MessageBox.Show("Seat Number is set.")
         Me.Close()
     End Sub
 

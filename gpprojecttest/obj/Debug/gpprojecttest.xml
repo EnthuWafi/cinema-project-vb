@@ -27,7 +27,17 @@ gpprojecttest
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:gpprojecttest.My.Resources.Resources.chef">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:gpprojecttest.My.Resources.Resources.cinema_red">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.fight_club">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -42,7 +52,17 @@ gpprojecttest
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:gpprojecttest.My.Resources.Resources.interstellar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:gpprojecttest.My.Resources.Resources.mat_kilau">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.nanny_mcphee">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -52,7 +72,22 @@ gpprojecttest
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:gpprojecttest.My.Resources.Resources.the_hobbit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:gpprojecttest.My.Resources.Resources.the_martian">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.the_terminal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:gpprojecttest.My.Resources.Resources.the_war_games">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -97,11 +132,6 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:gpprojecttest.cinemadbDataSet.ticketsDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:gpprojecttest.cinemadbDataSet.ticket_priceDataTable">
 <summary>
 Represents the strongly named DataTable class.
@@ -133,11 +163,6 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:gpprojecttest.cinemadbDataSet.purchasesRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
-<member name="T:gpprojecttest.cinemadbDataSet.ticketsRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -177,11 +202,6 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:gpprojecttest.cinemadbDataSet.ticketsRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:gpprojecttest.cinemadbDataSet.ticket_priceRowChangeEvent">
 <summary>
 Row event argument class
@@ -213,11 +233,6 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:gpprojecttest.cinemadbDataSetTableAdapters.purchasesTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
-<member name="T:gpprojecttest.cinemadbDataSetTableAdapters.ticketsTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

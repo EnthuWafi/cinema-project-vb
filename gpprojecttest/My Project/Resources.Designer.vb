@@ -73,9 +73,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property chef() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("chef", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property cinema_red() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("cinema_red", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fight_club() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fight_club", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -103,9 +123,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property interstellar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("interstellar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property mat_kilau() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("mat_kilau", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property nanny_mcphee() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("nanny_mcphee", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -123,9 +163,39 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property the_hobbit() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("the_hobbit", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property the_martian() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("the_martian", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property the_terminal() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("the_terminal", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property the_war_games() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("the_war_games", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

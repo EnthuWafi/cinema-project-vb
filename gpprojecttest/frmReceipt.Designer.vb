@@ -25,31 +25,41 @@ Partial Class frmReceipt
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReceipt))
         Me.GroupBox = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.lblNet = New System.Windows.Forms.Label()
+        Me.lblTax = New System.Windows.Forms.Label()
+        Me.lblDiscount = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.dgvReceipt = New System.Windows.Forms.DataGridView()
+        Me.movieName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.price = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.lblPurchaseID = New System.Windows.Forms.Label()
+        Me.lblName = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
+        Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
+        Me.PurchasesTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.purchasesTableAdapter()
+        Me.PrintPreview = New System.Windows.Forms.PrintPreviewDialog()
+        Me.PrintDoc = New System.Drawing.Printing.PrintDocument()
+        Me.PrintDialog = New System.Windows.Forms.PrintDialog()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
         Me.GroupBox.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.dgvReceipt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox
@@ -71,10 +81,10 @@ Partial Class frmReceipt
         Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.Controls.Add(Me.Label14)
-        Me.Panel2.Controls.Add(Me.Label13)
-        Me.Panel2.Controls.Add(Me.Label12)
-        Me.Panel2.Controls.Add(Me.Label11)
+        Me.Panel2.Controls.Add(Me.lblNet)
+        Me.Panel2.Controls.Add(Me.lblTax)
+        Me.Panel2.Controls.Add(Me.lblDiscount)
+        Me.Panel2.Controls.Add(Me.lblPrice)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label8)
@@ -84,41 +94,41 @@ Partial Class frmReceipt
         Me.Panel2.Size = New System.Drawing.Size(501, 123)
         Me.Panel2.TabIndex = 2
         '
-        'Label14
+        'lblNet
         '
-        Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label14.Location = New System.Drawing.Point(280, 92)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(202, 19)
-        Me.Label14.TabIndex = 9
-        Me.Label14.Text = "RM"
+        Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblNet.Location = New System.Drawing.Point(280, 92)
+        Me.lblNet.Name = "lblNet"
+        Me.lblNet.Size = New System.Drawing.Size(202, 19)
+        Me.lblNet.TabIndex = 9
+        Me.lblNet.Text = "RM"
         '
-        'Label13
+        'lblTax
         '
-        Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label13.Location = New System.Drawing.Point(280, 65)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(202, 19)
-        Me.Label13.TabIndex = 8
-        Me.Label13.Text = "RM"
+        Me.lblTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblTax.Location = New System.Drawing.Point(280, 65)
+        Me.lblTax.Name = "lblTax"
+        Me.lblTax.Size = New System.Drawing.Size(202, 19)
+        Me.lblTax.TabIndex = 8
+        Me.lblTax.Text = "RM"
         '
-        'Label12
+        'lblDiscount
         '
-        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label12.Location = New System.Drawing.Point(280, 38)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(202, 19)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "RM"
+        Me.lblDiscount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDiscount.Location = New System.Drawing.Point(280, 38)
+        Me.lblDiscount.Name = "lblDiscount"
+        Me.lblDiscount.Size = New System.Drawing.Size(202, 19)
+        Me.lblDiscount.TabIndex = 7
+        Me.lblDiscount.Text = "RM"
         '
-        'Label11
+        'lblPrice
         '
-        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label11.Location = New System.Drawing.Point(280, 8)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(202, 19)
-        Me.Label11.TabIndex = 6
-        Me.Label11.Text = "RM"
+        Me.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblPrice.Location = New System.Drawing.Point(280, 8)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(202, 19)
+        Me.lblPrice.TabIndex = 6
+        Me.lblPrice.Text = "RM"
         '
         'Label10
         '
@@ -161,69 +171,65 @@ Partial Class frmReceipt
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Panel1.Controls.Add(Me.dgvReceipt)
+        Me.Panel1.Controls.Add(Me.lblDate)
+        Me.Panel1.Controls.Add(Me.lblPurchaseID)
+        Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Location = New System.Drawing.Point(28, 32)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(501, 164)
         Me.Panel1.TabIndex = 1
         '
-        'Label6
+        'dgvReceipt
         '
-        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label6.Location = New System.Drawing.Point(280, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(202, 19)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Date: "
+        Me.dgvReceipt.AllowUserToDeleteRows = False
+        Me.dgvReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvReceipt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieName, Me.price})
+        Me.dgvReceipt.Location = New System.Drawing.Point(25, 60)
+        Me.dgvReceipt.Name = "dgvReceipt"
+        Me.dgvReceipt.ReadOnly = True
+        Me.dgvReceipt.Size = New System.Drawing.Size(457, 92)
+        Me.dgvReceipt.TabIndex = 6
         '
-        'Label5
+        'movieName
         '
-        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label5.Location = New System.Drawing.Point(25, 37)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(236, 19)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Ticket ID: "
+        Me.movieName.HeaderText = "Movie Name"
+        Me.movieName.Name = "movieName"
+        Me.movieName.ReadOnly = True
         '
-        'Label4
+        'price
         '
-        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(25, 9)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(236, 19)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Name: "
+        Me.price.HeaderText = "Price (RM)"
+        Me.price.Name = "price"
+        Me.price.ReadOnly = True
         '
-        'Label3
+        'lblDate
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(389, 63)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "PRICE (RM)"
+        Me.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblDate.Location = New System.Drawing.Point(280, 9)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(202, 19)
+        Me.lblDate.TabIndex = 5
+        Me.lblDate.Text = "Date: "
         '
-        'Label2
+        'lblPurchaseID
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(49, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(41, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "MOVIE"
+        Me.lblPurchaseID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblPurchaseID.Location = New System.Drawing.Point(25, 37)
+        Me.lblPurchaseID.Name = "lblPurchaseID"
+        Me.lblPurchaseID.Size = New System.Drawing.Size(236, 19)
+        Me.lblPurchaseID.TabIndex = 4
+        Me.lblPurchaseID.Text = "Purchase ID: "
         '
-        'FlowLayoutPanel1
+        'lblName
         '
-        Me.FlowLayoutPanel1.AutoScroll = True
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(18, 79)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(464, 80)
-        Me.FlowLayoutPanel1.TabIndex = 0
+        Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblName.Location = New System.Drawing.Point(25, 9)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(236, 19)
+        Me.lblName.TabIndex = 3
+        Me.lblName.Text = "Name: "
         '
         'Label1
         '
@@ -251,22 +257,23 @@ Partial Class frmReceipt
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.btnExit)
-        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Controls.Add(Me.btnPrint)
         Me.GroupBox1.Location = New System.Drawing.Point(46, 425)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(564, 81)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
-        'Button1
+        'Label2
         '
-        Me.Button1.Location = New System.Drawing.Point(308, 19)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(113, 37)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Print"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(25, 16)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "** 5% Tax"
         '
         'btnExit
         '
@@ -276,6 +283,59 @@ Partial Class frmReceipt
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnPrint
+        '
+        Me.btnPrint.Location = New System.Drawing.Point(308, 19)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(113, 37)
+        Me.btnPrint.TabIndex = 0
+        Me.btnPrint.Text = "Print"
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.auditoriumsTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.customersTableAdapter = Nothing
+        Me.TableAdapterManager.moviesTableAdapter = Nothing
+        Me.TableAdapterManager.purchase_lineTableAdapter = Nothing
+        Me.TableAdapterManager.purchasesTableAdapter = Nothing
+        Me.TableAdapterManager.showtimesTableAdapter = Nothing
+        Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'CinemadbDataSet
+        '
+        Me.CinemadbDataSet.DataSetName = "cinemadbDataSet"
+        Me.CinemadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'PurchasesTableAdapter
+        '
+        Me.PurchasesTableAdapter.ClearBeforeFill = True
+        '
+        'PrintPreview
+        '
+        Me.PrintPreview.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreview.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreview.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreview.Enabled = True
+        Me.PrintPreview.Icon = CType(resources.GetObject("PrintPreview.Icon"), System.Drawing.Icon)
+        Me.PrintPreview.Name = "PrintPreview"
+        Me.PrintPreview.Visible = False
+        '
+        'PrintDoc
+        '
+        Me.PrintDoc.OriginAtMargins = True
+        '
+        'PrintDialog
+        '
+        Me.PrintDialog.UseEXDialog = True
+        '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
         '
         'frmReceipt
         '
@@ -294,9 +354,11 @@ Partial Class frmReceipt
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        CType(Me.dgvReceipt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -304,23 +366,31 @@ Partial Class frmReceipt
     Friend WithEvents GroupBox As GroupBox
     Friend WithEvents picGTA As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label11 As Label
+    Friend WithEvents lblNet As Label
+    Friend WithEvents lblTax As Label
+    Friend WithEvents lblDiscount As Label
+    Friend WithEvents lblPrice As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents lblDate As Label
+    Friend WithEvents lblPurchaseID As Label
+    Friend WithEvents lblName As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnPrint As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents TableAdapterManager As cinemadbDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents CinemadbDataSet As cinemadbDataSet
+    Friend WithEvents dgvReceipt As DataGridView
+    Friend WithEvents movieName As DataGridViewTextBoxColumn
+    Friend WithEvents price As DataGridViewTextBoxColumn
+    Friend WithEvents PurchasesTableAdapter As cinemadbDataSetTableAdapters.purchasesTableAdapter
+    Friend WithEvents Label2 As Label
+    Friend WithEvents PrintPreview As PrintPreviewDialog
+    Friend WithEvents PrintDoc As Printing.PrintDocument
+    Friend WithEvents PrintDialog As PrintDialog
+    Friend WithEvents PrintDialog1 As PrintDialog
 End Class

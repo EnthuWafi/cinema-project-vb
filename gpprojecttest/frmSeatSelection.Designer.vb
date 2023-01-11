@@ -422,7 +422,6 @@ Partial Class frmSeatSelection
         Me.TableAdapterManager.purchase_lineTableAdapter = Nothing
         Me.TableAdapterManager.purchasesTableAdapter = Nothing
         Me.TableAdapterManager.showtimesTableAdapter = Nothing
-        Me.TableAdapterManager.ticketsTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Purchase_lineBindingSource

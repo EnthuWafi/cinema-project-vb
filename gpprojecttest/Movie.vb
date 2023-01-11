@@ -24,8 +24,8 @@
         'anchors and direction
         flowLayout.Anchor = AnchorStyles.Top + AnchorStyles.Left
         flowLayout.FlowDirection = FlowDirection.TopDown
-        flowLayout.AutoSize = True
-        flowLayout.Margin = New Padding(50, 20, 50, 20)
+        flowLayout.Size = New Size(300, 400)
+        flowLayout.Margin = New Padding(50, 30, 50, 20)
 
         Dim picBox As New PictureBox
         picBox.Image = My.Resources.ResourceManager.GetObject(Me.strPic)
@@ -42,11 +42,11 @@
 
         Dim lblTitle As New Label
         lblTitle.Text = Me.strTitle
-        lblTitle.Font = New Font("Noto Sans", 15, FontStyle.Bold)
+        lblTitle.Font = New Font("Noto Sans", 12, FontStyle.Bold)
         lblTitle.ForeColor = Color.White
         lblTitle.AutoSize = True
         lblTitle.Anchor = AnchorStyles.None
-        lblTitle.Margin = New Padding(10)
+        lblTitle.Margin = New Padding(0, 2, 0, 2)
         flowLayout.Controls.Add(lblTitle)
 
         Dim lblGenre As New Label
@@ -78,7 +78,7 @@
         btnMore.BackColor = SystemColors.ButtonFace
         btnMore.Size = New Size(110, 30)
         btnMore.Anchor = AnchorStyles.Bottom
-        btnMore.Margin = New Padding(0, 10, 0, 0)
+        btnMore.Margin = New Padding(0, 5, 0, 0)
         flowLayout.Controls.Add(btnMore)
 
         AddHandler btnMore.Click, AddressOf btnMore_Click

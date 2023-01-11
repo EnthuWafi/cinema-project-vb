@@ -25,17 +25,39 @@ Partial Class frmPayment
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPayment))
         Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.radTNG = New System.Windows.Forms.RadioButton()
+        Me.radOnline = New System.Windows.Forms.RadioButton()
+        Me.radCash = New System.Windows.Forms.RadioButton()
+        Me.dgvTickets = New System.Windows.Forms.DataGridView()
+        Me.movieImage = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.movieName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.auditoriumName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.seatNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ageCategory = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ticketPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.movieInfo = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btnProceed = New System.Windows.Forms.Button()
         Me.gboPayInfo = New System.Windows.Forms.GroupBox()
-        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.tbpPayment = New System.Windows.Forms.TableLayoutPanel()
+        Me.lblBottom = New System.Windows.Forms.Label()
+        Me.txtTop = New System.Windows.Forms.TextBox()
+        Me.lblTop = New System.Windows.Forms.Label()
+        Me.cboBottom = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPrice = New System.Windows.Forms.Label()
+        Me.btnBack = New System.Windows.Forms.Button()
+        Me.AuditoriumsTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.auditoriumsTableAdapter()
+        Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
+        Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
+        Me.Purchase_lineTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.purchase_lineTableAdapter()
+        Me.PurchasesTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.purchasesTableAdapter()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gboPayInfo.SuspendLayout()
+        Me.tbpPayment.SuspendLayout()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'picGTA
@@ -55,10 +77,10 @@ Partial Class frmPayment
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.RadioButton4)
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.radTNG)
+        Me.GroupBox1.Controls.Add(Me.radOnline)
+        Me.GroupBox1.Controls.Add(Me.radCash)
         Me.GroupBox1.Location = New System.Drawing.Point(33, 318)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(311, 170)
@@ -66,60 +88,106 @@ Partial Class frmPayment
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Payment Method"
         '
-        'RadioButton4
+        'Label2
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(47, 125)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(125, 17)
-        Me.RadioButton4.TabIndex = 3
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Touch 'N Go eWallet"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(213, 96)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "~ 5% Discount"
         '
-        'RadioButton3
+        'radTNG
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(47, 92)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(52, 17)
-        Me.RadioButton3.TabIndex = 2
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Credit"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.radTNG.AutoSize = True
+        Me.radTNG.Location = New System.Drawing.Point(47, 94)
+        Me.radTNG.Name = "radTNG"
+        Me.radTNG.Size = New System.Drawing.Size(125, 17)
+        Me.radTNG.TabIndex = 3
+        Me.radTNG.TabStop = True
+        Me.radTNG.Text = "Touch 'N Go eWallet"
+        Me.radTNG.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'radOnline
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(47, 59)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(122, 17)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "FPX/Online Banking"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.radOnline.AutoSize = True
+        Me.radOnline.Location = New System.Drawing.Point(47, 59)
+        Me.radOnline.Name = "radOnline"
+        Me.radOnline.Size = New System.Drawing.Size(122, 17)
+        Me.radOnline.TabIndex = 1
+        Me.radOnline.TabStop = True
+        Me.radOnline.Text = "FPX/Online Banking"
+        Me.radOnline.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'radCash
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(47, 26)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(49, 17)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Cash"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.radCash.AutoSize = True
+        Me.radCash.Location = New System.Drawing.Point(47, 26)
+        Me.radCash.Name = "radCash"
+        Me.radCash.Size = New System.Drawing.Size(49, 17)
+        Me.radCash.TabIndex = 0
+        Me.radCash.TabStop = True
+        Me.radCash.Text = "Cash"
+        Me.radCash.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgvTickets
         '
-        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvTickets.AllowUserToDeleteRows = False
+        Me.dgvTickets.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(33, 88)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(801, 224)
-        Me.DataGridView1.TabIndex = 6
+        Me.dgvTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieImage, Me.movieName, Me.auditoriumName, Me.seatNumber, Me.ageCategory, Me.ticketPrice, Me.movieInfo})
+        Me.dgvTickets.Location = New System.Drawing.Point(33, 88)
+        Me.dgvTickets.Name = "dgvTickets"
+        Me.dgvTickets.ReadOnly = True
+        Me.dgvTickets.Size = New System.Drawing.Size(801, 224)
+        Me.dgvTickets.TabIndex = 6
+        '
+        'movieImage
+        '
+        Me.movieImage.HeaderText = "Movie Image"
+        Me.movieImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch
+        Me.movieImage.MinimumWidth = 10
+        Me.movieImage.Name = "movieImage"
+        Me.movieImage.ReadOnly = True
+        '
+        'movieName
+        '
+        Me.movieName.HeaderText = "Movie Name"
+        Me.movieName.Name = "movieName"
+        Me.movieName.ReadOnly = True
+        '
+        'auditoriumName
+        '
+        Me.auditoriumName.HeaderText = "Auditorium Name"
+        Me.auditoriumName.Name = "auditoriumName"
+        Me.auditoriumName.ReadOnly = True
+        '
+        'seatNumber
+        '
+        Me.seatNumber.HeaderText = "Seat Number"
+        Me.seatNumber.Name = "seatNumber"
+        Me.seatNumber.ReadOnly = True
+        '
+        'ageCategory
+        '
+        Me.ageCategory.HeaderText = "Age Category"
+        Me.ageCategory.Name = "ageCategory"
+        Me.ageCategory.ReadOnly = True
+        '
+        'ticketPrice
+        '
+        Me.ticketPrice.HeaderText = "Ticket Price"
+        Me.ticketPrice.Name = "ticketPrice"
+        Me.ticketPrice.ReadOnly = True
+        '
+        'movieInfo
+        '
+        Me.movieInfo.HeaderText = "Movie Info"
+        Me.movieInfo.Name = "movieInfo"
+        Me.movieInfo.ReadOnly = True
         '
         'btnProceed
         '
@@ -139,6 +207,9 @@ Partial Class frmPayment
         '
         Me.gboPayInfo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gboPayInfo.Controls.Add(Me.tbpPayment)
+        Me.gboPayInfo.Controls.Add(Me.Label1)
+        Me.gboPayInfo.Controls.Add(Me.lblPrice)
         Me.gboPayInfo.Location = New System.Drawing.Point(363, 318)
         Me.gboPayInfo.Name = "gboPayInfo"
         Me.gboPayInfo.Size = New System.Drawing.Size(471, 170)
@@ -146,19 +217,123 @@ Partial Class frmPayment
         Me.gboPayInfo.TabStop = False
         Me.gboPayInfo.Text = "Payment Info"
         '
-        'btnCancel
+        'tbpPayment
         '
-        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnCancel.Location = New System.Drawing.Point(598, 502)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(115, 37)
-        Me.btnCancel.TabIndex = 13
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = False
+        Me.tbpPayment.ColumnCount = 1
+        Me.tbpPayment.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tbpPayment.Controls.Add(Me.lblBottom, 0, 2)
+        Me.tbpPayment.Controls.Add(Me.txtTop, 0, 1)
+        Me.tbpPayment.Controls.Add(Me.lblTop, 0, 0)
+        Me.tbpPayment.Controls.Add(Me.cboBottom, 0, 3)
+        Me.tbpPayment.Location = New System.Drawing.Point(19, 19)
+        Me.tbpPayment.Name = "tbpPayment"
+        Me.tbpPayment.RowCount = 4
+        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.5625!))
+        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.4375!))
+        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
+        Me.tbpPayment.Size = New System.Drawing.Size(238, 133)
+        Me.tbpPayment.TabIndex = 2
+        '
+        'lblBottom
+        '
+        Me.lblBottom.AutoSize = True
+        Me.lblBottom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBottom.Location = New System.Drawing.Point(3, 64)
+        Me.lblBottom.Name = "lblBottom"
+        Me.lblBottom.Size = New System.Drawing.Size(0, 13)
+        Me.lblBottom.TabIndex = 3
+        '
+        'txtTop
+        '
+        Me.txtTop.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtTop.Location = New System.Drawing.Point(3, 20)
+        Me.txtTop.Name = "txtTop"
+        Me.txtTop.Size = New System.Drawing.Size(232, 20)
+        Me.txtTop.TabIndex = 0
+        '
+        'lblTop
+        '
+        Me.lblTop.AutoSize = True
+        Me.lblTop.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTop.Location = New System.Drawing.Point(3, 0)
+        Me.lblTop.Name = "lblTop"
+        Me.lblTop.Size = New System.Drawing.Size(0, 13)
+        Me.lblTop.TabIndex = 2
+        '
+        'cboBottom
+        '
+        Me.cboBottom.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cboBottom.FormattingEnabled = True
+        Me.cboBottom.Location = New System.Drawing.Point(3, 89)
+        Me.cboBottom.Name = "cboBottom"
+        Me.cboBottom.Size = New System.Drawing.Size(232, 21)
+        Me.cboBottom.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(389, 48)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(66, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "~Before Tax"
+        '
+        'lblPrice
+        '
+        Me.lblPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblPrice.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPrice.Location = New System.Drawing.Point(263, 22)
+        Me.lblPrice.Name = "lblPrice"
+        Me.lblPrice.Size = New System.Drawing.Size(192, 23)
+        Me.lblPrice.TabIndex = 0
+        Me.lblPrice.Text = "Total Price: "
+        '
+        'btnBack
+        '
+        Me.btnBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBack.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnBack.Location = New System.Drawing.Point(598, 502)
+        Me.btnBack.Name = "btnBack"
+        Me.btnBack.Size = New System.Drawing.Size(115, 37)
+        Me.btnBack.TabIndex = 13
+        Me.btnBack.Text = "Back"
+        Me.btnBack.UseVisualStyleBackColor = False
+        '
+        'AuditoriumsTableAdapter
+        '
+        Me.AuditoriumsTableAdapter.ClearBeforeFill = True
+        '
+        'CinemadbDataSet
+        '
+        Me.CinemadbDataSet.DataSetName = "cinemadbDataSet"
+        Me.CinemadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.auditoriumsTableAdapter = Me.AuditoriumsTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.customersTableAdapter = Nothing
+        Me.TableAdapterManager.moviesTableAdapter = Nothing
+        Me.TableAdapterManager.purchase_lineTableAdapter = Nothing
+        Me.TableAdapterManager.purchasesTableAdapter = Nothing
+        Me.TableAdapterManager.showtimesTableAdapter = Nothing
+        Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Purchase_lineTableAdapter
+        '
+        Me.Purchase_lineTableAdapter.ClearBeforeFill = True
+        '
+        'PurchasesTableAdapter
+        '
+        Me.PurchasesTableAdapter.ClearBeforeFill = True
         '
         'frmPayment
         '
@@ -167,10 +342,10 @@ Partial Class frmPayment
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.cinema_red
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(858, 586)
-        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.gboPayInfo)
         Me.Controls.Add(Me.btnProceed)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgvTickets)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.picGTA)
         Me.MaximizeBox = False
@@ -180,19 +355,43 @@ Partial Class frmPayment
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTickets, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gboPayInfo.ResumeLayout(False)
+        Me.gboPayInfo.PerformLayout()
+        Me.tbpPayment.ResumeLayout(False)
+        Me.tbpPayment.PerformLayout()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents picGTA As PictureBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents RadioButton4 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents dgvTickets As DataGridView
+    Friend WithEvents radTNG As RadioButton
+    Friend WithEvents radOnline As RadioButton
+    Friend WithEvents radCash As RadioButton
     Friend WithEvents btnProceed As Button
     Friend WithEvents gboPayInfo As GroupBox
-    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnBack As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPrice As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents tbpPayment As TableLayoutPanel
+    Friend WithEvents AuditoriumsTableAdapter As cinemadbDataSetTableAdapters.auditoriumsTableAdapter
+    Friend WithEvents CinemadbDataSet As cinemadbDataSet
+    Friend WithEvents TableAdapterManager As cinemadbDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents movieImage As DataGridViewImageColumn
+    Friend WithEvents movieName As DataGridViewTextBoxColumn
+    Friend WithEvents auditoriumName As DataGridViewTextBoxColumn
+    Friend WithEvents seatNumber As DataGridViewTextBoxColumn
+    Friend WithEvents ageCategory As DataGridViewTextBoxColumn
+    Friend WithEvents ticketPrice As DataGridViewTextBoxColumn
+    Friend WithEvents movieInfo As DataGridViewButtonColumn
+    Friend WithEvents txtTop As TextBox
+    Friend WithEvents lblBottom As Label
+    Friend WithEvents lblTop As Label
+    Friend WithEvents cboBottom As ComboBox
+    Friend WithEvents Purchase_lineTableAdapter As cinemadbDataSetTableAdapters.purchase_lineTableAdapter
+    Friend WithEvents PurchasesTableAdapter As cinemadbDataSetTableAdapters.purchasesTableAdapter
 End Class

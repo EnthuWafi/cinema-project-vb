@@ -29,10 +29,10 @@
     Private Sub LoadTickets()
         lboTickets.Items.Clear()
 
-        lboTickets.Items.Add(String.Format("{0, -30}{1, -30}{2, -30}{3, -30}", "Ticket ID", "Seat Number", "Age Category", "Ticket Price"))
+        lboTickets.Items.Add(String.Format("{0, -30}{1, -30}{2, -30}{3, -30}", "Movie Name", "Seat Number", "Age Category", "Ticket Price"))
         For i = 0 To listOfTickets.Count - 1
             Dim ticket As PendingTicket = listOfTickets(i)
-            lboTickets.Items.Add(String.Format("{0, -35}{1, -38}{2, -37}{3, -30}", ticket.intTicketID, ticket.intSeatNumber,
+            lboTickets.Items.Add(String.Format("{0, -35}{1, -38}{2, -37}{3, -30}", ticket.movie.strTitle, ticket.intSeatNumber,
                                  ticket.age_category, ticket.decPrice.ToString("C")))
         Next
     End Sub
