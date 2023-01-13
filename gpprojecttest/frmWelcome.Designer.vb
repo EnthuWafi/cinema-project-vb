@@ -22,9 +22,10 @@ Partial Class frmWelcome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmWelcome))
         Me.mnuMain = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
-        Me.STAFFMODEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFileStaff = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,22 +53,22 @@ Partial Class frmWelcome
         '
         'mnuFile
         '
-        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STAFFMODEToolStripMenuItem, Me.mnuExit})
+        Me.mnuFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFileStaff, Me.mnuExit})
         Me.mnuFile.Name = "mnuFile"
         Me.mnuFile.Size = New System.Drawing.Size(37, 20)
         Me.mnuFile.Text = "File"
         '
-        'STAFFMODEToolStripMenuItem
+        'mnuFileStaff
         '
-        Me.STAFFMODEToolStripMenuItem.Name = "STAFFMODEToolStripMenuItem"
-        Me.STAFFMODEToolStripMenuItem.Size = New System.Drawing.Size(130, 22)
-        Me.STAFFMODEToolStripMenuItem.Text = "&Staff Path"
+        Me.mnuFileStaff.Name = "mnuFileStaff"
+        Me.mnuFileStaff.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileStaff.Text = "&Staff Path"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuExit.Size = New System.Drawing.Size(130, 22)
+        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
         Me.mnuExit.Text = "E&xit"
         '
         'mnuHelp
@@ -187,9 +188,12 @@ Partial Class frmWelcome
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.mnuMain)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.mnuMain
+        Me.MaximizeBox = False
         Me.Name = "frmWelcome"
-        Me.Text = "Welcome"
+        Me.Text = "GTA Cinema Ticketing System: Welcome"
         Me.mnuMain.ResumeLayout(False)
         Me.mnuMain.PerformLayout()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).EndInit()
@@ -213,5 +217,5 @@ Partial Class frmWelcome
     Friend WithEvents lblMain2 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents STAFFMODEToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mnuFileStaff As ToolStripMenuItem
 End Class

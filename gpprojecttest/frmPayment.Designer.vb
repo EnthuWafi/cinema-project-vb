@@ -132,6 +132,7 @@ Partial Class frmPayment
         '
         'dgvTickets
         '
+        Me.dgvTickets.AllowUserToAddRows = False
         Me.dgvTickets.AllowUserToDeleteRows = False
         Me.dgvTickets.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _

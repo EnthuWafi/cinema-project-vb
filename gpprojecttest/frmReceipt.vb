@@ -56,9 +56,9 @@
         If PrintDialog.ShowDialog() = DialogResult.OK Then
             PrintDoc.PrinterSettings = PrintDialog.PrinterSettings
             Dim PageSetup As New Printing.PageSettings
-            PageSetup.Margins.Left = 50
+            PageSetup.Margins.Left = 25
             PageSetup.Margins.Top = 50
-            PageSetup.Margins.Right = 50
+            PageSetup.Margins.Right = 25
             PageSetup.Margins.Bottom = 50
 
             PrintDoc.DefaultPageSettings = PageSetup

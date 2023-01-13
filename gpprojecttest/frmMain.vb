@@ -216,6 +216,7 @@ Public Class frmMain
         currentTicket.age_category = dt.Rows(0)("age_category")
         currentTicket.decPrice = dt.Rows(0)("ticket_price")
         currentTicket.intShowtimeID = dt.Rows(0)("showtime_id")
+        currentTicket.intPriceID = dt.Rows(0)("price_id")
         currentTicket.movie = currentMovie
 
         lblPrice.Text = "Price: " & currentTicket.decPrice.ToString("C")

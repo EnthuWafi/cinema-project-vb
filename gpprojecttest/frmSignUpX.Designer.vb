@@ -23,7 +23,10 @@ Partial Class frmSignUpX
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSignUpX))
         Me.txtFName = New System.Windows.Forms.TextBox()
+        Me.CustomersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
@@ -45,16 +48,16 @@ Partial Class frmSignUpX
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSignUp = New System.Windows.Forms.Button()
-        Me.CustomersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
         Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
         Me.CustomersTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.customersTableAdapter()
+        Me.errorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.errorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtFName
@@ -65,6 +68,16 @@ Partial Class frmSignUpX
         Me.txtFName.Name = "txtFName"
         Me.txtFName.Size = New System.Drawing.Size(227, 20)
         Me.txtFName.TabIndex = 0
+        '
+        'CustomersBindingSource
+        '
+        Me.CustomersBindingSource.DataMember = "customers"
+        Me.CustomersBindingSource.DataSource = Me.CinemadbDataSet
+        '
+        'CinemadbDataSet
+        '
+        Me.CinemadbDataSet.DataSetName = "cinemadbDataSet"
+        Me.CinemadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'GroupBox1
         '
@@ -280,25 +293,25 @@ Partial Class frmSignUpX
         Me.btnSignUp.Text = "Sign Up"
         Me.btnSignUp.UseVisualStyleBackColor = True
         '
-        'CustomersBindingSource
-        '
-        Me.CustomersBindingSource.DataMember = "customers"
-        Me.CustomersBindingSource.DataSource = Me.CinemadbDataSet
-        '
-        'CinemadbDataSet
-        '
-        Me.CinemadbDataSet.DataSetName = "cinemadbDataSet"
-        Me.CinemadbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'TableAdapterManager
         '
+        Me.TableAdapterManager.auditoriumsTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.customersTableAdapter = Me.CustomersTableAdapter
+        Me.TableAdapterManager.moviesTableAdapter = Nothing
+        Me.TableAdapterManager.purchase_lineTableAdapter = Nothing
+        Me.TableAdapterManager.purchasesTableAdapter = Nothing
+        Me.TableAdapterManager.showtimesTableAdapter = Nothing
+        Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'CustomersTableAdapter
         '
         Me.CustomersTableAdapter.ClearBeforeFill = True
+        '
+        'errorProvider
+        '
+        Me.errorProvider.ContainerControl = Me
         '
         'frmSignUpX
         '
@@ -310,8 +323,11 @@ Partial Class frmSignUpX
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSignUpX"
-        Me.Text = "frmSignUpX"
+        Me.Text = "Cinema: SignUp"
+        CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
@@ -320,8 +336,7 @@ Partial Class frmSignUpX
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.errorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -352,4 +367,5 @@ Partial Class frmSignUpX
     Friend WithEvents CustomersBindingSource As BindingSource
     Friend WithEvents TableAdapterManager As cinemadbDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CustomersTableAdapter As cinemadbDataSetTableAdapters.customersTableAdapter
+    Friend WithEvents errorProvider As ErrorProvider
 End Class

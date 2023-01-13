@@ -62,6 +62,11 @@ gpprojecttest
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:gpprojecttest.My.Resources.Resources.movie_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
 <member name="P:gpprojecttest.My.Resources.Resources.nanny_mcphee">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

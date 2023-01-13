@@ -182,6 +182,7 @@ Partial Class frmReceipt
         '
         'dgvReceipt
         '
+        Me.dgvReceipt.AllowUserToAddRows = False
         Me.dgvReceipt.AllowUserToDeleteRows = False
         Me.dgvReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize

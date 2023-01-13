@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\movie_icon-removebg-preview.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -123,6 +126,42 @@
     <Compile Include="frmSignUpX.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmStaffHome.Designer.vb">
+      <DependentUpon>frmStaffHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffMovie.Designer.vb">
+      <DependentUpon>frmStaffMovie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffMovie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffShowtime.Designer.vb">
+      <DependentUpon>frmStaffShowtime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffShowtime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffTransaction.Designer.vb">
+      <DependentUpon>frmStaffTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffTransactionLine.Designer.vb">
+      <DependentUpon>frmStaffTransactionLine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffTransactionLine.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffWelcome.Designer.vb">
+      <DependentUpon>frmStaffWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmWelcome.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +233,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignUpX.resx">
       <DependentUpon>frmSignUpX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffHome.resx">
+      <DependentUpon>frmStaffHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffMovie.resx">
+      <DependentUpon>frmStaffMovie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffShowtime.resx">
+      <DependentUpon>frmStaffShowtime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffTransaction.resx">
+      <DependentUpon>frmStaffTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffTransactionLine.resx">
+      <DependentUpon>frmStaffTransactionLine.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffWelcome.resx">
+      <DependentUpon>frmStaffWelcome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.vb</DependentUpon>
@@ -284,6 +341,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fight_club.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="movie_icon-removebg-preview.ico" />
+    <None Include="Resources\movie_icon-removebg-preview.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

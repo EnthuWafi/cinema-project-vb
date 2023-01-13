@@ -327,6 +327,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.flpMovie)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.picGTA)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.Text = "Cinema: Main"

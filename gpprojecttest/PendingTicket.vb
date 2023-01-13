@@ -1,5 +1,5 @@
 ﻿Public Class PendingTicket
-    Public intSeatNumber, intShowtimeID As Integer
+    Public intSeatNumber, intShowtimeID, intPriceID As Integer
     Public age_category As String
     Public decPrice As Decimal
 

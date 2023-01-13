@@ -22,18 +22,24 @@ Partial Class frmListTickets
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.dgvTicket = New System.Windows.Forms.DataGridView()
+        Me.movieName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.seatNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ageCategory = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ticketPrice = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lboTickets = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.dgvTicket, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.dgvTicket)
         Me.GroupBox1.Controls.Add(Me.btnClose)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.lboTickets)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox1.Location = New System.Drawing.Point(27, 25)
         Me.GroupBox1.Name = "GroupBox1"
@@ -41,6 +47,54 @@ Partial Class frmListTickets
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "List of Tickets"
+        '
+        'dgvTicket
+        '
+        Me.dgvTicket.AllowUserToAddRows = False
+        Me.dgvTicket.AllowUserToDeleteRows = False
+        Me.dgvTicket.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvTicket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTicket.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieName, Me.seatNumber, Me.ageCategory, Me.ticketPrice})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTicket.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvTicket.Location = New System.Drawing.Point(21, 31)
+        Me.dgvTicket.Name = "dgvTicket"
+        Me.dgvTicket.ReadOnly = True
+        Me.dgvTicket.Size = New System.Drawing.Size(637, 301)
+        Me.dgvTicket.TabIndex = 3
+        '
+        'movieName
+        '
+        Me.movieName.HeaderText = "Movie Name"
+        Me.movieName.Name = "movieName"
+        Me.movieName.ReadOnly = True
+        '
+        'seatNumber
+        '
+        Me.seatNumber.HeaderText = "Seat Number"
+        Me.seatNumber.Name = "seatNumber"
+        Me.seatNumber.ReadOnly = True
+        '
+        'ageCategory
+        '
+        Me.ageCategory.HeaderText = "Age Category"
+        Me.ageCategory.Name = "ageCategory"
+        Me.ageCategory.ReadOnly = True
+        '
+        'ticketPrice
+        '
+        Me.ticketPrice.HeaderText = "Ticket Price"
+        Me.ticketPrice.Name = "ticketPrice"
+        Me.ticketPrice.ReadOnly = True
         '
         'btnClose
         '
@@ -62,14 +116,6 @@ Partial Class frmListTickets
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "**You can click to select which ticket to discard"
         '
-        'lboTickets
-        '
-        Me.lboTickets.FormattingEnabled = True
-        Me.lboTickets.Location = New System.Drawing.Point(32, 32)
-        Me.lboTickets.Name = "lboTickets"
-        Me.lboTickets.Size = New System.Drawing.Size(626, 290)
-        Me.lboTickets.TabIndex = 0
-        '
         'frmListTickets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -85,12 +131,17 @@ Partial Class frmListTickets
         Me.Text = "Tickets: List"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.dgvTicket, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnClose As Button
-    Friend WithEvents lboTickets As ListBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents dgvTicket As DataGridView
+    Friend WithEvents movieName As DataGridViewTextBoxColumn
+    Friend WithEvents seatNumber As DataGridViewTextBoxColumn
+    Friend WithEvents ageCategory As DataGridViewTextBoxColumn
+    Friend WithEvents ticketPrice As DataGridViewTextBoxColumn
 End Class

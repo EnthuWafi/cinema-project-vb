@@ -53,7 +53,7 @@
 
         For i = 0 To ticketList.Count - 1
             Dim ticket As PendingTicket = ticketList(i)
-            Purchase_lineTableAdapter.InsertTicket(purchaseID, ticket.intSeatNumber, ticket.intShowtimeID)
+            Purchase_lineTableAdapter.InsertTicket(purchaseID, ticket.intSeatNumber, ticket.intShowtimeID, ticket.intPriceID)
         Next
 
         MessageBox.Show("Transaction Complete!")
@@ -74,8 +74,8 @@
         Me.myMain = myMain
     End Sub
 
-    Private Sub dgvTickets_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
-        If e.RowIndex >= dgvTickets.Rows.Count - 1 Then
+    Private Sub dgvTickets_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTickets.CellContentClick
+        If e.RowIndex = -1 Then
             Return
         End If
         If e.ColumnIndex = dgvTickets.Columns("movieInfo").Index Then
@@ -87,6 +87,7 @@
     'not really important tbh
     'cash
     Private Sub radCash_CheckedChanged(sender As Object, e As EventArgs) Handles radCash.CheckedChanged
+        btnProceed.Enabled = True
 
         lblTop.Text = "Pay upfront."
         txtTop.Visible = False
@@ -97,6 +98,7 @@
     End Sub
 
     Private Sub radOnline_CheckedChanged(sender As Object, e As EventArgs) Handles radOnline.CheckedChanged
+        btnProceed.Enabled = False
 
         txtTop.Visible = True
         lblTop.Text = "Enter your PIN NUMBER: "
@@ -116,6 +118,8 @@
     End Sub
 
     Private Sub radTNG_CheckedChanged(sender As Object, e As EventArgs) Handles radTNG.CheckedChanged
+        btnProceed.Enabled = False
+
         txtTop.Visible = True
         lblTop.Text = "Enter your PIN NUMBER: "
         txtTop.UseSystemPasswordChar = True
@@ -123,6 +127,22 @@
         lblBottom.Visible = False
         cboBottom.Visible = False
 
+        cboBottom.SelectedIndex = -1
+
         discount = 0.05
+    End Sub
+
+    Private Sub txtTop_TextChanged(sender As Object, e As EventArgs) Handles txtTop.TextChanged
+        'if TNG
+        If Not lblBottom.Visible() Then
+            btnProceed.Enabled = True
+        End If
+    End Sub
+
+    Private Sub cboBottom_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cboBottom.SelectionChangeCommitted
+        'if online
+        If cboBottom.SelectedIndex <> -1 Then
+            btnProceed.Enabled = True
+        End If
     End Sub
 End Class

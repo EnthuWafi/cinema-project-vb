@@ -58,3 +58,9 @@ C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpp
 C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.xml
 C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.pdb
 C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmListTickets.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmStaffHome.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmStaffMovie.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmStaffShowtime.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmStaffTransaction.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmStaffTransactionLine.resources
+C:\Users\ABDUL WAFI\Desktop\GitHub\cinema-project-vb\gpprojecttest\obj\Debug\gpprojecttest.frmStaffWelcome.resources
