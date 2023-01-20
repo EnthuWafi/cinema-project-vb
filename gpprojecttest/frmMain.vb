@@ -231,6 +231,10 @@ Public Class frmMain
         lblTicketCount.Text = "Ticket Count: " & ticketList.Count
     End Sub
 
+    Private Sub flpMovie_Paint(sender As Object, e As PaintEventArgs) Handles flpMovie.Paint
+
+    End Sub
+
     'validation
 
 

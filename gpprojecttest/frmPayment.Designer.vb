@@ -67,9 +67,10 @@ Partial Class frmPayment
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = CType(resources.GetObject("picGTA.Image"), System.Drawing.Image)
-        Me.picGTA.Location = New System.Drawing.Point(259, 12)
+        Me.picGTA.Location = New System.Drawing.Point(345, 15)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4)
         Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGTA.TabIndex = 4
         Me.picGTA.TabStop = False
@@ -81,9 +82,11 @@ Partial Class frmPayment
         Me.GroupBox1.Controls.Add(Me.radTNG)
         Me.GroupBox1.Controls.Add(Me.radOnline)
         Me.GroupBox1.Controls.Add(Me.radCash)
-        Me.GroupBox1.Location = New System.Drawing.Point(33, 318)
+        Me.GroupBox1.Location = New System.Drawing.Point(44, 391)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(311, 170)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(415, 209)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Payment Method"
@@ -91,18 +94,20 @@ Partial Class frmPayment
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(213, 96)
+        Me.Label2.Location = New System.Drawing.Point(284, 118)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 13)
+        Me.Label2.Size = New System.Drawing.Size(94, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "~ 5% Discount"
         '
         'radTNG
         '
         Me.radTNG.AutoSize = True
-        Me.radTNG.Location = New System.Drawing.Point(47, 94)
+        Me.radTNG.Location = New System.Drawing.Point(63, 116)
+        Me.radTNG.Margin = New System.Windows.Forms.Padding(4)
         Me.radTNG.Name = "radTNG"
-        Me.radTNG.Size = New System.Drawing.Size(125, 17)
+        Me.radTNG.Size = New System.Drawing.Size(150, 20)
         Me.radTNG.TabIndex = 3
         Me.radTNG.TabStop = True
         Me.radTNG.Text = "Touch 'N Go eWallet"
@@ -111,9 +116,10 @@ Partial Class frmPayment
         'radOnline
         '
         Me.radOnline.AutoSize = True
-        Me.radOnline.Location = New System.Drawing.Point(47, 59)
+        Me.radOnline.Location = New System.Drawing.Point(63, 73)
+        Me.radOnline.Margin = New System.Windows.Forms.Padding(4)
         Me.radOnline.Name = "radOnline"
-        Me.radOnline.Size = New System.Drawing.Size(122, 17)
+        Me.radOnline.Size = New System.Drawing.Size(145, 20)
         Me.radOnline.TabIndex = 1
         Me.radOnline.TabStop = True
         Me.radOnline.Text = "FPX/Online Banking"
@@ -122,9 +128,10 @@ Partial Class frmPayment
         'radCash
         '
         Me.radCash.AutoSize = True
-        Me.radCash.Location = New System.Drawing.Point(47, 26)
+        Me.radCash.Location = New System.Drawing.Point(63, 32)
+        Me.radCash.Margin = New System.Windows.Forms.Padding(4)
         Me.radCash.Name = "radCash"
-        Me.radCash.Size = New System.Drawing.Size(49, 17)
+        Me.radCash.Size = New System.Drawing.Size(57, 20)
         Me.radCash.TabIndex = 0
         Me.radCash.TabStop = True
         Me.radCash.Text = "Cash"
@@ -140,10 +147,11 @@ Partial Class frmPayment
         Me.dgvTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTickets.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieImage, Me.movieName, Me.auditoriumName, Me.seatNumber, Me.ageCategory, Me.ticketPrice, Me.movieInfo})
-        Me.dgvTickets.Location = New System.Drawing.Point(33, 88)
+        Me.dgvTickets.Location = New System.Drawing.Point(44, 108)
+        Me.dgvTickets.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvTickets.Name = "dgvTickets"
         Me.dgvTickets.ReadOnly = True
-        Me.dgvTickets.Size = New System.Drawing.Size(801, 224)
+        Me.dgvTickets.Size = New System.Drawing.Size(1068, 276)
         Me.dgvTickets.TabIndex = 6
         '
         'movieImage
@@ -197,9 +205,10 @@ Partial Class frmPayment
         Me.btnProceed.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnProceed.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnProceed.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnProceed.Location = New System.Drawing.Point(719, 502)
+        Me.btnProceed.Location = New System.Drawing.Point(959, 618)
+        Me.btnProceed.Margin = New System.Windows.Forms.Padding(4)
         Me.btnProceed.Name = "btnProceed"
-        Me.btnProceed.Size = New System.Drawing.Size(115, 37)
+        Me.btnProceed.Size = New System.Drawing.Size(153, 46)
         Me.btnProceed.TabIndex = 10
         Me.btnProceed.Text = "Proceed"
         Me.btnProceed.UseVisualStyleBackColor = False
@@ -211,9 +220,11 @@ Partial Class frmPayment
         Me.gboPayInfo.Controls.Add(Me.tbpPayment)
         Me.gboPayInfo.Controls.Add(Me.Label1)
         Me.gboPayInfo.Controls.Add(Me.lblPrice)
-        Me.gboPayInfo.Location = New System.Drawing.Point(363, 318)
+        Me.gboPayInfo.Location = New System.Drawing.Point(484, 391)
+        Me.gboPayInfo.Margin = New System.Windows.Forms.Padding(4)
         Me.gboPayInfo.Name = "gboPayInfo"
-        Me.gboPayInfo.Size = New System.Drawing.Size(471, 170)
+        Me.gboPayInfo.Padding = New System.Windows.Forms.Padding(4)
+        Me.gboPayInfo.Size = New System.Drawing.Size(628, 209)
         Me.gboPayInfo.TabIndex = 12
         Me.gboPayInfo.TabStop = False
         Me.gboPayInfo.Text = "Payment Info"
@@ -226,21 +237,23 @@ Partial Class frmPayment
         Me.tbpPayment.Controls.Add(Me.txtTop, 0, 1)
         Me.tbpPayment.Controls.Add(Me.lblTop, 0, 0)
         Me.tbpPayment.Controls.Add(Me.cboBottom, 0, 3)
-        Me.tbpPayment.Location = New System.Drawing.Point(19, 19)
+        Me.tbpPayment.Location = New System.Drawing.Point(25, 23)
+        Me.tbpPayment.Margin = New System.Windows.Forms.Padding(4)
         Me.tbpPayment.Name = "tbpPayment"
         Me.tbpPayment.RowCount = 4
         Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.5625!))
         Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.4375!))
-        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
-        Me.tbpPayment.Size = New System.Drawing.Size(238, 133)
+        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
+        Me.tbpPayment.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57.0!))
+        Me.tbpPayment.Size = New System.Drawing.Size(317, 164)
         Me.tbpPayment.TabIndex = 2
         '
         'lblBottom
         '
         Me.lblBottom.AutoSize = True
         Me.lblBottom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBottom.Location = New System.Drawing.Point(3, 64)
+        Me.lblBottom.Location = New System.Drawing.Point(4, 79)
+        Me.lblBottom.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBottom.Name = "lblBottom"
         Me.lblBottom.Size = New System.Drawing.Size(0, 13)
         Me.lblBottom.TabIndex = 3
@@ -248,16 +261,18 @@ Partial Class frmPayment
         'txtTop
         '
         Me.txtTop.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtTop.Location = New System.Drawing.Point(3, 20)
+        Me.txtTop.Location = New System.Drawing.Point(4, 25)
+        Me.txtTop.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTop.Name = "txtTop"
-        Me.txtTop.Size = New System.Drawing.Size(232, 20)
+        Me.txtTop.Size = New System.Drawing.Size(309, 22)
         Me.txtTop.TabIndex = 0
         '
         'lblTop
         '
         Me.lblTop.AutoSize = True
         Me.lblTop.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTop.Location = New System.Drawing.Point(3, 0)
+        Me.lblTop.Location = New System.Drawing.Point(4, 0)
+        Me.lblTop.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTop.Name = "lblTop"
         Me.lblTop.Size = New System.Drawing.Size(0, 13)
         Me.lblTop.TabIndex = 2
@@ -266,18 +281,20 @@ Partial Class frmPayment
         '
         Me.cboBottom.Dock = System.Windows.Forms.DockStyle.Fill
         Me.cboBottom.FormattingEnabled = True
-        Me.cboBottom.Location = New System.Drawing.Point(3, 89)
+        Me.cboBottom.Location = New System.Drawing.Point(4, 110)
+        Me.cboBottom.Margin = New System.Windows.Forms.Padding(4)
         Me.cboBottom.Name = "cboBottom"
-        Me.cboBottom.Size = New System.Drawing.Size(232, 21)
+        Me.cboBottom.Size = New System.Drawing.Size(309, 24)
         Me.cboBottom.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(389, 48)
+        Me.Label1.Location = New System.Drawing.Point(519, 59)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "~Before Tax"
         '
@@ -287,9 +304,10 @@ Partial Class frmPayment
         Me.lblPrice.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblPrice.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPrice.Location = New System.Drawing.Point(263, 22)
+        Me.lblPrice.Location = New System.Drawing.Point(351, 27)
+        Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(192, 23)
+        Me.lblPrice.Size = New System.Drawing.Size(256, 28)
         Me.lblPrice.TabIndex = 0
         Me.lblPrice.Text = "Total Price: "
         '
@@ -300,9 +318,10 @@ Partial Class frmPayment
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnBack.Location = New System.Drawing.Point(598, 502)
+        Me.btnBack.Location = New System.Drawing.Point(797, 618)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(115, 37)
+        Me.btnBack.Size = New System.Drawing.Size(153, 46)
         Me.btnBack.TabIndex = 13
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = False
@@ -338,17 +357,19 @@ Partial Class frmPayment
         '
         'frmPayment
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.cinema_red
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(858, 586)
+        Me.ClientSize = New System.Drawing.Size(1144, 721)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.gboPayInfo)
         Me.Controls.Add(Me.btnProceed)
         Me.Controls.Add(Me.dgvTickets)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.picGTA)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmPayment"
         Me.Text = "Cinema: Payment"

@@ -63,10 +63,11 @@ Partial Class frmSignUpX
         'txtFName
         '
         Me.txtFName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_fname", True))
-        Me.txtFName.Location = New System.Drawing.Point(112, 43)
+        Me.txtFName.Location = New System.Drawing.Point(149, 53)
+        Me.txtFName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtFName.MaxLength = 50
         Me.txtFName.Name = "txtFName"
-        Me.txtFName.Size = New System.Drawing.Size(227, 20)
+        Me.txtFName.Size = New System.Drawing.Size(301, 22)
         Me.txtFName.TabIndex = 0
         '
         'CustomersBindingSource
@@ -89,9 +90,11 @@ Partial Class frmSignUpX
         Me.GroupBox1.Controls.Add(Me.txtLName)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtFName)
-        Me.GroupBox1.Location = New System.Drawing.Point(26, 91)
+        Me.GroupBox1.Location = New System.Drawing.Point(35, 112)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(378, 289)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(504, 356)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Sign Up"
@@ -102,9 +105,11 @@ Partial Class frmSignUpX
         Me.GroupBox4.Controls.Add(Me.Label8)
         Me.GroupBox4.Controls.Add(Me.txtPhone)
         Me.GroupBox4.Controls.Add(Me.Label7)
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 158)
+        Me.GroupBox4.Location = New System.Drawing.Point(8, 194)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(366, 125)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Size = New System.Drawing.Size(488, 154)
         Me.GroupBox4.TabIndex = 8
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Optional"
@@ -112,81 +117,90 @@ Partial Class frmSignUpX
         'txtAddress
         '
         Me.txtAddress.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "address", True))
-        Me.txtAddress.Location = New System.Drawing.Point(106, 71)
+        Me.txtAddress.Location = New System.Drawing.Point(141, 87)
+        Me.txtAddress.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtAddress.MaxLength = 12
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(227, 20)
+        Me.txtAddress.Size = New System.Drawing.Size(301, 22)
         Me.txtAddress.TabIndex = 8
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(52, 74)
+        Me.Label8.Location = New System.Drawing.Point(69, 91)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 13)
+        Me.Label8.Size = New System.Drawing.Size(62, 16)
         Me.Label8.TabIndex = 9
         Me.Label8.Text = "Address:"
         '
         'txtPhone
         '
         Me.txtPhone.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "phone_number", True))
-        Me.txtPhone.Location = New System.Drawing.Point(106, 33)
+        Me.txtPhone.Location = New System.Drawing.Point(141, 41)
+        Me.txtPhone.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPhone.MaxLength = 12
         Me.txtPhone.Name = "txtPhone"
-        Me.txtPhone.Size = New System.Drawing.Size(227, 20)
+        Me.txtPhone.Size = New System.Drawing.Size(301, 22)
         Me.txtPhone.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(20, 36)
+        Me.Label7.Location = New System.Drawing.Point(27, 44)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(81, 13)
+        Me.Label7.Size = New System.Drawing.Size(101, 16)
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Phone Number:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(71, 118)
+        Me.Label3.Location = New System.Drawing.Point(95, 145)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(35, 13)
+        Me.Label3.Size = New System.Drawing.Size(45, 16)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Email:"
         '
         'txtEmail
         '
         Me.txtEmail.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "email", True))
-        Me.txtEmail.Location = New System.Drawing.Point(112, 115)
+        Me.txtEmail.Location = New System.Drawing.Point(149, 142)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtEmail.MaxLength = 50
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(227, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(301, 22)
         Me.txtEmail.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(46, 82)
+        Me.Label2.Location = New System.Drawing.Point(61, 101)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(76, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Last Name:"
         '
         'txtLName
         '
         Me.txtLName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_lname", True))
-        Me.txtLName.Location = New System.Drawing.Point(112, 79)
+        Me.txtLName.Location = New System.Drawing.Point(149, 97)
+        Me.txtLName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtLName.MaxLength = 50
         Me.txtLName.Name = "txtLName"
-        Me.txtLName.Size = New System.Drawing.Size(227, 20)
+        Me.txtLName.Size = New System.Drawing.Size(301, 22)
         Me.txtLName.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(46, 46)
+        Me.Label1.Location = New System.Drawing.Point(61, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 13)
+        Me.Label1.Size = New System.Drawing.Size(76, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "First Name:"
         '
@@ -194,9 +208,11 @@ Partial Class frmSignUpX
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Maroon
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Location = New System.Drawing.Point(26, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(35, 15)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(651, 70)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(868, 86)
         Me.GroupBox2.TabIndex = 2
         Me.GroupBox2.TabStop = False
         '
@@ -205,7 +221,8 @@ Partial Class frmSignUpX
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label9.Location = New System.Drawing.Point(22, 16)
+        Me.Label9.Location = New System.Drawing.Point(29, 20)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(155, 42)
         Me.Label9.TabIndex = 0
@@ -214,37 +231,41 @@ Partial Class frmSignUpX
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(17, 46)
+        Me.Label4.Location = New System.Drawing.Point(23, 57)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(61, 13)
+        Me.Label4.Size = New System.Drawing.Size(77, 16)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "User name:"
         '
         'txtUsername
         '
         Me.txtUsername.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_username", True))
-        Me.txtUsername.Location = New System.Drawing.Point(84, 43)
+        Me.txtUsername.Location = New System.Drawing.Point(112, 53)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUsername.MaxLength = 10
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(156, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(207, 22)
         Me.txtUsername.TabIndex = 6
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(23, 103)
+        Me.Label5.Location = New System.Drawing.Point(31, 127)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 13)
+        Me.Label5.Size = New System.Drawing.Size(71, 16)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Password:"
         '
         'txtPassword
         '
         Me.txtPassword.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.CustomersBindingSource, "cust_password", True))
-        Me.txtPassword.Location = New System.Drawing.Point(85, 100)
+        Me.txtPassword.Location = New System.Drawing.Point(113, 123)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPassword.MaxLength = 50
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(156, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(207, 22)
         Me.txtPassword.TabIndex = 8
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -252,7 +273,8 @@ Partial Class frmSignUpX
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(82, 66)
+        Me.Label6.Location = New System.Drawing.Point(109, 81)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(158, 24)
         Me.Label6.TabIndex = 18
@@ -268,27 +290,31 @@ Partial Class frmSignUpX
         Me.GroupBox3.Controls.Add(Me.Label5)
         Me.GroupBox3.Controls.Add(Me.txtUsername)
         Me.GroupBox3.Controls.Add(Me.txtPassword)
-        Me.GroupBox3.Location = New System.Drawing.Point(410, 91)
+        Me.GroupBox3.Location = New System.Drawing.Point(547, 112)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(267, 289)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Size = New System.Drawing.Size(356, 356)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Account Info"
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(64, 213)
+        Me.btnClear.Location = New System.Drawing.Point(85, 262)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(138, 33)
+        Me.btnClear.Size = New System.Drawing.Size(184, 41)
         Me.btnClear.TabIndex = 20
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
         'btnSignUp
         '
-        Me.btnSignUp.Location = New System.Drawing.Point(64, 174)
+        Me.btnSignUp.Location = New System.Drawing.Point(85, 214)
+        Me.btnSignUp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(138, 33)
+        Me.btnSignUp.Size = New System.Drawing.Size(184, 41)
         Me.btnSignUp.TabIndex = 19
         Me.btnSignUp.Text = "Sign Up"
         Me.btnSignUp.UseVisualStyleBackColor = True
@@ -315,15 +341,17 @@ Partial Class frmSignUpX
         '
         'frmSignUpX
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MistyRose
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
-        Me.ClientSize = New System.Drawing.Size(698, 399)
+        Me.ClientSize = New System.Drawing.Size(931, 491)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmSignUpX"
         Me.Text = "Cinema: SignUp"
         CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

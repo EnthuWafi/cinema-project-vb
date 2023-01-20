@@ -49,9 +49,11 @@ Partial Class frmStaffTransactionLine
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox4.Controls.Add(Me.dgvInvoiceLine)
-        Me.GroupBox4.Location = New System.Drawing.Point(28, 88)
+        Me.GroupBox4.Location = New System.Drawing.Point(37, 108)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(760, 244)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Size = New System.Drawing.Size(1013, 300)
         Me.GroupBox4.TabIndex = 29
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Invoice"
@@ -64,10 +66,11 @@ Partial Class frmStaffTransactionLine
         Me.dgvInvoiceLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvInvoiceLine.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieName, Me.auditoriumName, Me.seatNumber, Me.ticketPrice})
         Me.dgvInvoiceLine.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvInvoiceLine.Location = New System.Drawing.Point(3, 16)
+        Me.dgvInvoiceLine.Location = New System.Drawing.Point(4, 19)
+        Me.dgvInvoiceLine.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvInvoiceLine.Name = "dgvInvoiceLine"
         Me.dgvInvoiceLine.ReadOnly = True
-        Me.dgvInvoiceLine.Size = New System.Drawing.Size(754, 225)
+        Me.dgvInvoiceLine.Size = New System.Drawing.Size(1005, 277)
         Me.dgvInvoiceLine.TabIndex = 0
         '
         'movieName
@@ -105,9 +108,11 @@ Partial Class frmStaffTransactionLine
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.BackColor = System.Drawing.Color.Maroon
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(37, 15)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(760, 70)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(1013, 86)
         Me.GroupBox2.TabIndex = 28
         Me.GroupBox2.TabStop = False
         '
@@ -116,7 +121,8 @@ Partial Class frmStaffTransactionLine
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label9.Location = New System.Drawing.Point(22, 16)
+        Me.Label9.Location = New System.Drawing.Point(29, 20)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(175, 42)
         Me.Label9.TabIndex = 0
@@ -127,18 +133,21 @@ Partial Class frmStaffTransactionLine
         Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox3.Controls.Add(Me.btnBack)
-        Me.GroupBox3.Location = New System.Drawing.Point(28, 338)
+        Me.GroupBox3.Location = New System.Drawing.Point(37, 416)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(760, 100)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Size = New System.Drawing.Size(1013, 123)
         Me.GroupBox3.TabIndex = 30
         Me.GroupBox3.TabStop = False
         '
         'btnBack
         '
         Me.btnBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBack.Location = New System.Drawing.Point(623, 34)
+        Me.btnBack.Location = New System.Drawing.Point(831, 42)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(118, 39)
+        Me.btnBack.Size = New System.Drawing.Size(157, 48)
         Me.btnBack.TabIndex = 20
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -166,13 +175,15 @@ Partial Class frmStaffTransactionLine
         '
         'frmStaffTransactionLine
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Brown
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffTransactionLine"
         Me.Text = "frmStaffTransactionLine"

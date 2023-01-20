@@ -42,7 +42,7 @@
 
         Me.ticket = ticket
 
-        lblAuditorium.Text = dtAuditorium.Rows(0)("auditorium_name")
+        lblAuditorium.Text = "Auditorium " & dtAuditorium.Rows(0)("auditorium_name")
         lblMovie.Text = movie.strTitle
         lblPrice.Text = Me.ticket.decPrice.ToString("C")
     End Sub

@@ -23,8 +23,8 @@ Partial Class frmStaffMovie
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStaffMovie))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -65,14 +65,15 @@ Partial Class frmStaffMovie
         '
         'GroupBox2
         '
-        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.BackColor = System.Drawing.Color.Maroon
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 15)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(752, 70)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(1003, 86)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         '
@@ -81,7 +82,8 @@ Partial Class frmStaffMovie
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label9.Location = New System.Drawing.Point(22, 16)
+        Me.Label9.Location = New System.Drawing.Point(29, 20)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(148, 42)
         Me.Label9.TabIndex = 0
@@ -102,9 +104,11 @@ Partial Class frmStaffMovie
         Me.GroupBox1.Controls.Add(Me.txtRelease)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.txtMovie)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 342)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 421)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(625, 240)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(833, 295)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Movie Information"
@@ -112,86 +116,96 @@ Partial Class frmStaffMovie
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(9, 134)
+        Me.Label6.Location = New System.Drawing.Point(12, 165)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(99, 13)
+        Me.Label6.Size = New System.Drawing.Size(121, 16)
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Duration (Minutes): "
         '
         'txtDuration
         '
-        Me.txtDuration.Location = New System.Drawing.Point(112, 131)
+        Me.txtDuration.Location = New System.Drawing.Point(149, 161)
+        Me.txtDuration.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDuration.MaxLength = 50
         Me.txtDuration.Name = "txtDuration"
-        Me.txtDuration.Size = New System.Drawing.Size(227, 20)
+        Me.txtDuration.Size = New System.Drawing.Size(651, 22)
         Me.txtDuration.TabIndex = 12
         '
         'txtDesc
         '
-        Me.txtDesc.Location = New System.Drawing.Point(112, 163)
+        Me.txtDesc.Location = New System.Drawing.Point(149, 201)
+        Me.txtDesc.Margin = New System.Windows.Forms.Padding(4)
         Me.txtDesc.Multiline = True
         Me.txtDesc.Name = "txtDesc"
-        Me.txtDesc.Size = New System.Drawing.Size(227, 65)
+        Me.txtDesc.Size = New System.Drawing.Size(651, 79)
         Me.txtDesc.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(9, 163)
+        Me.Label4.Location = New System.Drawing.Point(12, 201)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(98, 13)
+        Me.Label4.Size = New System.Drawing.Size(122, 16)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Movie Description: "
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(64, 106)
+        Me.Label3.Location = New System.Drawing.Point(85, 130)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(42, 13)
+        Me.Label3.Size = New System.Drawing.Size(51, 16)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Genre :"
         '
         'txtGenre
         '
-        Me.txtGenre.Location = New System.Drawing.Point(112, 103)
+        Me.txtGenre.Location = New System.Drawing.Point(149, 127)
+        Me.txtGenre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtGenre.MaxLength = 50
         Me.txtGenre.Name = "txtGenre"
-        Me.txtGenre.Size = New System.Drawing.Size(227, 20)
+        Me.txtGenre.Size = New System.Drawing.Size(651, 22)
         Me.txtGenre.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(31, 70)
+        Me.Label2.Location = New System.Drawing.Point(41, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 13)
+        Me.Label2.Size = New System.Drawing.Size(95, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Release Date:"
         '
         'txtRelease
         '
-        Me.txtRelease.Location = New System.Drawing.Point(112, 67)
+        Me.txtRelease.Location = New System.Drawing.Point(149, 82)
+        Me.txtRelease.Margin = New System.Windows.Forms.Padding(4)
         Me.txtRelease.MaxLength = 50
         Me.txtRelease.Name = "txtRelease"
-        Me.txtRelease.Size = New System.Drawing.Size(227, 20)
+        Me.txtRelease.Size = New System.Drawing.Size(651, 22)
         Me.txtRelease.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(37, 34)
+        Me.Label1.Location = New System.Drawing.Point(49, 42)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
+        Me.Label1.Size = New System.Drawing.Size(88, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Movie Name:"
         '
         'txtMovie
         '
-        Me.txtMovie.Location = New System.Drawing.Point(112, 31)
+        Me.txtMovie.Location = New System.Drawing.Point(149, 38)
+        Me.txtMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMovie.MaxLength = 50
         Me.txtMovie.Name = "txtMovie"
-        Me.txtMovie.Size = New System.Drawing.Size(227, 20)
+        Me.txtMovie.Size = New System.Drawing.Size(651, 22)
         Me.txtMovie.TabIndex = 0
         '
         'GroupBox3
@@ -201,18 +215,21 @@ Partial Class frmStaffMovie
         Me.GroupBox3.Controls.Add(Me.btnClear)
         Me.GroupBox3.Controls.Add(Me.btnBack)
         Me.GroupBox3.Controls.Add(Me.btnAddMovie)
-        Me.GroupBox3.Location = New System.Drawing.Point(643, 342)
+        Me.GroupBox3.Location = New System.Drawing.Point(857, 421)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(121, 240)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Size = New System.Drawing.Size(161, 295)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         '
         'btnClear
         '
         Me.btnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClear.Location = New System.Drawing.Point(20, 103)
+        Me.btnClear.Location = New System.Drawing.Point(27, 127)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(88, 47)
+        Me.btnClear.Size = New System.Drawing.Size(117, 58)
         Me.btnClear.TabIndex = 21
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -220,9 +237,10 @@ Partial Class frmStaffMovie
         'btnBack
         '
         Me.btnBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBack.Location = New System.Drawing.Point(20, 36)
+        Me.btnBack.Location = New System.Drawing.Point(27, 44)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(88, 47)
+        Me.btnBack.Size = New System.Drawing.Size(117, 58)
         Me.btnBack.TabIndex = 20
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -230,9 +248,10 @@ Partial Class frmStaffMovie
         'btnAddMovie
         '
         Me.btnAddMovie.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddMovie.Location = New System.Drawing.Point(20, 175)
+        Me.btnAddMovie.Location = New System.Drawing.Point(27, 215)
+        Me.btnAddMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddMovie.Name = "btnAddMovie"
-        Me.btnAddMovie.Size = New System.Drawing.Size(88, 47)
+        Me.btnAddMovie.Size = New System.Drawing.Size(117, 58)
         Me.btnAddMovie.TabIndex = 19
         Me.btnAddMovie.Text = "Add Movie"
         Me.btnAddMovie.UseVisualStyleBackColor = True
@@ -244,9 +263,11 @@ Partial Class frmStaffMovie
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox4.Controls.Add(Me.dgvMovie)
-        Me.GroupBox4.Location = New System.Drawing.Point(12, 88)
+        Me.GroupBox4.Location = New System.Drawing.Point(16, 108)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(752, 248)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox4.Size = New System.Drawing.Size(1003, 305)
         Me.GroupBox4.TabIndex = 21
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Movie List"
@@ -256,29 +277,30 @@ Partial Class frmStaffMovie
         Me.dgvMovie.AllowUserToAddRows = False
         Me.dgvMovie.AllowUserToDeleteRows = False
         Me.dgvMovie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvMovie.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvMovie.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvMovie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMovie.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieIMG, Me.movieName, Me.releaseDate, Me.genre, Me.movieDuration, Me.movieDesc})
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvMovie.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvMovie.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvMovie.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvMovie.Location = New System.Drawing.Point(3, 16)
+        Me.dgvMovie.Location = New System.Drawing.Point(4, 19)
+        Me.dgvMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvMovie.Name = "dgvMovie"
         Me.dgvMovie.ReadOnly = True
-        Me.dgvMovie.Size = New System.Drawing.Size(746, 229)
+        Me.dgvMovie.Size = New System.Drawing.Size(995, 282)
         Me.dgvMovie.TabIndex = 0
         '
         'movieIMG
@@ -324,7 +346,7 @@ Partial Class frmStaffMovie
         Me.movieDesc.HeaderText = "Description"
         Me.movieDesc.Name = "movieDesc"
         Me.movieDesc.ReadOnly = True
-        Me.movieDesc.Width = 85
+        Me.movieDesc.Width = 101
         '
         'errorProvider
         '
@@ -341,17 +363,19 @@ Partial Class frmStaffMovie
         '
         'frmStaffMovie
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DarkRed
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
-        Me.ClientSize = New System.Drawing.Size(776, 597)
+        Me.ClientSize = New System.Drawing.Size(1035, 735)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffMovie"
         Me.Text = "Add Movie"

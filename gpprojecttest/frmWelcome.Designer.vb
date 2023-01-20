@@ -47,7 +47,8 @@ Partial Class frmWelcome
         Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuHelp})
         Me.mnuMain.Location = New System.Drawing.Point(0, 0)
         Me.mnuMain.Name = "mnuMain"
-        Me.mnuMain.Size = New System.Drawing.Size(684, 24)
+        Me.mnuMain.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
+        Me.mnuMain.Size = New System.Drawing.Size(912, 24)
         Me.mnuMain.TabIndex = 0
         Me.mnuMain.Text = "MenuStrip1"
         '
@@ -61,14 +62,14 @@ Partial Class frmWelcome
         'mnuFileStaff
         '
         Me.mnuFileStaff.Name = "mnuFileStaff"
-        Me.mnuFileStaff.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileStaff.Size = New System.Drawing.Size(130, 22)
         Me.mnuFileStaff.Text = "&Staff Path"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
+        Me.mnuExit.Size = New System.Drawing.Size(130, 22)
         Me.mnuExit.Text = "E&xit"
         '
         'mnuHelp
@@ -90,7 +91,8 @@ Partial Class frmWelcome
         Me.lblWelcome.BackColor = System.Drawing.SystemColors.Control
         Me.lblWelcome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblWelcome.Font = New System.Drawing.Font("Perpetua Titling MT", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(242, 37)
+        Me.lblWelcome.Location = New System.Drawing.Point(349, 51)
+        Me.lblWelcome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(202, 34)
         Me.lblWelcome.TabIndex = 1
@@ -101,9 +103,10 @@ Partial Class frmWelcome
         Me.btnSignUp.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSignUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSignUp.Location = New System.Drawing.Point(324, 174)
+        Me.btnSignUp.Location = New System.Drawing.Point(432, 214)
+        Me.btnSignUp.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(147, 54)
+        Me.btnSignUp.Size = New System.Drawing.Size(196, 66)
         Me.btnSignUp.TabIndex = 4
         Me.btnSignUp.Text = "SIGN UP"
         Me.btnSignUp.UseVisualStyleBackColor = False
@@ -112,7 +115,8 @@ Partial Class frmWelcome
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Corbel", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(187, 120)
+        Me.Label1.Location = New System.Drawing.Point(277, 148)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(205, 19)
         Me.Label1.TabIndex = 3
@@ -123,9 +127,10 @@ Partial Class frmWelcome
         Me.btnLogin.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(105, 174)
+        Me.btnLogin.Location = New System.Drawing.Point(140, 214)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(147, 54)
+        Me.btnLogin.Size = New System.Drawing.Size(196, 66)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "LOG IN"
         Me.btnLogin.UseVisualStyleBackColor = False
@@ -136,9 +141,10 @@ Partial Class frmWelcome
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = Global.gpprojecttest.My.Resources.Resources.GTAlogo
-        Me.picGTA.Location = New System.Drawing.Point(121, 19)
+        Me.picGTA.Location = New System.Drawing.Point(161, 23)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4)
         Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGTA.TabIndex = 2
         Me.picGTA.TabStop = False
@@ -147,7 +153,8 @@ Partial Class frmWelcome
         '
         Me.lblMain2.AutoSize = True
         Me.lblMain2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMain2.Location = New System.Drawing.Point(178, 279)
+        Me.lblMain2.Location = New System.Drawing.Point(265, 343)
+        Me.lblMain2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMain2.Name = "lblMain2"
         Me.lblMain2.Size = New System.Drawing.Size(239, 16)
         Me.lblMain2.TabIndex = 6
@@ -162,9 +169,11 @@ Partial Class frmWelcome
         Me.GroupBox1.Controls.Add(Me.btnLogin)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.btnSignUp)
-        Me.GroupBox1.Location = New System.Drawing.Point(56, 87)
+        Me.GroupBox1.Location = New System.Drawing.Point(75, 107)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(577, 317)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(769, 390)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " "
@@ -172,25 +181,28 @@ Partial Class frmWelcome
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(493, 281)
+        Me.Label2.Location = New System.Drawing.Point(644, 343)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(82, 16)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "version 1.2"
+        Me.Label2.Text = "version 1.2.2"
         '
         'frmWelcome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.ClientSize = New System.Drawing.Size(912, 512)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.mnuMain)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.mnuMain
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmWelcome"
         Me.Text = "GTA Cinema Ticketing System: Welcome"

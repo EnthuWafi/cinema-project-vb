@@ -78,9 +78,11 @@ Partial Class frmStaffShowtime
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox4.Controls.Add(Me.dgvShowtime)
-        Me.GroupBox4.Location = New System.Drawing.Point(24, 88)
+        Me.GroupBox4.Location = New System.Drawing.Point(32, 108)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(847, 244)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox4.Size = New System.Drawing.Size(1129, 300)
         Me.GroupBox4.TabIndex = 25
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Showtime List"
@@ -93,10 +95,11 @@ Partial Class frmStaffShowtime
         Me.dgvShowtime.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvShowtime.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.showtimeID, Me.movieName, Me.auditoriumName, Me.startTime, Me.endTime, Me.ticketPrice})
         Me.dgvShowtime.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvShowtime.Location = New System.Drawing.Point(3, 16)
+        Me.dgvShowtime.Location = New System.Drawing.Point(4, 19)
+        Me.dgvShowtime.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvShowtime.Name = "dgvShowtime"
         Me.dgvShowtime.ReadOnly = True
-        Me.dgvShowtime.Size = New System.Drawing.Size(841, 225)
+        Me.dgvShowtime.Size = New System.Drawing.Size(1121, 277)
         Me.dgvShowtime.TabIndex = 0
         '
         'showtimeID
@@ -149,18 +152,21 @@ Partial Class frmStaffShowtime
         Me.GroupBox3.Controls.Add(Me.btnClear)
         Me.GroupBox3.Controls.Add(Me.btnBack)
         Me.GroupBox3.Controls.Add(Me.btnAddShowtime)
-        Me.GroupBox3.Location = New System.Drawing.Point(740, 338)
+        Me.GroupBox3.Location = New System.Drawing.Point(987, 416)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(131, 241)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox3.Size = New System.Drawing.Size(175, 297)
         Me.GroupBox3.TabIndex = 24
         Me.GroupBox3.TabStop = False
         '
         'btnClear
         '
         Me.btnClear.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClear.Location = New System.Drawing.Point(15, 107)
+        Me.btnClear.Location = New System.Drawing.Point(20, 132)
+        Me.btnClear.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(101, 48)
+        Me.btnClear.Size = New System.Drawing.Size(135, 59)
         Me.btnClear.TabIndex = 21
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -168,9 +174,10 @@ Partial Class frmStaffShowtime
         'btnBack
         '
         Me.btnBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBack.Location = New System.Drawing.Point(15, 39)
+        Me.btnBack.Location = New System.Drawing.Point(20, 48)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(101, 48)
+        Me.btnBack.Size = New System.Drawing.Size(135, 59)
         Me.btnBack.TabIndex = 20
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -178,9 +185,10 @@ Partial Class frmStaffShowtime
         'btnAddShowtime
         '
         Me.btnAddShowtime.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddShowtime.Location = New System.Drawing.Point(15, 175)
+        Me.btnAddShowtime.Location = New System.Drawing.Point(20, 215)
+        Me.btnAddShowtime.Margin = New System.Windows.Forms.Padding(4)
         Me.btnAddShowtime.Name = "btnAddShowtime"
-        Me.btnAddShowtime.Size = New System.Drawing.Size(101, 48)
+        Me.btnAddShowtime.Size = New System.Drawing.Size(135, 59)
         Me.btnAddShowtime.TabIndex = 19
         Me.btnAddShowtime.Text = "Add Showtime"
         Me.btnAddShowtime.UseVisualStyleBackColor = True
@@ -199,9 +207,11 @@ Partial Class frmStaffShowtime
         Me.GroupBox1.Controls.Add(Me.cboMovie)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 338)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 416)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(710, 241)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox1.Size = New System.Drawing.Size(947, 297)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Movie Information"
@@ -210,9 +220,10 @@ Partial Class frmStaffShowtime
         '
         Me.cboAuditorium.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboAuditorium.FormattingEnabled = True
-        Me.cboAuditorium.Location = New System.Drawing.Point(114, 67)
+        Me.cboAuditorium.Location = New System.Drawing.Point(152, 82)
+        Me.cboAuditorium.Margin = New System.Windows.Forms.Padding(4)
         Me.cboAuditorium.Name = "cboAuditorium"
-        Me.cboAuditorium.Size = New System.Drawing.Size(225, 21)
+        Me.cboAuditorium.Size = New System.Drawing.Size(299, 24)
         Me.cboAuditorium.TabIndex = 24
         '
         'GroupBox5
@@ -224,9 +235,11 @@ Partial Class frmStaffShowtime
         Me.GroupBox5.Controls.Add(Me.Label7)
         Me.GroupBox5.Controls.Add(Me.txtOKU)
         Me.GroupBox5.Controls.Add(Me.Label8)
-        Me.GroupBox5.Location = New System.Drawing.Point(16, 107)
+        Me.GroupBox5.Location = New System.Drawing.Point(21, 132)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(664, 128)
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox5.Size = New System.Drawing.Size(885, 158)
         Me.GroupBox5.TabIndex = 23
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Ticket Price"
@@ -234,88 +247,98 @@ Partial Class frmStaffShowtime
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(42, 27)
+        Me.Label4.Location = New System.Drawing.Point(56, 33)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(34, 13)
+        Me.Label4.Size = New System.Drawing.Size(41, 16)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Adult:"
         '
         'txtAdult
         '
-        Me.txtAdult.Location = New System.Drawing.Point(96, 24)
+        Me.txtAdult.Location = New System.Drawing.Point(128, 30)
+        Me.txtAdult.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAdult.MaxLength = 50
         Me.txtAdult.Name = "txtAdult"
-        Me.txtAdult.Size = New System.Drawing.Size(114, 20)
+        Me.txtAdult.Size = New System.Drawing.Size(151, 22)
         Me.txtAdult.TabIndex = 4
         '
         'txtChildren
         '
-        Me.txtChildren.Location = New System.Drawing.Point(96, 52)
+        Me.txtChildren.Location = New System.Drawing.Point(128, 64)
+        Me.txtChildren.Margin = New System.Windows.Forms.Padding(4)
         Me.txtChildren.MaxLength = 50
         Me.txtChildren.Name = "txtChildren"
-        Me.txtChildren.Size = New System.Drawing.Size(114, 20)
+        Me.txtChildren.Size = New System.Drawing.Size(151, 22)
         Me.txtChildren.TabIndex = 14
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(41, 55)
+        Me.Label7.Location = New System.Drawing.Point(55, 68)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(48, 13)
+        Me.Label7.Size = New System.Drawing.Size(60, 16)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Children:"
         '
         'txtOKU
         '
-        Me.txtOKU.Location = New System.Drawing.Point(96, 80)
+        Me.txtOKU.Location = New System.Drawing.Point(128, 98)
+        Me.txtOKU.Margin = New System.Windows.Forms.Padding(4)
         Me.txtOKU.MaxLength = 50
         Me.txtOKU.Name = "txtOKU"
-        Me.txtOKU.Size = New System.Drawing.Size(114, 20)
+        Me.txtOKU.Size = New System.Drawing.Size(151, 22)
         Me.txtOKU.TabIndex = 16
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(42, 83)
+        Me.Label8.Location = New System.Drawing.Point(56, 102)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(33, 13)
+        Me.Label8.Size = New System.Drawing.Size(39, 16)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "OKU:"
         '
         'dtpDate
         '
         Me.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.dtpDate.Location = New System.Drawing.Point(485, 30)
+        Me.dtpDate.Location = New System.Drawing.Point(647, 37)
+        Me.dtpDate.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(200, 20)
+        Me.dtpDate.Size = New System.Drawing.Size(265, 22)
         Me.dtpDate.TabIndex = 22
         '
         'Label6
         '
         Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(418, 33)
+        Me.Label6.Location = New System.Drawing.Point(557, 41)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(61, 13)
+        Me.Label6.Size = New System.Drawing.Size(73, 16)
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "Start Date: "
         '
         'txtTime
         '
         Me.txtTime.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.txtTime.Location = New System.Drawing.Point(485, 63)
+        Me.txtTime.Location = New System.Drawing.Point(647, 78)
+        Me.txtTime.Margin = New System.Windows.Forms.Padding(4)
         Me.txtTime.MaxLength = 50
         Me.txtTime.Name = "txtTime"
-        Me.txtTime.Size = New System.Drawing.Size(200, 20)
+        Me.txtTime.Size = New System.Drawing.Size(265, 22)
         Me.txtTime.TabIndex = 20
         '
         'Label5
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(372, 70)
+        Me.Label5.Location = New System.Drawing.Point(496, 86)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(107, 13)
+        Me.Label5.Size = New System.Drawing.Size(130, 16)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "Start Time (AM/PM): "
         '
@@ -323,39 +346,43 @@ Partial Class frmStaffShowtime
         '
         Me.cboMovie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMovie.FormattingEnabled = True
-        Me.cboMovie.Location = New System.Drawing.Point(114, 29)
+        Me.cboMovie.Location = New System.Drawing.Point(152, 36)
+        Me.cboMovie.Margin = New System.Windows.Forms.Padding(4)
         Me.cboMovie.Name = "cboMovie"
-        Me.cboMovie.Size = New System.Drawing.Size(225, 21)
+        Me.cboMovie.Size = New System.Drawing.Size(299, 24)
         Me.cboMovie.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 70)
+        Me.Label2.Location = New System.Drawing.Point(17, 86)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(90, 13)
+        Me.Label2.Size = New System.Drawing.Size(114, 16)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Auditorium Name:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(37, 34)
+        Me.Label1.Location = New System.Drawing.Point(49, 42)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 13)
+        Me.Label1.Size = New System.Drawing.Size(88, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Movie Name:"
         '
         'GroupBox2
         '
-        Me.GroupBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox2.BackColor = System.Drawing.Color.Maroon
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Location = New System.Drawing.Point(24, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(32, 15)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(847, 70)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
+        Me.GroupBox2.Size = New System.Drawing.Size(1129, 85)
         Me.GroupBox2.TabIndex = 22
         Me.GroupBox2.TabStop = False
         '
@@ -364,7 +391,8 @@ Partial Class frmStaffShowtime
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.HighlightText
-        Me.Label9.Location = New System.Drawing.Point(22, 16)
+        Me.Label9.Location = New System.Drawing.Point(29, 20)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(224, 42)
         Me.Label9.TabIndex = 0
@@ -409,17 +437,19 @@ Partial Class frmStaffShowtime
         '
         'frmStaffShowtime
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.cinema_red
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(895, 591)
+        Me.ClientSize = New System.Drawing.Size(1193, 727)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffShowtime"
         Me.Text = "Staff: Showtime"

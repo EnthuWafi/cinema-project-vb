@@ -22,7 +22,7 @@ Public Class frmLoginX
 
         If dt.Rows.Count() <= 0 Then
             MessageBox.Show("Invalid Username or Password", "Error!", MessageBoxButtons.OK,
-                            MessageBoxIcon.Exclamation)
+            MessageBoxIcon.Exclamation)
             Return
         End If
 
