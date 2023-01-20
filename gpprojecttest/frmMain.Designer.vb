@@ -63,9 +63,10 @@ Partial Class frmMain
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = CType(resources.GetObject("picGTA.Image"), System.Drawing.Image)
-        Me.picGTA.Location = New System.Drawing.Point(287, 12)
+        Me.picGTA.Location = New System.Drawing.Point(383, 15)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGTA.TabIndex = 3
         Me.picGTA.TabStop = False
@@ -84,9 +85,11 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.cboCategory)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox1.Location = New System.Drawing.Point(375, 397)
+        Me.GroupBox1.Location = New System.Drawing.Point(500, 489)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(526, 111)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(701, 137)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tickets"
@@ -94,9 +97,10 @@ Partial Class frmMain
         'btnSeatSelection
         '
         Me.btnSeatSelection.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnSeatSelection.Location = New System.Drawing.Point(268, 33)
+        Me.btnSeatSelection.Location = New System.Drawing.Point(357, 41)
+        Me.btnSeatSelection.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSeatSelection.Name = "btnSeatSelection"
-        Me.btnSeatSelection.Size = New System.Drawing.Size(103, 26)
+        Me.btnSeatSelection.Size = New System.Drawing.Size(137, 32)
         Me.btnSeatSelection.TabIndex = 11
         Me.btnSeatSelection.Text = "Seat Selection"
         Me.btnSeatSelection.UseVisualStyleBackColor = True
@@ -104,7 +108,8 @@ Partial Class frmMain
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(235, 38)
+        Me.Label5.Location = New System.Drawing.Point(313, 47)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(32, 13)
         Me.Label5.TabIndex = 10
@@ -114,7 +119,8 @@ Partial Class frmMain
         '
         Me.lblTicketCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTicketCount.AutoSize = True
-        Me.lblTicketCount.Location = New System.Drawing.Point(415, 16)
+        Me.lblTicketCount.Location = New System.Drawing.Point(553, 20)
+        Me.lblTicketCount.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTicketCount.Name = "lblTicketCount"
         Me.lblTicketCount.Size = New System.Drawing.Size(80, 13)
         Me.lblTicketCount.TabIndex = 6
@@ -124,9 +130,10 @@ Partial Class frmMain
         '
         Me.btnListOfTicket.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnListOfTicket.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnListOfTicket.Location = New System.Drawing.Point(406, 65)
+        Me.btnListOfTicket.Location = New System.Drawing.Point(541, 80)
+        Me.btnListOfTicket.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnListOfTicket.Name = "btnListOfTicket"
-        Me.btnListOfTicket.Size = New System.Drawing.Size(103, 26)
+        Me.btnListOfTicket.Size = New System.Drawing.Size(137, 32)
         Me.btnListOfTicket.TabIndex = 5
         Me.btnListOfTicket.Text = "List of Tickets"
         Me.btnListOfTicket.UseVisualStyleBackColor = True
@@ -135,9 +142,10 @@ Partial Class frmMain
         '
         Me.btnTicket.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnTicket.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnTicket.Location = New System.Drawing.Point(406, 33)
+        Me.btnTicket.Location = New System.Drawing.Point(541, 41)
+        Me.btnTicket.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnTicket.Name = "btnTicket"
-        Me.btnTicket.Size = New System.Drawing.Size(103, 26)
+        Me.btnTicket.Size = New System.Drawing.Size(137, 32)
         Me.btnTicket.TabIndex = 4
         Me.btnTicket.Text = "Add Ticket"
         Me.btnTicket.UseVisualStyleBackColor = True
@@ -145,7 +153,8 @@ Partial Class frmMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(36, 40)
+        Me.Label2.Location = New System.Drawing.Point(48, 49)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 3
@@ -157,15 +166,17 @@ Partial Class frmMain
         Me.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategory.FormattingEnabled = True
         Me.cboCategory.Items.AddRange(New Object() {"Adult", "Children", "OKU"})
-        Me.cboCategory.Location = New System.Drawing.Point(94, 37)
+        Me.cboCategory.Location = New System.Drawing.Point(125, 46)
+        Me.cboCategory.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboCategory.Name = "cboCategory"
-        Me.cboCategory.Size = New System.Drawing.Size(105, 21)
+        Me.cboCategory.Size = New System.Drawing.Size(139, 21)
         Me.cboCategory.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 40)
+        Me.Label1.Location = New System.Drawing.Point(44, 49)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(70, 13)
         Me.Label1.TabIndex = 1
@@ -175,9 +186,10 @@ Partial Class frmMain
         '
         Me.cboMovie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboMovie.FormattingEnabled = True
-        Me.cboMovie.Location = New System.Drawing.Point(109, 38)
+        Me.cboMovie.Location = New System.Drawing.Point(145, 47)
+        Me.cboMovie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboMovie.Name = "cboMovie"
-        Me.cboMovie.Size = New System.Drawing.Size(185, 21)
+        Me.cboMovie.Size = New System.Drawing.Size(245, 21)
         Me.cboMovie.TabIndex = 0
         '
         'flpMovie
@@ -188,10 +200,11 @@ Partial Class frmMain
         Me.flpMovie.AutoScroll = True
         Me.flpMovie.BackColor = System.Drawing.Color.IndianRed
         Me.flpMovie.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
-        Me.flpMovie.Location = New System.Drawing.Point(35, 88)
+        Me.flpMovie.Location = New System.Drawing.Point(47, 108)
+        Me.flpMovie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.flpMovie.Name = "flpMovie"
-        Me.flpMovie.Padding = New System.Windows.Forms.Padding(3)
-        Me.flpMovie.Size = New System.Drawing.Size(866, 303)
+        Me.flpMovie.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.flpMovie.Size = New System.Drawing.Size(1155, 373)
         Me.flpMovie.TabIndex = 6
         '
         'GroupBox2
@@ -202,9 +215,11 @@ Partial Class frmMain
         Me.GroupBox2.Controls.Add(Me.cboMovie)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.GroupBox2.Location = New System.Drawing.Point(35, 397)
+        Me.GroupBox2.Location = New System.Drawing.Point(47, 489)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(334, 111)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Size = New System.Drawing.Size(445, 137)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Movies"
@@ -216,9 +231,10 @@ Partial Class frmMain
         Me.btnProceed.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnProceed.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnProceed.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnProceed.Location = New System.Drawing.Point(774, 523)
+        Me.btnProceed.Location = New System.Drawing.Point(1032, 644)
+        Me.btnProceed.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnProceed.Name = "btnProceed"
-        Me.btnProceed.Size = New System.Drawing.Size(115, 37)
+        Me.btnProceed.Size = New System.Drawing.Size(153, 46)
         Me.btnProceed.TabIndex = 9
         Me.btnProceed.Text = "Next"
         Me.btnProceed.UseVisualStyleBackColor = False
@@ -226,9 +242,10 @@ Partial Class frmMain
         'dtpDate
         '
         Me.dtpDate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpDate.Location = New System.Drawing.Point(670, 62)
+        Me.dtpDate.Location = New System.Drawing.Point(893, 76)
+        Me.dtpDate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dtpDate.Name = "dtpDate"
-        Me.dtpDate.Size = New System.Drawing.Size(200, 20)
+        Me.dtpDate.Size = New System.Drawing.Size(265, 22)
         Me.dtpDate.TabIndex = 1
         Me.dtpDate.Value = New Date(2023, 1, 9, 0, 0, 0, 0)
         '
@@ -237,7 +254,8 @@ Partial Class frmMain
         Me.Label6.AutoSize = True
         Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(35, 49)
+        Me.Label6.Location = New System.Drawing.Point(47, 60)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(201, 33)
         Me.Label6.TabIndex = 10
@@ -248,9 +266,10 @@ Partial Class frmMain
         Me.lblPrice.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblPrice.BackColor = System.Drawing.SystemColors.Control
         Me.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblPrice.Location = New System.Drawing.Point(251, 523)
+        Me.lblPrice.Location = New System.Drawing.Point(335, 644)
+        Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(200, 21)
+        Me.lblPrice.Size = New System.Drawing.Size(267, 26)
         Me.lblPrice.TabIndex = 12
         Me.lblPrice.Text = "Price:"
         '
@@ -259,9 +278,10 @@ Partial Class frmMain
         Me.lblMovie.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.lblMovie.BackColor = System.Drawing.SystemColors.Control
         Me.lblMovie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblMovie.Location = New System.Drawing.Point(35, 523)
+        Me.lblMovie.Location = New System.Drawing.Point(47, 644)
+        Me.lblMovie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMovie.Name = "lblMovie"
-        Me.lblMovie.Size = New System.Drawing.Size(200, 21)
+        Me.lblMovie.Size = New System.Drawing.Size(267, 26)
         Me.lblMovie.TabIndex = 11
         Me.lblMovie.Text = "Movie: "
         '
@@ -271,9 +291,10 @@ Partial Class frmMain
         Me.lblSeat.BackColor = System.Drawing.SystemColors.Control
         Me.lblSeat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblSeat.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblSeat.Location = New System.Drawing.Point(469, 523)
+        Me.lblSeat.Location = New System.Drawing.Point(625, 644)
+        Me.lblSeat.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSeat.Name = "lblSeat"
-        Me.lblSeat.Size = New System.Drawing.Size(160, 21)
+        Me.lblSeat.Size = New System.Drawing.Size(213, 26)
         Me.lblSeat.TabIndex = 13
         Me.lblSeat.Text = "Seat Number:"
         '
@@ -312,11 +333,11 @@ Partial Class frmMain
         '
         'frmMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(913, 601)
+        Me.ClientSize = New System.Drawing.Size(1217, 740)
         Me.Controls.Add(Me.lblSeat)
         Me.Controls.Add(Me.lblPrice)
         Me.Controls.Add(Me.Label6)
@@ -327,7 +348,9 @@ Partial Class frmMain
         Me.Controls.Add(Me.flpMovie)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.picGTA)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.Text = "Cinema: Main"

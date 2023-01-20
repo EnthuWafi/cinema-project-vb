@@ -44,6 +44,6 @@
 
     Private Sub mnuFileStaff_Click(sender As Object, e As EventArgs) Handles mnuFileStaff.Click
         Me.Hide()
-        myStaff.ShowDialog()
+        myStaff.Show()
     End Sub
 End Class

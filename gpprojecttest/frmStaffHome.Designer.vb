@@ -40,35 +40,40 @@ Partial Class frmStaffHome
         Me.GroupBox1.Controls.Add(Me.btnInvoice)
         Me.GroupBox1.Controls.Add(Me.btnShowtimes)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 105)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 129)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(611, 136)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(815, 167)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
         'btnMovie
         '
-        Me.btnMovie.Location = New System.Drawing.Point(28, 62)
+        Me.btnMovie.Location = New System.Drawing.Point(37, 76)
+        Me.btnMovie.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMovie.Name = "btnMovie"
-        Me.btnMovie.Size = New System.Drawing.Size(181, 53)
+        Me.btnMovie.Size = New System.Drawing.Size(241, 65)
         Me.btnMovie.TabIndex = 5
         Me.btnMovie.Text = "Movies"
         Me.btnMovie.UseVisualStyleBackColor = True
         '
         'btnInvoice
         '
-        Me.btnInvoice.Location = New System.Drawing.Point(402, 62)
+        Me.btnInvoice.Location = New System.Drawing.Point(536, 76)
+        Me.btnInvoice.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnInvoice.Name = "btnInvoice"
-        Me.btnInvoice.Size = New System.Drawing.Size(181, 53)
+        Me.btnInvoice.Size = New System.Drawing.Size(241, 65)
         Me.btnInvoice.TabIndex = 4
         Me.btnInvoice.Text = "View Transaction"
         Me.btnInvoice.UseVisualStyleBackColor = True
         '
         'btnShowtimes
         '
-        Me.btnShowtimes.Location = New System.Drawing.Point(215, 62)
+        Me.btnShowtimes.Location = New System.Drawing.Point(287, 76)
+        Me.btnShowtimes.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnShowtimes.Name = "btnShowtimes"
-        Me.btnShowtimes.Size = New System.Drawing.Size(181, 53)
+        Me.btnShowtimes.Size = New System.Drawing.Size(241, 65)
         Me.btnShowtimes.TabIndex = 2
         Me.btnShowtimes.Text = "Showtimes"
         Me.btnShowtimes.UseVisualStyleBackColor = True
@@ -77,7 +82,8 @@ Partial Class frmStaffHome
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(244, 16)
+        Me.Label1.Location = New System.Drawing.Point(325, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(137, 24)
         Me.Label1.TabIndex = 0
@@ -89,23 +95,26 @@ Partial Class frmStaffHome
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = Global.gpprojecttest.My.Resources.Resources.GTAlogo
-        Me.picGTA.Location = New System.Drawing.Point(171, 12)
+        Me.picGTA.Location = New System.Drawing.Point(228, 15)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGTA.TabIndex = 3
         Me.picGTA.TabStop = False
         '
         'frmStaffHome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Firebrick
-        Me.ClientSize = New System.Drawing.Size(635, 259)
+        Me.ClientSize = New System.Drawing.Size(847, 319)
         Me.Controls.Add(Me.picGTA)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffHome"
         Me.Text = "Staff Home Page"

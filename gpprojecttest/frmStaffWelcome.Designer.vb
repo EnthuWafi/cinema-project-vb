@@ -27,14 +27,12 @@ Partial Class frmStaffWelcome
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileCustomer = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblMain2 = New System.Windows.Forms.Label()
-        Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.mnuMain.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -42,10 +40,10 @@ Partial Class frmStaffWelcome
         '
         'mnuMain
         '
-        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuHelp})
+        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile})
         Me.mnuMain.Location = New System.Drawing.Point(0, 0)
         Me.mnuMain.Name = "mnuMain"
-        Me.mnuMain.Size = New System.Drawing.Size(684, 24)
+        Me.mnuMain.Size = New System.Drawing.Size(912, 24)
         Me.mnuMain.TabIndex = 1
         Me.mnuMain.Text = "MenuStrip1"
         '
@@ -59,28 +57,15 @@ Partial Class frmStaffWelcome
         'mnuFileCustomer
         '
         Me.mnuFileCustomer.Name = "mnuFileCustomer"
-        Me.mnuFileCustomer.Size = New System.Drawing.Size(153, 22)
+        Me.mnuFileCustomer.Size = New System.Drawing.Size(180, 22)
         Me.mnuFileCustomer.Text = "&Customer Path"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuExit.Size = New System.Drawing.Size(153, 22)
+        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
         Me.mnuExit.Text = "E&xit"
-        '
-        'mnuHelp
-        '
-        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuAbout})
-        Me.mnuHelp.Name = "mnuHelp"
-        Me.mnuHelp.Size = New System.Drawing.Size(44, 20)
-        Me.mnuHelp.Text = "Help"
-        '
-        'mnuAbout
-        '
-        Me.mnuAbout.Name = "mnuAbout"
-        Me.mnuAbout.Size = New System.Drawing.Size(107, 22)
-        Me.mnuAbout.Text = "&About"
         '
         'lblWelcome
         '
@@ -88,7 +73,7 @@ Partial Class frmStaffWelcome
         Me.lblWelcome.BackColor = System.Drawing.SystemColors.Control
         Me.lblWelcome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblWelcome.Font = New System.Drawing.Font("Perpetua Titling MT", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(241, 34)
+        Me.lblWelcome.Location = New System.Drawing.Point(355, 34)
         Me.lblWelcome.Name = "lblWelcome"
         Me.lblWelcome.Size = New System.Drawing.Size(202, 34)
         Me.lblWelcome.TabIndex = 9
@@ -96,14 +81,17 @@ Partial Class frmStaffWelcome
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.GroupBox1.Controls.Add(Me.lblMain2)
         Me.GroupBox1.Controls.Add(Me.picGTA)
+        Me.GroupBox1.Controls.Add(Me.lblMain2)
         Me.GroupBox1.Controls.Add(Me.btnEnter)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(54, 84)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(577, 317)
+        Me.GroupBox1.Size = New System.Drawing.Size(805, 413)
         Me.GroupBox1.TabIndex = 10
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " "
@@ -112,33 +100,20 @@ Partial Class frmStaffWelcome
         '
         Me.lblMain2.AutoSize = True
         Me.lblMain2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMain2.Location = New System.Drawing.Point(178, 279)
+        Me.lblMain2.Location = New System.Drawing.Point(283, 367)
         Me.lblMain2.Name = "lblMain2"
         Me.lblMain2.Size = New System.Drawing.Size(239, 16)
         Me.lblMain2.TabIndex = 6
         Me.lblMain2.Text = "2022 (C) SANWAD ENTERTAINMENT"
-        '
-        'picGTA
-        '
-        Me.picGTA.BackColor = System.Drawing.Color.Snow
-        Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.picGTA.Image = Global.gpprojecttest.My.Resources.Resources.GTAlogo
-        Me.picGTA.Location = New System.Drawing.Point(121, 19)
-        Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
-        Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.picGTA.TabIndex = 2
-        Me.picGTA.TabStop = False
         '
         'btnEnter
         '
         Me.btnEnter.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnter.Location = New System.Drawing.Point(215, 174)
+        Me.btnEnter.Location = New System.Drawing.Point(284, 238)
         Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(147, 54)
+        Me.btnEnter.Size = New System.Drawing.Size(236, 68)
         Me.btnEnter.TabIndex = 5
         Me.btnEnter.Text = "ENTER"
         Me.btnEnter.UseVisualStyleBackColor = False
@@ -147,11 +122,25 @@ Partial Class frmStaffWelcome
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Corbel", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(122, 120)
+        Me.Label1.Location = New System.Drawing.Point(236, 149)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(333, 19)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "CINEMA MANAGEMENT SYSTEM (STAFF ONLY)"
+        '
+        'picGTA
+        '
+        Me.picGTA.BackColor = System.Drawing.Color.Snow
+        Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.picGTA.Image = Global.gpprojecttest.My.Resources.Resources.GTAlogo
+        Me.picGTA.Location = New System.Drawing.Point(178, 32)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4)
+        Me.picGTA.Name = "picGTA"
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
+        Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picGTA.TabIndex = 7
+        Me.picGTA.TabStop = False
         '
         'frmStaffWelcome
         '
@@ -159,7 +148,7 @@ Partial Class frmStaffWelcome
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(684, 416)
+        Me.ClientSize = New System.Drawing.Size(912, 512)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.mnuMain)
@@ -180,12 +169,10 @@ Partial Class frmStaffWelcome
     Friend WithEvents mnuFile As ToolStripMenuItem
     Friend WithEvents mnuFileCustomer As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
-    Friend WithEvents mnuHelp As ToolStripMenuItem
-    Friend WithEvents mnuAbout As ToolStripMenuItem
     Friend WithEvents lblWelcome As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents lblMain2 As Label
-    Friend WithEvents picGTA As PictureBox
     Friend WithEvents btnEnter As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents picGTA As PictureBox
 End Class

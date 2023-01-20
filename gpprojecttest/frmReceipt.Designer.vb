@@ -70,9 +70,11 @@ Partial Class frmReceipt
         Me.GroupBox.Controls.Add(Me.Panel2)
         Me.GroupBox.Controls.Add(Me.Panel1)
         Me.GroupBox.Controls.Add(Me.Label1)
-        Me.GroupBox.Location = New System.Drawing.Point(46, 88)
+        Me.GroupBox.Location = New System.Drawing.Point(61, 108)
+        Me.GroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox.Name = "GroupBox"
-        Me.GroupBox.Size = New System.Drawing.Size(564, 331)
+        Me.GroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox.Size = New System.Drawing.Size(752, 407)
         Me.GroupBox.TabIndex = 0
         Me.GroupBox.TabStop = False
         '
@@ -89,80 +91,89 @@ Partial Class frmReceipt
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
-        Me.Panel2.Location = New System.Drawing.Point(28, 202)
+        Me.Panel2.Location = New System.Drawing.Point(37, 249)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(501, 123)
+        Me.Panel2.Size = New System.Drawing.Size(668, 151)
         Me.Panel2.TabIndex = 2
         '
         'lblNet
         '
         Me.lblNet.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblNet.Location = New System.Drawing.Point(280, 92)
+        Me.lblNet.Location = New System.Drawing.Point(373, 113)
+        Me.lblNet.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblNet.Name = "lblNet"
-        Me.lblNet.Size = New System.Drawing.Size(202, 19)
+        Me.lblNet.Size = New System.Drawing.Size(269, 23)
         Me.lblNet.TabIndex = 9
         Me.lblNet.Text = "RM"
         '
         'lblTax
         '
         Me.lblTax.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblTax.Location = New System.Drawing.Point(280, 65)
+        Me.lblTax.Location = New System.Drawing.Point(373, 80)
+        Me.lblTax.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTax.Name = "lblTax"
-        Me.lblTax.Size = New System.Drawing.Size(202, 19)
+        Me.lblTax.Size = New System.Drawing.Size(269, 23)
         Me.lblTax.TabIndex = 8
         Me.lblTax.Text = "RM"
         '
         'lblDiscount
         '
         Me.lblDiscount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblDiscount.Location = New System.Drawing.Point(280, 38)
+        Me.lblDiscount.Location = New System.Drawing.Point(373, 47)
+        Me.lblDiscount.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDiscount.Name = "lblDiscount"
-        Me.lblDiscount.Size = New System.Drawing.Size(202, 19)
+        Me.lblDiscount.Size = New System.Drawing.Size(269, 23)
         Me.lblDiscount.TabIndex = 7
         Me.lblDiscount.Text = "RM"
         '
         'lblPrice
         '
         Me.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblPrice.Location = New System.Drawing.Point(280, 8)
+        Me.lblPrice.Location = New System.Drawing.Point(373, 10)
+        Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(202, 19)
+        Me.lblPrice.Size = New System.Drawing.Size(269, 23)
         Me.lblPrice.TabIndex = 6
         Me.lblPrice.Text = "RM"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(36, 98)
+        Me.Label10.Location = New System.Drawing.Point(48, 121)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(93, 13)
+        Me.Label10.Size = New System.Drawing.Size(114, 16)
         Me.Label10.TabIndex = 3
         Me.Label10.Text = "NET PRICE (RM):"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(95, 71)
+        Me.Label9.Location = New System.Drawing.Point(127, 87)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(31, 13)
+        Me.Label9.Size = New System.Drawing.Size(37, 16)
         Me.Label9.TabIndex = 2
         Me.Label9.Text = "TAX:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(65, 44)
+        Me.Label8.Location = New System.Drawing.Point(87, 54)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(66, 13)
+        Me.Label8.Size = New System.Drawing.Size(81, 16)
         Me.Label8.TabIndex = 1
         Me.Label8.Text = "DISCOUNT:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(22, 14)
+        Me.Label7.Location = New System.Drawing.Point(29, 17)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 13)
+        Me.Label7.Size = New System.Drawing.Size(133, 16)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "TOTAL PRICE (RM): "
         '
@@ -175,9 +186,10 @@ Partial Class frmReceipt
         Me.Panel1.Controls.Add(Me.lblDate)
         Me.Panel1.Controls.Add(Me.lblPurchaseID)
         Me.Panel1.Controls.Add(Me.lblName)
-        Me.Panel1.Location = New System.Drawing.Point(28, 32)
+        Me.Panel1.Location = New System.Drawing.Point(37, 39)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(501, 164)
+        Me.Panel1.Size = New System.Drawing.Size(668, 202)
         Me.Panel1.TabIndex = 1
         '
         'dgvReceipt
@@ -187,10 +199,11 @@ Partial Class frmReceipt
         Me.dgvReceipt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvReceipt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieName, Me.price})
-        Me.dgvReceipt.Location = New System.Drawing.Point(25, 60)
+        Me.dgvReceipt.Location = New System.Drawing.Point(33, 74)
+        Me.dgvReceipt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.dgvReceipt.Name = "dgvReceipt"
         Me.dgvReceipt.ReadOnly = True
-        Me.dgvReceipt.Size = New System.Drawing.Size(457, 92)
+        Me.dgvReceipt.Size = New System.Drawing.Size(609, 113)
         Me.dgvReceipt.TabIndex = 6
         '
         'movieName
@@ -208,27 +221,30 @@ Partial Class frmReceipt
         'lblDate
         '
         Me.lblDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblDate.Location = New System.Drawing.Point(280, 9)
+        Me.lblDate.Location = New System.Drawing.Point(373, 11)
+        Me.lblDate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(202, 19)
+        Me.lblDate.Size = New System.Drawing.Size(269, 23)
         Me.lblDate.TabIndex = 5
         Me.lblDate.Text = "Date: "
         '
         'lblPurchaseID
         '
         Me.lblPurchaseID.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblPurchaseID.Location = New System.Drawing.Point(25, 37)
+        Me.lblPurchaseID.Location = New System.Drawing.Point(33, 46)
+        Me.lblPurchaseID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPurchaseID.Name = "lblPurchaseID"
-        Me.lblPurchaseID.Size = New System.Drawing.Size(236, 19)
+        Me.lblPurchaseID.Size = New System.Drawing.Size(315, 23)
         Me.lblPurchaseID.TabIndex = 4
         Me.lblPurchaseID.Text = "Purchase ID: "
         '
         'lblName
         '
         Me.lblName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblName.Location = New System.Drawing.Point(25, 9)
+        Me.lblName.Location = New System.Drawing.Point(33, 11)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(236, 19)
+        Me.lblName.Size = New System.Drawing.Size(315, 23)
         Me.lblName.TabIndex = 3
         Me.lblName.Text = "Name: "
         '
@@ -236,7 +252,8 @@ Partial Class frmReceipt
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(242, 11)
+        Me.Label1.Location = New System.Drawing.Point(323, 14)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(79, 18)
         Me.Label1.TabIndex = 0
@@ -249,9 +266,10 @@ Partial Class frmReceipt
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = CType(resources.GetObject("picGTA.Image"), System.Drawing.Image)
-        Me.picGTA.Location = New System.Drawing.Point(172, 12)
+        Me.picGTA.Location = New System.Drawing.Point(229, 15)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGTA.TabIndex = 5
         Me.picGTA.TabStop = False
@@ -261,35 +279,40 @@ Partial Class frmReceipt
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.btnExit)
         Me.GroupBox1.Controls.Add(Me.btnPrint)
-        Me.GroupBox1.Location = New System.Drawing.Point(46, 425)
+        Me.GroupBox1.Location = New System.Drawing.Point(61, 523)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(564, 81)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(752, 100)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(25, 16)
+        Me.Label2.Location = New System.Drawing.Point(33, 20)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.Size = New System.Drawing.Size(66, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "** 5% Tax"
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(427, 19)
+        Me.btnExit.Location = New System.Drawing.Point(569, 23)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(113, 37)
+        Me.btnExit.Size = New System.Drawing.Size(151, 46)
         Me.btnExit.TabIndex = 1
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnPrint
         '
-        Me.btnPrint.Location = New System.Drawing.Point(308, 19)
+        Me.btnPrint.Location = New System.Drawing.Point(411, 23)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnPrint.Name = "btnPrint"
-        Me.btnPrint.Size = New System.Drawing.Size(113, 37)
+        Me.btnPrint.Size = New System.Drawing.Size(151, 46)
         Me.btnPrint.TabIndex = 0
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
@@ -340,14 +363,16 @@ Partial Class frmReceipt
         '
         'frmReceipt
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(658, 518)
+        Me.ClientSize = New System.Drawing.Size(877, 638)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.picGTA)
         Me.Controls.Add(Me.GroupBox)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmReceipt"
         Me.Text = "Receipt"
         Me.GroupBox.ResumeLayout(False)

@@ -75,9 +75,10 @@ Partial Class frmSeatSelection
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = CType(resources.GetObject("picGTA.Image"), System.Drawing.Image)
-        Me.picGTA.Location = New System.Drawing.Point(209, 12)
+        Me.picGTA.Location = New System.Drawing.Point(279, 15)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.picGTA.Name = "picGTA"
-        Me.picGTA.Size = New System.Drawing.Size(338, 70)
+        Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.picGTA.TabIndex = 4
         Me.picGTA.TabStop = False
@@ -90,9 +91,11 @@ Partial Class frmSeatSelection
         Me.GroupBox1.Controls.Add(Me.btnCancel)
         Me.GroupBox1.Controls.Add(Me.btnConfirm)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(40, 370)
+        Me.GroupBox1.Location = New System.Drawing.Point(53, 455)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(674, 136)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(899, 167)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
@@ -100,9 +103,10 @@ Partial Class frmSeatSelection
         '
         Me.lblPrice.BackColor = System.Drawing.SystemColors.Control
         Me.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblPrice.Location = New System.Drawing.Point(48, 76)
+        Me.lblPrice.Location = New System.Drawing.Point(64, 94)
+        Me.lblPrice.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPrice.Name = "lblPrice"
-        Me.lblPrice.Size = New System.Drawing.Size(200, 21)
+        Me.lblPrice.Size = New System.Drawing.Size(267, 26)
         Me.lblPrice.TabIndex = 4
         Me.lblPrice.Text = "Price:"
         '
@@ -110,26 +114,29 @@ Partial Class frmSeatSelection
         '
         Me.lblMovie.BackColor = System.Drawing.SystemColors.Control
         Me.lblMovie.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblMovie.Location = New System.Drawing.Point(48, 48)
+        Me.lblMovie.Location = New System.Drawing.Point(64, 59)
+        Me.lblMovie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblMovie.Name = "lblMovie"
-        Me.lblMovie.Size = New System.Drawing.Size(200, 21)
+        Me.lblMovie.Size = New System.Drawing.Size(267, 26)
         Me.lblMovie.TabIndex = 3
         Me.lblMovie.Text = "Movie: "
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(544, 85)
+        Me.btnCancel.Location = New System.Drawing.Point(725, 105)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 32)
+        Me.btnCancel.Size = New System.Drawing.Size(149, 39)
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnConfirm
         '
-        Me.btnConfirm.Location = New System.Drawing.Point(426, 85)
+        Me.btnConfirm.Location = New System.Drawing.Point(568, 105)
+        Me.btnConfirm.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnConfirm.Name = "btnConfirm"
-        Me.btnConfirm.Size = New System.Drawing.Size(112, 32)
+        Me.btnConfirm.Size = New System.Drawing.Size(149, 39)
         Me.btnConfirm.TabIndex = 1
         Me.btnConfirm.Text = "Confirm"
         Me.btnConfirm.UseVisualStyleBackColor = True
@@ -138,9 +145,10 @@ Partial Class frmSeatSelection
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(15, 16)
+        Me.Label1.Location = New System.Drawing.Point(20, 20)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 13)
+        Me.Label1.Size = New System.Drawing.Size(295, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "**Disabled Seat are seats that are already taken"
         '
@@ -170,9 +178,11 @@ Partial Class frmSeatSelection
         Me.grpSeatSelection.Controls.Add(Me.RadioButton2)
         Me.grpSeatSelection.Controls.Add(Me.RadioButton1)
         Me.grpSeatSelection.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.grpSeatSelection.Location = New System.Drawing.Point(40, 88)
+        Me.grpSeatSelection.Location = New System.Drawing.Point(53, 108)
+        Me.grpSeatSelection.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpSeatSelection.Name = "grpSeatSelection"
-        Me.grpSeatSelection.Size = New System.Drawing.Size(674, 276)
+        Me.grpSeatSelection.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpSeatSelection.Size = New System.Drawing.Size(899, 340)
         Me.grpSeatSelection.TabIndex = 6
         Me.grpSeatSelection.TabStop = False
         Me.grpSeatSelection.Text = "Seat Selection"
@@ -183,18 +193,20 @@ Partial Class frmSeatSelection
         Me.lblAuditorium.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblAuditorium.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAuditorium.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.lblAuditorium.Location = New System.Drawing.Point(33, 28)
+        Me.lblAuditorium.Location = New System.Drawing.Point(44, 34)
+        Me.lblAuditorium.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAuditorium.Name = "lblAuditorium"
-        Me.lblAuditorium.Size = New System.Drawing.Size(191, 22)
+        Me.lblAuditorium.Size = New System.Drawing.Size(255, 27)
         Me.lblAuditorium.TabIndex = 21
         Me.lblAuditorium.Text = "Auditorium: "
         '
         'RadioButton15
         '
         Me.RadioButton15.AutoSize = True
-        Me.RadioButton15.Location = New System.Drawing.Point(529, 216)
+        Me.RadioButton15.Location = New System.Drawing.Point(705, 266)
+        Me.RadioButton15.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton15.Name = "RadioButton15"
-        Me.RadioButton15.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton15.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton15.TabIndex = 20
         Me.RadioButton15.Text = "21"
         Me.RadioButton15.UseVisualStyleBackColor = True
@@ -202,9 +214,10 @@ Partial Class frmSeatSelection
         'RadioButton16
         '
         Me.RadioButton16.AutoSize = True
-        Me.RadioButton16.Location = New System.Drawing.Point(475, 216)
+        Me.RadioButton16.Location = New System.Drawing.Point(633, 266)
+        Me.RadioButton16.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton16.Name = "RadioButton16"
-        Me.RadioButton16.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton16.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton16.TabIndex = 19
         Me.RadioButton16.Text = "20"
         Me.RadioButton16.UseVisualStyleBackColor = True
@@ -212,9 +225,10 @@ Partial Class frmSeatSelection
         'RadioButton17
         '
         Me.RadioButton17.AutoSize = True
-        Me.RadioButton17.Location = New System.Drawing.Point(372, 216)
+        Me.RadioButton17.Location = New System.Drawing.Point(496, 266)
+        Me.RadioButton17.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton17.Name = "RadioButton17"
-        Me.RadioButton17.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton17.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton17.TabIndex = 18
         Me.RadioButton17.Text = "19"
         Me.RadioButton17.UseVisualStyleBackColor = True
@@ -222,9 +236,10 @@ Partial Class frmSeatSelection
         'RadioButton18
         '
         Me.RadioButton18.AutoSize = True
-        Me.RadioButton18.Location = New System.Drawing.Point(318, 216)
+        Me.RadioButton18.Location = New System.Drawing.Point(424, 266)
+        Me.RadioButton18.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton18.Name = "RadioButton18"
-        Me.RadioButton18.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton18.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton18.TabIndex = 17
         Me.RadioButton18.Text = "18"
         Me.RadioButton18.UseVisualStyleBackColor = True
@@ -232,9 +247,10 @@ Partial Class frmSeatSelection
         'RadioButton19
         '
         Me.RadioButton19.AutoSize = True
-        Me.RadioButton19.Location = New System.Drawing.Point(264, 216)
+        Me.RadioButton19.Location = New System.Drawing.Point(352, 266)
+        Me.RadioButton19.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton19.Name = "RadioButton19"
-        Me.RadioButton19.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton19.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton19.TabIndex = 16
         Me.RadioButton19.Text = "17"
         Me.RadioButton19.UseVisualStyleBackColor = True
@@ -242,9 +258,10 @@ Partial Class frmSeatSelection
         'RadioButton20
         '
         Me.RadioButton20.AutoSize = True
-        Me.RadioButton20.Location = New System.Drawing.Point(156, 216)
+        Me.RadioButton20.Location = New System.Drawing.Point(208, 266)
+        Me.RadioButton20.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton20.Name = "RadioButton20"
-        Me.RadioButton20.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton20.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton20.TabIndex = 15
         Me.RadioButton20.Text = "16"
         Me.RadioButton20.UseVisualStyleBackColor = True
@@ -252,9 +269,10 @@ Partial Class frmSeatSelection
         'RadioButton21
         '
         Me.RadioButton21.AutoSize = True
-        Me.RadioButton21.Location = New System.Drawing.Point(102, 216)
+        Me.RadioButton21.Location = New System.Drawing.Point(136, 266)
+        Me.RadioButton21.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton21.Name = "RadioButton21"
-        Me.RadioButton21.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton21.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton21.TabIndex = 14
         Me.RadioButton21.Text = "15"
         Me.RadioButton21.UseVisualStyleBackColor = True
@@ -262,9 +280,10 @@ Partial Class frmSeatSelection
         'RadioButton8
         '
         Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Location = New System.Drawing.Point(529, 155)
+        Me.RadioButton8.Location = New System.Drawing.Point(705, 191)
+        Me.RadioButton8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton8.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton8.TabIndex = 13
         Me.RadioButton8.Text = "14"
         Me.RadioButton8.UseVisualStyleBackColor = True
@@ -272,9 +291,10 @@ Partial Class frmSeatSelection
         'RadioButton9
         '
         Me.RadioButton9.AutoSize = True
-        Me.RadioButton9.Location = New System.Drawing.Point(475, 155)
+        Me.RadioButton9.Location = New System.Drawing.Point(633, 191)
+        Me.RadioButton9.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton9.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton9.TabIndex = 12
         Me.RadioButton9.Text = "13"
         Me.RadioButton9.UseVisualStyleBackColor = True
@@ -282,9 +302,10 @@ Partial Class frmSeatSelection
         'RadioButton10
         '
         Me.RadioButton10.AutoSize = True
-        Me.RadioButton10.Location = New System.Drawing.Point(372, 155)
+        Me.RadioButton10.Location = New System.Drawing.Point(496, 191)
+        Me.RadioButton10.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton10.Name = "RadioButton10"
-        Me.RadioButton10.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton10.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton10.TabIndex = 11
         Me.RadioButton10.Text = "12"
         Me.RadioButton10.UseVisualStyleBackColor = True
@@ -292,9 +313,10 @@ Partial Class frmSeatSelection
         'RadioButton11
         '
         Me.RadioButton11.AutoSize = True
-        Me.RadioButton11.Location = New System.Drawing.Point(318, 155)
+        Me.RadioButton11.Location = New System.Drawing.Point(424, 191)
+        Me.RadioButton11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton11.Name = "RadioButton11"
-        Me.RadioButton11.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton11.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton11.TabIndex = 10
         Me.RadioButton11.Text = "11"
         Me.RadioButton11.UseVisualStyleBackColor = True
@@ -302,9 +324,10 @@ Partial Class frmSeatSelection
         'RadioButton12
         '
         Me.RadioButton12.AutoSize = True
-        Me.RadioButton12.Location = New System.Drawing.Point(264, 155)
+        Me.RadioButton12.Location = New System.Drawing.Point(352, 191)
+        Me.RadioButton12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton12.Name = "RadioButton12"
-        Me.RadioButton12.Size = New System.Drawing.Size(37, 17)
+        Me.RadioButton12.Size = New System.Drawing.Size(40, 20)
         Me.RadioButton12.TabIndex = 9
         Me.RadioButton12.Text = "10"
         Me.RadioButton12.UseVisualStyleBackColor = True
@@ -312,9 +335,10 @@ Partial Class frmSeatSelection
         'RadioButton13
         '
         Me.RadioButton13.AutoSize = True
-        Me.RadioButton13.Location = New System.Drawing.Point(156, 155)
+        Me.RadioButton13.Location = New System.Drawing.Point(208, 191)
+        Me.RadioButton13.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton13.Name = "RadioButton13"
-        Me.RadioButton13.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton13.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton13.TabIndex = 8
         Me.RadioButton13.Text = "9"
         Me.RadioButton13.UseVisualStyleBackColor = True
@@ -322,9 +346,10 @@ Partial Class frmSeatSelection
         'RadioButton14
         '
         Me.RadioButton14.AutoSize = True
-        Me.RadioButton14.Location = New System.Drawing.Point(102, 155)
+        Me.RadioButton14.Location = New System.Drawing.Point(136, 191)
+        Me.RadioButton14.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton14.Name = "RadioButton14"
-        Me.RadioButton14.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton14.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton14.TabIndex = 7
         Me.RadioButton14.Text = "8"
         Me.RadioButton14.UseVisualStyleBackColor = True
@@ -332,9 +357,10 @@ Partial Class frmSeatSelection
         'RadioButton7
         '
         Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Location = New System.Drawing.Point(529, 94)
+        Me.RadioButton7.Location = New System.Drawing.Point(705, 116)
+        Me.RadioButton7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton7.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton7.TabIndex = 6
         Me.RadioButton7.Text = "7"
         Me.RadioButton7.UseVisualStyleBackColor = True
@@ -342,9 +368,10 @@ Partial Class frmSeatSelection
         'RadioButton6
         '
         Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(475, 94)
+        Me.RadioButton6.Location = New System.Drawing.Point(633, 116)
+        Me.RadioButton6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton6.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton6.TabIndex = 5
         Me.RadioButton6.Text = "6"
         Me.RadioButton6.UseVisualStyleBackColor = True
@@ -352,9 +379,10 @@ Partial Class frmSeatSelection
         'RadioButton5
         '
         Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(372, 94)
+        Me.RadioButton5.Location = New System.Drawing.Point(496, 116)
+        Me.RadioButton5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton5.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton5.TabIndex = 4
         Me.RadioButton5.Text = "5"
         Me.RadioButton5.UseVisualStyleBackColor = True
@@ -362,9 +390,10 @@ Partial Class frmSeatSelection
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(318, 94)
+        Me.RadioButton4.Location = New System.Drawing.Point(424, 116)
+        Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton4.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton4.TabIndex = 3
         Me.RadioButton4.Text = "4"
         Me.RadioButton4.UseVisualStyleBackColor = True
@@ -372,9 +401,10 @@ Partial Class frmSeatSelection
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(264, 94)
+        Me.RadioButton3.Location = New System.Drawing.Point(352, 116)
+        Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton3.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton3.TabIndex = 2
         Me.RadioButton3.Text = "3"
         Me.RadioButton3.UseVisualStyleBackColor = True
@@ -382,9 +412,10 @@ Partial Class frmSeatSelection
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(156, 94)
+        Me.RadioButton2.Location = New System.Drawing.Point(208, 116)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.Text = "2"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -392,9 +423,10 @@ Partial Class frmSeatSelection
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(102, 94)
+        Me.RadioButton1.Location = New System.Drawing.Point(136, 116)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(31, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(33, 20)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.Text = "1"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -422,6 +454,7 @@ Partial Class frmSeatSelection
         Me.TableAdapterManager.purchase_lineTableAdapter = Nothing
         Me.TableAdapterManager.purchasesTableAdapter = Nothing
         Me.TableAdapterManager.showtimesTableAdapter = Nothing
+        Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Purchase_lineBindingSource
@@ -435,14 +468,16 @@ Partial Class frmSeatSelection
         '
         'frmSeatSelection
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.cinema_red
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(737, 518)
+        Me.ClientSize = New System.Drawing.Size(983, 638)
         Me.Controls.Add(Me.grpSeatSelection)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.picGTA)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.Name = "frmSeatSelection"
         Me.Text = "Ticket: Seat Selection"

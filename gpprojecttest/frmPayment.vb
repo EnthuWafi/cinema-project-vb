@@ -100,6 +100,9 @@
     Private Sub radOnline_CheckedChanged(sender As Object, e As EventArgs) Handles radOnline.CheckedChanged
         btnProceed.Enabled = False
 
+        txtTop.Text = String.Empty
+        cboBottom.SelectedIndex = -1
+
         txtTop.Visible = True
         lblTop.Text = "Enter your PIN NUMBER: "
         txtTop.UseSystemPasswordChar = True
@@ -120,6 +123,9 @@
     Private Sub radTNG_CheckedChanged(sender As Object, e As EventArgs) Handles radTNG.CheckedChanged
         btnProceed.Enabled = False
 
+        txtTop.Text = String.Empty
+        cboBottom.SelectedIndex = -1
+
         txtTop.Visible = True
         lblTop.Text = "Enter your PIN NUMBER: "
         txtTop.UseSystemPasswordChar = True
@@ -133,16 +139,29 @@
     End Sub
 
     Private Sub txtTop_TextChanged(sender As Object, e As EventArgs) Handles txtTop.TextChanged
-        'if TNG
-        If Not lblBottom.Visible() Then
+        'if tng
+        If Not cboBottom.Visible Then
+            btnProceed.Enabled = True
+            Return
+        End If
+
+        'if online
+        If cboBottom.SelectedIndex <> -1 Then
             btnProceed.Enabled = True
         End If
     End Sub
+
 
     Private Sub cboBottom_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cboBottom.SelectionChangeCommitted
         'if online
         If cboBottom.SelectedIndex <> -1 Then
             btnProceed.Enabled = True
+        End If
+    End Sub
+
+    Private Sub txtTop_Leave(sender As Object, e As EventArgs) Handles txtTop.Leave
+        If txtTop.Text = String.Empty Then
+            btnProceed.Enabled = False
         End If
     End Sub
 End Class
