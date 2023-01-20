@@ -38,7 +38,7 @@
         Next
         decDiscount = decTotal * discount
         decTax = decTotal * 0.05
-        decNet = decTotal - decDiscount - decTax
+        decNet = (decTotal - decDiscount) + decTax
 
         lblPrice.Text = decTotal.ToString("C")
         lblDiscount.Text = decDiscount.ToString("C")

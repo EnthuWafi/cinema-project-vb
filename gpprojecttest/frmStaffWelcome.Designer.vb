@@ -27,8 +27,6 @@ Partial Class frmStaffWelcome
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileCustomer = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblMain2 = New System.Windows.Forms.Label()
@@ -42,7 +40,7 @@ Partial Class frmStaffWelcome
         '
         'mnuMain
         '
-        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuHelp})
+        Me.mnuMain.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile})
         Me.mnuMain.Location = New System.Drawing.Point(0, 0)
         Me.mnuMain.Name = "mnuMain"
         Me.mnuMain.Size = New System.Drawing.Size(684, 24)
@@ -59,28 +57,15 @@ Partial Class frmStaffWelcome
         'mnuFileCustomer
         '
         Me.mnuFileCustomer.Name = "mnuFileCustomer"
-        Me.mnuFileCustomer.Size = New System.Drawing.Size(153, 22)
+        Me.mnuFileCustomer.Size = New System.Drawing.Size(180, 22)
         Me.mnuFileCustomer.Text = "&Customer Path"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuExit.Size = New System.Drawing.Size(153, 22)
+        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
         Me.mnuExit.Text = "E&xit"
-        '
-        'mnuHelp
-        '
-        Me.mnuHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuAbout})
-        Me.mnuHelp.Name = "mnuHelp"
-        Me.mnuHelp.Size = New System.Drawing.Size(44, 20)
-        Me.mnuHelp.Text = "Help"
-        '
-        'mnuAbout
-        '
-        Me.mnuAbout.Name = "mnuAbout"
-        Me.mnuAbout.Size = New System.Drawing.Size(107, 22)
-        Me.mnuAbout.Text = "&About"
         '
         'lblWelcome
         '
@@ -180,8 +165,6 @@ Partial Class frmStaffWelcome
     Friend WithEvents mnuFile As ToolStripMenuItem
     Friend WithEvents mnuFileCustomer As ToolStripMenuItem
     Friend WithEvents mnuExit As ToolStripMenuItem
-    Friend WithEvents mnuHelp As ToolStripMenuItem
-    Friend WithEvents mnuAbout As ToolStripMenuItem
     Friend WithEvents lblWelcome As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents lblMain2 As Label
