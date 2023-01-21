@@ -22,6 +22,7 @@ Partial Class frmListTickets
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgvTicket = New System.Windows.Forms.DataGridView()
         Me.movieName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,9 +42,9 @@ Partial Class frmListTickets
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox1.Location = New System.Drawing.Point(36, 31)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(912, 507)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
@@ -59,8 +60,16 @@ Partial Class frmListTickets
         Me.dgvTicket.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvTicket.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieName, Me.seatNumber, Me.ageCategory, Me.ticketPrice})
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvTicket.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTicket.Location = New System.Drawing.Point(28, 38)
-        Me.dgvTicket.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvTicket.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvTicket.Name = "dgvTicket"
         Me.dgvTicket.ReadOnly = True
         Me.dgvTicket.Size = New System.Drawing.Size(849, 370)
@@ -94,7 +103,7 @@ Partial Class frmListTickets
         '
         Me.btnClose.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnClose.Location = New System.Drawing.Point(745, 448)
-        Me.btnClose.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnClose.Margin = New System.Windows.Forms.Padding(4)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(132, 41)
         Me.btnClose.TabIndex = 1
@@ -123,7 +132,7 @@ Partial Class frmListTickets
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmListTickets"
         Me.Text = "Tickets: List"

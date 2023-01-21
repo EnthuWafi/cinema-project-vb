@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmReceipt
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmReceipt
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmReceipt))
         Me.GroupBox = New System.Windows.Forms.GroupBox()
@@ -52,7 +52,7 @@ Partial Class frmReceipt
         Me.PrintPreview = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDoc = New System.Drawing.Printing.PrintDocument()
         Me.PrintDialog = New System.Windows.Forms.PrintDialog()
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.AuditoriumsTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.auditoriumsTableAdapter()
         Me.GroupBox.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -71,9 +71,9 @@ Partial Class frmReceipt
         Me.GroupBox.Controls.Add(Me.Panel1)
         Me.GroupBox.Controls.Add(Me.Label1)
         Me.GroupBox.Location = New System.Drawing.Point(61, 108)
-        Me.GroupBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox.Name = "GroupBox"
-        Me.GroupBox.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox.Size = New System.Drawing.Size(752, 407)
         Me.GroupBox.TabIndex = 0
         Me.GroupBox.TabStop = False
@@ -92,7 +92,7 @@ Partial Class frmReceipt
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Location = New System.Drawing.Point(37, 249)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(668, 151)
         Me.Panel2.TabIndex = 2
@@ -187,7 +187,7 @@ Partial Class frmReceipt
         Me.Panel1.Controls.Add(Me.lblPurchaseID)
         Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Location = New System.Drawing.Point(37, 39)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(668, 202)
         Me.Panel1.TabIndex = 1
@@ -200,7 +200,7 @@ Partial Class frmReceipt
         Me.dgvReceipt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvReceipt.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.movieName, Me.price})
         Me.dgvReceipt.Location = New System.Drawing.Point(33, 74)
-        Me.dgvReceipt.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvReceipt.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvReceipt.Name = "dgvReceipt"
         Me.dgvReceipt.ReadOnly = True
         Me.dgvReceipt.Size = New System.Drawing.Size(609, 113)
@@ -267,7 +267,7 @@ Partial Class frmReceipt
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.picGTA.Image = CType(resources.GetObject("picGTA.Image"), System.Drawing.Image)
         Me.picGTA.Location = New System.Drawing.Point(229, 15)
-        Me.picGTA.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.picGTA.Margin = New System.Windows.Forms.Padding(4)
         Me.picGTA.Name = "picGTA"
         Me.picGTA.Size = New System.Drawing.Size(449, 85)
         Me.picGTA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -280,9 +280,9 @@ Partial Class frmReceipt
         Me.GroupBox1.Controls.Add(Me.btnExit)
         Me.GroupBox1.Controls.Add(Me.btnPrint)
         Me.GroupBox1.Location = New System.Drawing.Point(61, 523)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Size = New System.Drawing.Size(752, 100)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
@@ -300,7 +300,7 @@ Partial Class frmReceipt
         'btnExit
         '
         Me.btnExit.Location = New System.Drawing.Point(569, 23)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(151, 46)
         Me.btnExit.TabIndex = 1
@@ -310,7 +310,7 @@ Partial Class frmReceipt
         'btnPrint
         '
         Me.btnPrint.Location = New System.Drawing.Point(411, 23)
-        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnPrint.Margin = New System.Windows.Forms.Padding(4)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(151, 46)
         Me.btnPrint.TabIndex = 0
@@ -357,9 +357,9 @@ Partial Class frmReceipt
         '
         Me.PrintDialog.UseEXDialog = True
         '
-        'PrintDialog1
+        'AuditoriumsTableAdapter
         '
-        Me.PrintDialog1.UseEXDialog = True
+        Me.AuditoriumsTableAdapter.ClearBeforeFill = True
         '
         'frmReceipt
         '
@@ -372,7 +372,7 @@ Partial Class frmReceipt
         Me.Controls.Add(Me.picGTA)
         Me.Controls.Add(Me.GroupBox)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmReceipt"
         Me.Text = "Receipt"
         Me.GroupBox.ResumeLayout(False)
@@ -418,5 +418,5 @@ Partial Class frmReceipt
     Friend WithEvents PrintPreview As PrintPreviewDialog
     Friend WithEvents PrintDoc As Printing.PrintDocument
     Friend WithEvents PrintDialog As PrintDialog
-    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents AuditoriumsTableAdapter As cinemadbDataSetTableAdapters.auditoriumsTableAdapter
 End Class
