@@ -1846,6 +1846,8 @@ Partial Public Class cinemadbDataSet
         
         Private columnprice_id As Global.System.Data.DataColumn
         
+        Private columndiscount As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -1922,6 +1924,14 @@ Partial Public Class cinemadbDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property discountColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndiscount
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1958,9 +1968,9 @@ Partial Public Class cinemadbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function Addpurchase_lineRow(ByVal parentpurchasesRowBypurchasespurchase_line As purchasesRow, ByVal seat_num As Integer, ByVal parentshowtimesRowByshowtimespurchase_line As showtimesRow, ByVal parentticket_priceRowByticket_pricepurchase_line As ticket_priceRow) As purchase_lineRow
+        Public Overloads Function Addpurchase_lineRow(ByVal parentpurchasesRowBypurchasespurchase_line As purchasesRow, ByVal seat_num As Integer, ByVal parentshowtimesRowByshowtimespurchase_line As showtimesRow, ByVal parentticket_priceRowByticket_pricepurchase_line As ticket_priceRow, ByVal discount As Decimal) As purchase_lineRow
             Dim rowpurchase_lineRow As purchase_lineRow = CType(Me.NewRow,purchase_lineRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, seat_num, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Nothing, seat_num, Nothing, Nothing, discount}
             If (Not (parentpurchasesRowBypurchasespurchase_line) Is Nothing) Then
                 columnValuesArray(1) = parentpurchasesRowBypurchasespurchase_line(0)
             End If
@@ -2003,6 +2013,7 @@ Partial Public Class cinemadbDataSet
             Me.columnseat_num = MyBase.Columns("seat_num")
             Me.columnticket_id = MyBase.Columns("ticket_id")
             Me.columnprice_id = MyBase.Columns("price_id")
+            Me.columndiscount = MyBase.Columns("discount")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2018,6 +2029,8 @@ Partial Public Class cinemadbDataSet
             MyBase.Columns.Add(Me.columnticket_id)
             Me.columnprice_id = New Global.System.Data.DataColumn("price_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnprice_id)
+            Me.columndiscount = New Global.System.Data.DataColumn("discount", GetType(Decimal), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndiscount)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnline_id}, true))
             Me.columnline_id.AutoIncrement = true
             Me.columnline_id.AutoIncrementSeed = -1
@@ -3507,6 +3520,21 @@ Partial Public Class cinemadbDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property discount() As Decimal
+            Get
+                Try 
+                    Return CType(Me(Me.tablepurchase_line.discountColumn),Decimal)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'discount' in table 'purchase_line' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablepurchase_line.discountColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property purchasesRow() As purchasesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("purchasespurchase_line")),purchasesRow)
@@ -3584,6 +3612,18 @@ Partial Public Class cinemadbDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub Setprice_idNull()
             Me(Me.tablepurchase_line.price_idColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsdiscountNull() As Boolean
+            Return Me.IsNull(Me.tablepurchase_line.discountColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetdiscountNull()
+            Me(Me.tablepurchase_line.discountColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -6222,13 +6262,15 @@ Namespace cinemadbDataSetTableAdapters
             tableMapping.ColumnMappings.Add("seat_num", "seat_num")
             tableMapping.ColumnMappings.Add("ticket_id", "ticket_id")
             tableMapping.ColumnMappings.Add("price_id", "price_id")
+            tableMapping.ColumnMappings.Add("discount", "discount")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM `purchase_line` WHERE ((`line_id` = ?) AND ((? = 1 AND `purchase_id` "& _ 
                 "IS NULL) OR (`purchase_id` = ?)) AND ((? = 1 AND `seat_num` IS NULL) OR (`seat_n"& _ 
                 "um` = ?)) AND ((? = 1 AND `ticket_id` IS NULL) OR (`ticket_id` = ?)) AND ((? = 1"& _ 
-                " AND `price_id` IS NULL) OR (`price_id` = ?)))"
+                " AND `price_id` IS NULL) OR (`price_id` = ?)) AND ((? = 1 AND `discount` IS NULL"& _ 
+                ") OR (`discount` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_line_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "line_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
@@ -6239,27 +6281,32 @@ Namespace cinemadbDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ticket_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ticket_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_discount", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_discount", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `purchase_line` (`purchase_id`, `seat_num`, `ticket_id`, `price_id`) "& _ 
-                "VALUES (?, ?, ?, ?)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `purchase_line` (`purchase_id`, `seat_num`, `ticket_id`, `price_id`, "& _ 
+                "`discount`) VALUES (?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("seat_num", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "seat_num", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ticket_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ticket_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("discount", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `purchase_line` SET `purchase_id` = ?, `seat_num` = ?, `ticket_id` = ?, `p"& _ 
-                "rice_id` = ? WHERE ((`line_id` = ?) AND ((? = 1 AND `purchase_id` IS NULL) OR (`"& _ 
-                "purchase_id` = ?)) AND ((? = 1 AND `seat_num` IS NULL) OR (`seat_num` = ?)) AND "& _ 
-                "((? = 1 AND `ticket_id` IS NULL) OR (`ticket_id` = ?)) AND ((? = 1 AND `price_id"& _ 
-                "` IS NULL) OR (`price_id` = ?)))"
+                "rice_id` = ?, `discount` = ? WHERE ((`line_id` = ?) AND ((? = 1 AND `purchase_id"& _ 
+                "` IS NULL) OR (`purchase_id` = ?)) AND ((? = 1 AND `seat_num` IS NULL) OR (`seat"& _ 
+                "_num` = ?)) AND ((? = 1 AND `ticket_id` IS NULL) OR (`ticket_id` = ?)) AND ((? ="& _ 
+                " 1 AND `price_id` IS NULL) OR (`price_id` = ?)) AND ((? = 1 AND `discount` IS NU"& _ 
+                "LL) OR (`discount` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("seat_num", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "seat_num", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ticket_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ticket_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("discount", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_line_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "line_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -6269,6 +6316,8 @@ Namespace cinemadbDataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ticket_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ticket_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_discount", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_discount", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6284,19 +6333,20 @@ Namespace cinemadbDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT line_id, purchase_id, seat_num, ticket_id, price_id FROM purchase_line"
+            Me._commandCollection(0).CommandText = "SELECT line_id, purchase_id, seat_num, ticket_id, price_id, discount FROM purchas"& _ 
+                "e_line"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "SELECT        purchase_line.line_id, purchase_line.purchase_id, purchase_line.sea"& _ 
                 "t_num, purchase_line.ticket_id, movies.movie_name, auditoriums.auditorium_name, "& _ 
-                "ticket_price.ticket_price"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ((((purchase_line INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
-                "                  showtimes ON showtimes.showtime_id = purchase_line.ticket_id) "& _ 
-                "INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         auditoriums ON showtimes.auditorium_id = au"& _ 
-                "ditoriums.auditorium_id) INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         movies ON showtime"& _ 
-                "s.movie_id = movies.movie_id) INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         ticket_price "& _ 
-                "ON purchase_line.price_id = ticket_price.price_id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (purchase_line."& _ 
-                "purchase_id = ?)"
+                "ticket_price.ticket_price, purchase_line.discount"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ((((purchase_"& _ 
+                "line INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         showtimes ON showtimes.showtime_id = p"& _ 
+                "urchase_line.ticket_id) INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         auditoriums ON show"& _ 
+                "times.auditorium_id = auditoriums.auditorium_id) INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                   "& _ 
+                "      movies ON showtimes.movie_id = movies.movie_id) INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "           ticket_price ON purchase_line.price_id = ticket_price.price_id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHER"& _ 
+                "E        (purchase_line.purchase_id = ?)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
@@ -6309,12 +6359,13 @@ Namespace cinemadbDataSetTableAdapters
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "INSERT INTO purchase_line"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         (purchase_id, seat_num, ticke"& _ 
-                "t_id, price_id)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?)"
+                "t_id, price_id, discount)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"VALUES        (?, ?, ?, ?, ?)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("purchase_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "purchase_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("seat_num", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "seat_num", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("ticket_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ticket_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("price_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "price_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("discount", Global.System.Data.OleDb.OleDbType.Currency, 0, Global.System.Data.ParameterDirection.Input, CType(19,Byte), CType(0,Byte), "discount", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6401,7 +6452,7 @@ Namespace cinemadbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_line_id As Integer, ByVal Original_purchase_id As Integer, ByVal Original_seat_num As Global.System.Nullable(Of Integer), ByVal Original_ticket_id As Global.System.Nullable(Of Integer), ByVal Original_price_id As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_line_id As Integer, ByVal Original_purchase_id As Integer, ByVal Original_seat_num As Global.System.Nullable(Of Integer), ByVal Original_ticket_id As Global.System.Nullable(Of Integer), ByVal Original_price_id As Global.System.Nullable(Of Integer), ByVal Original_discount As Decimal) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_line_id,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_purchase_id,Integer)
@@ -6426,6 +6477,8 @@ Namespace cinemadbDataSetTableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+            Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_discount,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6445,7 +6498,7 @@ Namespace cinemadbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal purchase_id As Integer, ByVal seat_num As Global.System.Nullable(Of Integer), ByVal ticket_id As Global.System.Nullable(Of Integer), ByVal price_id As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal purchase_id As Integer, ByVal seat_num As Global.System.Nullable(Of Integer), ByVal ticket_id As Global.System.Nullable(Of Integer), ByVal price_id As Global.System.Nullable(Of Integer), ByVal discount As Decimal) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(purchase_id,Integer)
             If (seat_num.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = CType(seat_num.Value,Integer)
@@ -6462,6 +6515,7 @@ Namespace cinemadbDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(discount,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6481,7 +6535,7 @@ Namespace cinemadbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal purchase_id As Integer, ByVal seat_num As Global.System.Nullable(Of Integer), ByVal ticket_id As Global.System.Nullable(Of Integer), ByVal price_id As Global.System.Nullable(Of Integer), ByVal Original_line_id As Integer, ByVal Original_purchase_id As Integer, ByVal Original_seat_num As Global.System.Nullable(Of Integer), ByVal Original_ticket_id As Global.System.Nullable(Of Integer), ByVal Original_price_id As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update(ByVal purchase_id As Integer, ByVal seat_num As Global.System.Nullable(Of Integer), ByVal ticket_id As Global.System.Nullable(Of Integer), ByVal price_id As Global.System.Nullable(Of Integer), ByVal discount As Decimal, ByVal Original_line_id As Integer, ByVal Original_purchase_id As Integer, ByVal Original_seat_num As Global.System.Nullable(Of Integer), ByVal Original_ticket_id As Global.System.Nullable(Of Integer), ByVal Original_price_id As Global.System.Nullable(Of Integer), ByVal Original_discount As Decimal) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(purchase_id,Integer)
             If (seat_num.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(seat_num.Value,Integer)
@@ -6498,30 +6552,33 @@ Namespace cinemadbDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_line_id,Integer)
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_purchase_id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(discount,Decimal)
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_line_id,Integer)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_purchase_id,Integer)
             If (Original_seat_num.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_seat_num.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_seat_num.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             End If
             If (Original_ticket_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_ticket_id.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_ticket_id.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
             If (Original_price_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_price_id.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_price_id.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             End If
+            Me.Adapter.UpdateCommand.Parameters(14).Value = CType(0,Object)
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_discount,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -6541,7 +6598,7 @@ Namespace cinemadbDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function InsertTicket(ByVal purchase_id As Integer, ByVal seat_num As Global.System.Nullable(Of Integer), ByVal ticket_id As Global.System.Nullable(Of Integer), ByVal price_id As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function InsertTicket(ByVal purchase_id As Integer, ByVal seat_num As Global.System.Nullable(Of Integer), ByVal ticket_id As Global.System.Nullable(Of Integer), ByVal price_id As Global.System.Nullable(Of Integer), ByVal discount As Decimal) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
             command.Parameters(0).Value = CType(purchase_id,Integer)
             If (seat_num.HasValue = true) Then
@@ -6559,6 +6616,7 @@ Namespace cinemadbDataSetTableAdapters
             Else
                 command.Parameters(3).Value = Global.System.DBNull.Value
             End If
+            command.Parameters(4).Value = CType(discount,Decimal)
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
             If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

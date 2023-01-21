@@ -16,8 +16,9 @@
         End If
 
         For i = 0 To dt.Rows.Count - 1
+            Dim decPrice = Decimal.Parse(dt.Rows(i)("ticket_price")) - (Decimal.Parse(dt.Rows(i)("ticket_price")) * Decimal.Parse(dt.Rows(i)("discount")))
             dgvInvoiceLine.Rows.Add(dt.Rows(i)("movie_name"), dt.Rows(i)("auditorium_name"),
-                                    dt.Rows(i)("seat_num"), Decimal.Parse(dt.Rows(i)("ticket_price")).ToString("C"))
+                                    dt.Rows(i)("seat_num"), decPrice.ToString("C"))
         Next
 
         dgvInvoiceLine.AllowUserToAddRows = False

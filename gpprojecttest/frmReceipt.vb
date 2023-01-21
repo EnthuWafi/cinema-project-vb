@@ -37,11 +37,16 @@
         decTotal = 0
         For i = 0 To Me.ticketList.Count() - 1
             Dim ticket As PendingTicket = Me.ticketList.Item(i)
-            dgvReceipt.Rows.Add(ticket.movie.strTitle, ticket.decPrice.ToString("C"))
-            decTotal += ticket.decPrice
+
+            'ticket discounted price
+            Dim decPrice = ticket.decPrice - (ticket.decPrice * ticket.decDiscount)
+            dgvReceipt.Rows.Add(ticket.movie.strTitle, decPrice.ToString("C"))
+
+            'takes full price
+            decTotal += decPrice
         Next
         decDiscount = decTotal * discount
-        decTax = decTotal * 0.05
+        decTax = (decTotal - decDiscount) * 0.06
         decNet = (decTotal - decDiscount) + decTax
 
         lblPrice.Text = decTotal.ToString("C")
@@ -121,7 +126,13 @@
             e.Graphics.DrawString("Date: ", fntText, Brushes.Black, leftMargins + 20, fntText.Height * 11 + topMargins)
             e.Graphics.DrawString(ticket.movie.dtShowtime.ToString("g"), fntBolded, Brushes.Black, leftMargins + 20, fntText.Height * 12 + topMargins)
             e.Graphics.DrawString("Price: ", fntText, Brushes.Black, leftMargins + 450, fntText.Height * 11 + topMargins)
-            e.Graphics.DrawString(ticket.decPrice.ToString("c"), fntBolded, Brushes.Black, leftMargins + 450, fntText.Height * 12 + topMargins)
+
+            Dim decPrice = ticket.decPrice - (ticket.decPrice * ticket.decDiscount)
+            e.Graphics.DrawString(decPrice.ToString("c"), fntBolded, Brushes.Black, leftMargins + 450, fntText.Height * 12 + topMargins)
+
+            If ticket.isOKU Then
+                e.Graphics.DrawString("OKU", fntTitle, Brushes.Black, leftMargins + 650, fntText.Height * 1 + topMargins)
+            End If
             'print more tickets
             intStart += 1
             e.HasMorePages = True
@@ -137,8 +148,9 @@
         e.Graphics.DrawString("Price (RM)", fntText, Brushes.Black, leftMargins + 500, fntText.Height * 4 + topMargins)
         For i = 0 To ticketList.Count() - 1
             Dim ticket As PendingTicket = ticketList.Item(i)
+            Dim decPrice = ticket.decPrice - (ticket.decPrice * ticket.decDiscount)
             e.Graphics.DrawString(ticket.movie.strTitle, fntText, Brushes.Black, leftMargins, fntText.Height * (5 + i) + topMargins)
-            e.Graphics.DrawString(ticket.decPrice.ToString("C"), fntText, Brushes.Black, leftMargins + 500, fntText.Height * (5 + i) + topMargins)
+            e.Graphics.DrawString(decPrice.ToString("C"), fntText, Brushes.Black, leftMargins + 500, fntText.Height * (5 + i) + topMargins)
         Next
         e.Graphics.DrawString("==============================================================================", fntText, Brushes.Black, leftMargins, fntText.Height * (ticketList.Count + 6) + topMargins)
         e.Graphics.DrawString("Total Price (RM)", fntText, Brushes.Black, leftMargins, fntText.Height * (ticketList.Count + 7) + topMargins)

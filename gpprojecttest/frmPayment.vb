@@ -29,14 +29,17 @@
             Dim dt As New cinemadbDataSet.auditoriumsDataTable
             AuditoriumsTableAdapter.FillAuditoriumByID(dt, movie.intAuditoriumID)
 
+            'discount
+            Dim decPrice = ticket.decPrice - (ticket.decPrice * ticket.decDiscount)
+
             'add to data grid view!
             dgvTickets.Rows.Add(My.Resources.ResourceManager.GetObject(movie.strPic),
                                 movie.strTitle, dt.Rows(0)("auditorium_name"),
-                                ticket.intSeatNumber, ticket.age_category, ticket.decPrice.ToString("C"),
+                                ticket.intSeatNumber, ticket.age_category, decPrice.ToString("C"),
                                 "More Info")
             dgvTickets.Rows(i).Height = 200
-            'add dectotal
-            decTotal += ticket.decPrice
+            'add decimal total
+            decTotal += decPrice
         Next
         lblPrice.Text = "Total Price: " & decTotal.ToString("C")
     End Sub
@@ -53,7 +56,7 @@
 
         For i = 0 To ticketList.Count - 1
             Dim ticket As PendingTicket = ticketList(i)
-            Purchase_lineTableAdapter.InsertTicket(purchaseID, ticket.intSeatNumber, ticket.intShowtimeID, ticket.intPriceID)
+            Purchase_lineTableAdapter.InsertTicket(purchaseID, ticket.intSeatNumber, ticket.intShowtimeID, ticket.intPriceID, ticket.decDiscount)
         Next
 
         MessageBox.Show("Transaction Complete!")
@@ -95,6 +98,8 @@
         cboBottom.Visible = False
 
         discount = 0
+        Dim decPrice = decTotal - (decTotal * discount)
+        lblPrice.Text = "Total Price: " & decPrice.ToString("C")
     End Sub
 
     Private Sub radOnline_CheckedChanged(sender As Object, e As EventArgs) Handles radOnline.CheckedChanged
@@ -118,6 +123,8 @@
         cboBottom.Items.Add("MAYBANK")
 
         discount = 0
+        Dim decPrice = decTotal - (decTotal * discount)
+        lblPrice.Text = "Total Price: " & decPrice.ToString("C")
     End Sub
 
     Private Sub radTNG_CheckedChanged(sender As Object, e As EventArgs) Handles radTNG.CheckedChanged
@@ -136,6 +143,9 @@
         cboBottom.SelectedIndex = -1
 
         discount = 0.05
+
+        Dim decPrice = decTotal - (decTotal * discount)
+        lblPrice.Text = "Total Price: " & decPrice.ToString("C")
     End Sub
 
     Private Sub txtTop_TextChanged(sender As Object, e As EventArgs) Handles txtTop.TextChanged

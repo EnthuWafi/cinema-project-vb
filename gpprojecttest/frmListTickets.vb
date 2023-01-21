@@ -18,8 +18,9 @@
         dgvTicket.Rows.Clear()
         For i = 0 To listOfTickets.Count - 1
             Dim ticket As PendingTicket = listOfTickets(i)
+            Dim decPrice = ticket.decPrice - (ticket.decPrice * ticket.decDiscount)
             dgvTicket.Rows.Add(ticket.movie.strTitle, ticket.intSeatNumber,
-                                 ticket.age_category, ticket.decPrice.ToString("C"))
+                                 ticket.age_category, decPrice.ToString("C"))
         Next
     End Sub
 

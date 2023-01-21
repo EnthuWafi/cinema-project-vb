@@ -53,12 +53,14 @@ Public Class frmMain
         errorProvider.SetError(cboCategory, "")
 
         Dim mySeat As New frmSeatSelection(currentTicket, currentMovie, ticketList)
+        mySeat.setTicket(currentTicket)
         mySeat.ShowDialog()
-
-        currentTicket.intSeatNumber = mySeat.getTicket().intSeatNumber
 
         If currentTicket.intSeatNumber <> -1 Then
             lblSeat.Text = "Seat Number: " & currentTicket.intSeatNumber.ToString
+
+            Dim decPrice = currentTicket.decPrice - (currentTicket.decPrice * currentTicket.decDiscount)
+            lblPrice.Text = "Price: " & decPrice.ToString("C")
         End If
     End Sub
 
@@ -219,7 +221,8 @@ Public Class frmMain
         currentTicket.intPriceID = dt.Rows(0)("price_id")
         currentTicket.movie = currentMovie
 
-        lblPrice.Text = "Price: " & currentTicket.decPrice.ToString("C")
+        Dim decPrice = currentTicket.decPrice
+        lblPrice.Text = "Price: " & decPrice.ToString("C")
     End Sub
 
     Private Sub btnListOfTicket_Click(sender As Object, e As EventArgs) Handles btnListOfTicket.Click

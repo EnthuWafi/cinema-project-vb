@@ -36,11 +36,6 @@
             Return
         End If
         errorProvider.SetError(txtChildren, "")
-        If txtOKU.Text = String.Empty Or Not IsNumeric(txtOKU.Text) Then
-            errorProvider.SetError(txtOKU, "Must be valid and filled!")
-            Return
-        End If
-        errorProvider.SetError(txtOKU, "")
 
         Dim currentDate = DateTime.Parse(dtpDate.Value)
         Dim time As DateTime
@@ -59,7 +54,6 @@
 
         Ticket_priceTableAdapter.InsertTicket("Adult", Decimal.Parse(txtAdult.Text), id)
         Ticket_priceTableAdapter.InsertTicket("Children", Decimal.Parse(txtChildren.Text), id)
-        Ticket_priceTableAdapter.InsertTicket("OKU", Decimal.Parse(txtOKU.Text), id)
 
         'clear
         dtpDate.Value = dtpDate.MinDate
@@ -68,7 +62,6 @@
         cboAuditorium.SelectedIndex = -1
         txtAdult.Text = String.Empty
         txtChildren.Text = String.Empty
-        txtOKU.Text = String.Empty
         txtTime.Text = String.Empty
         UpdateShowtime()
     End Sub
@@ -133,7 +126,6 @@
         cboAuditorium.SelectedIndex = -1
         txtAdult.Text = String.Empty
         txtChildren.Text = String.Empty
-        txtOKU.Text = String.Empty
         txtTime.Text = String.Empty
     End Sub
 

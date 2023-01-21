@@ -43,8 +43,6 @@ Partial Class frmStaffShowtime
         Me.txtAdult = New System.Windows.Forms.TextBox()
         Me.txtChildren = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtOKU = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.dtpDate = New System.Windows.Forms.DateTimePicker()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtTime = New System.Windows.Forms.TextBox()
@@ -233,13 +231,11 @@ Partial Class frmStaffShowtime
         Me.GroupBox5.Controls.Add(Me.txtAdult)
         Me.GroupBox5.Controls.Add(Me.txtChildren)
         Me.GroupBox5.Controls.Add(Me.Label7)
-        Me.GroupBox5.Controls.Add(Me.txtOKU)
-        Me.GroupBox5.Controls.Add(Me.Label8)
         Me.GroupBox5.Location = New System.Drawing.Point(21, 132)
         Me.GroupBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Padding = New System.Windows.Forms.Padding(4)
-        Me.GroupBox5.Size = New System.Drawing.Size(885, 158)
+        Me.GroupBox5.Size = New System.Drawing.Size(885, 142)
         Me.GroupBox5.TabIndex = 23
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Ticket Price"
@@ -281,25 +277,6 @@ Partial Class frmStaffShowtime
         Me.Label7.Size = New System.Drawing.Size(60, 16)
         Me.Label7.TabIndex = 15
         Me.Label7.Text = "Children:"
-        '
-        'txtOKU
-        '
-        Me.txtOKU.Location = New System.Drawing.Point(128, 98)
-        Me.txtOKU.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtOKU.MaxLength = 50
-        Me.txtOKU.Name = "txtOKU"
-        Me.txtOKU.Size = New System.Drawing.Size(151, 22)
-        Me.txtOKU.TabIndex = 16
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(56, 102)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 16)
-        Me.Label8.TabIndex = 17
-        Me.Label8.Text = "OKU:"
         '
         'dtpDate
         '
@@ -480,8 +457,6 @@ Partial Class frmStaffShowtime
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtOKU As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtChildren As TextBox
     Friend WithEvents Label4 As Label

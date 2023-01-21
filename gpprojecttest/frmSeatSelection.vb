@@ -40,11 +40,9 @@
 
         Next
 
-        Me.ticket = ticket
-
         lblAuditorium.Text = "Auditorium " & dtAuditorium.Rows(0)("auditorium_name")
         lblMovie.Text = movie.strTitle
-        lblPrice.Text = Me.ticket.decPrice.ToString("C")
+        lblPrice.Text = ticket.decPrice.ToString("C")
     End Sub
 
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
@@ -61,7 +59,6 @@
         'radio button is found
         Dim intSeatNumber As Integer = Integer.Parse(checkedRButton.Text)
 
-        ticket = New PendingTicket
         ticket.intSeatNumber = intSeatNumber
 
         Me.Close()
@@ -71,7 +68,22 @@
         Me.Close()
     End Sub
 
-    Public Function getTicket() As PendingTicket
-        Return ticket
-    End Function
+    'by reference
+    Public Sub setTicket(ByRef ticket As PendingTicket)
+        Me.ticket = ticket
+    End Sub
+
+    Private Sub chkOKU_CheckedChanged(sender As Object, e As EventArgs) Handles chkOKU.CheckedChanged
+        'discount
+        If chkOKU.Checked Then
+            ticket.decDiscount = 0.5D
+            ticket.isOKU = True
+        Else
+            ticket.decDiscount = 0D
+            ticket.isOKU = False
+        End If
+
+        Dim decPrice = ticket.decPrice - (ticket.decPrice * ticket.decDiscount)
+        lblPrice.Text = decPrice.ToString("C")
+    End Sub
 End Class

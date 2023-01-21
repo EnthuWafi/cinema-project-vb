@@ -140,7 +140,7 @@ Partial Class frmReceipt
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(48, 121)
+        Me.Label10.Location = New System.Drawing.Point(54, 120)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(114, 16)
@@ -150,7 +150,7 @@ Partial Class frmReceipt
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(127, 87)
+        Me.Label9.Location = New System.Drawing.Point(131, 87)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(37, 16)
@@ -170,7 +170,7 @@ Partial Class frmReceipt
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(29, 17)
+        Me.Label7.Location = New System.Drawing.Point(35, 17)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(133, 16)
@@ -293,9 +293,9 @@ Partial Class frmReceipt
         Me.Label2.Location = New System.Drawing.Point(33, 20)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 16)
+        Me.Label2.Size = New System.Drawing.Size(201, 16)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "** 5% Tax"
+        Me.Label2.Text = "** 6% Tax Applied After Discount"
         '
         'btnExit
         '
