@@ -1,6 +1,8 @@
 # cinema-project-vb
-## Purposes for the Application
+
 For UiTM CSC248, our group had decided to create a Cinema Management System for our final assignment.
+## Purposes for the Application
+The purpose of this application to help simplify the daily operation of GTA CINEMA, both for the customers and the cinema employees.
 
 ## Tools Used
 - Microsoft Access
