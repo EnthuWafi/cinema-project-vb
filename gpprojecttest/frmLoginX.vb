@@ -6,9 +6,6 @@ Public Class frmLoginX
         'TODO: This line of code loads data into the 'CinemadbDataSet.customers' table. You can move, or remove it, as needed.
         Me.CustomersTableAdapter.Fill(Me.CinemadbDataSet.customers)
 
-        'for convenience
-        txtUsername.Text = "user"
-        txtPassword.Text = "user"
     End Sub
 
     Private Sub btnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOK.Click
