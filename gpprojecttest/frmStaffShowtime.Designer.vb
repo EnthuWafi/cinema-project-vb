@@ -429,7 +429,7 @@ Partial Class frmStaffShowtime
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffShowtime"
-        Me.Text = "Staff: Showtime"
+        Me.Text = "Staff: Add Showtime"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox4.ResumeLayout(False)
         CType(Me.dgvShowtime, System.ComponentModel.ISupportInitialize).EndInit()

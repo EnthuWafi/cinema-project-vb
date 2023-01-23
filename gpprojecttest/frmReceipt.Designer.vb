@@ -372,9 +372,10 @@ Partial Class frmReceipt
         Me.Controls.Add(Me.picGTA)
         Me.Controls.Add(Me.GroupBox)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmReceipt"
-        Me.Text = "Receipt"
+        Me.Text = "Cinema: Receipt"
         Me.GroupBox.ResumeLayout(False)
         Me.GroupBox.PerformLayout()
         Me.Panel2.ResumeLayout(False)

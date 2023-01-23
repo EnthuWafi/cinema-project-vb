@@ -35,6 +35,7 @@ Partial Class frmStaffTransaction
         Me.PurchasesTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.purchasesTableAdapter()
         Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
         Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
+        Me.btnClearTable = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvInvoice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -50,9 +51,9 @@ Partial Class frmStaffTransaction
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.Control
         Me.GroupBox4.Controls.Add(Me.dgvInvoice)
         Me.GroupBox4.Location = New System.Drawing.Point(16, 108)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox4.Size = New System.Drawing.Size(1013, 300)
         Me.GroupBox4.TabIndex = 27
         Me.GroupBox4.TabStop = False
@@ -67,7 +68,7 @@ Partial Class frmStaffTransaction
         Me.dgvInvoice.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.invoiceID, Me.customerName, Me.dateCreated})
         Me.dgvInvoice.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvInvoice.Location = New System.Drawing.Point(4, 19)
-        Me.dgvInvoice.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvInvoice.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvInvoice.Name = "dgvInvoice"
         Me.dgvInvoice.ReadOnly = True
         Me.dgvInvoice.Size = New System.Drawing.Size(1005, 277)
@@ -102,9 +103,9 @@ Partial Class frmStaffTransaction
         Me.GroupBox2.BackColor = System.Drawing.Color.Maroon
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 15)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox2.Size = New System.Drawing.Size(1013, 86)
         Me.GroupBox2.TabIndex = 26
         Me.GroupBox2.TabStop = False
@@ -125,12 +126,13 @@ Partial Class frmStaffTransaction
         '
         Me.GroupBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox3.Controls.Add(Me.btnClearTable)
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.btnBack)
         Me.GroupBox3.Location = New System.Drawing.Point(16, 416)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(4)
         Me.GroupBox3.Size = New System.Drawing.Size(1013, 123)
         Me.GroupBox3.TabIndex = 28
         Me.GroupBox3.TabStop = False
@@ -150,7 +152,7 @@ Partial Class frmStaffTransaction
         '
         Me.btnBack.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBack.Location = New System.Drawing.Point(831, 42)
-        Me.btnBack.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(157, 48)
         Me.btnBack.TabIndex = 20
@@ -178,6 +180,17 @@ Partial Class frmStaffTransaction
         Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'btnClearTable
+        '
+        Me.btnClearTable.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClearTable.Location = New System.Drawing.Point(666, 42)
+        Me.btnClearTable.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnClearTable.Name = "btnClearTable"
+        Me.btnClearTable.Size = New System.Drawing.Size(157, 48)
+        Me.btnClearTable.TabIndex = 22
+        Me.btnClearTable.Text = "Clear Table"
+        Me.btnClearTable.UseVisualStyleBackColor = True
+        '
         'frmStaffTransaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -188,7 +201,7 @@ Partial Class frmStaffTransaction
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffTransaction"
         Me.Text = "Staff: View Transaction"
@@ -216,4 +229,5 @@ Partial Class frmStaffTransaction
     Friend WithEvents customerName As DataGridViewTextBoxColumn
     Friend WithEvents dateCreated As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnClearTable As Button
 End Class

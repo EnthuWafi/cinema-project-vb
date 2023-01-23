@@ -1,4 +1,6 @@
 ﻿Public Class frmStaffTransactionLine
+    Dim purchaseID As Integer
+
     Public Sub New(id As Integer)
 
         ' This call is required by the designer.
@@ -22,9 +24,31 @@
         Next
 
         dgvInvoiceLine.AllowUserToAddRows = False
+
+        'get purchase info
+        Me.purchaseID = id
+
+        'title
+        Me.Text = "Transaction: Purchase ID " & purchaseID
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Close()
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        'are you sure message
+        If MessageBox.Show("Are you sure? This action is irreversible.", "Caution!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) = DialogResult.Yes Then
+            'clear everything
+            Try
+                PurchasesTableAdapter.DeleteID(purchaseID)
+
+                MessageBox.Show("Transaction has been deleted!")
+                Me.Close()
+            Catch ex As Exception
+                MessageBox.Show("An error has occured!" & vbNewLine & ex.ToString, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
+    End Sub
+
 End Class

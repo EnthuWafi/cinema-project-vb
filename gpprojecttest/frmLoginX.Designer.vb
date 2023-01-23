@@ -60,7 +60,7 @@ Partial Class frmLoginX
         '
         'PasswordLabel
         '
-        Me.PasswordLabel.Location = New System.Drawing.Point(259, 102)
+        Me.PasswordLabel.Location = New System.Drawing.Point(259, 96)
         Me.PasswordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PasswordLabel.Name = "PasswordLabel"
         Me.PasswordLabel.Size = New System.Drawing.Size(303, 28)
@@ -72,7 +72,7 @@ Partial Class frmLoginX
         '
         Me.txtUsername.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.txtUsername.Location = New System.Drawing.Point(344, 36)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsername.MaxLength = 225
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(216, 22)
@@ -80,8 +80,8 @@ Partial Class frmLoginX
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(344, 102)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtPassword.Location = New System.Drawing.Point(344, 96)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassword.MaxLength = 225
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -92,7 +92,7 @@ Partial Class frmLoginX
         '
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnOK.Location = New System.Drawing.Point(289, 193)
-        Me.btnOK.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnOK.Margin = New System.Windows.Forms.Padding(4)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(125, 28)
         Me.btnOK.TabIndex = 4
@@ -103,7 +103,7 @@ Partial Class frmLoginX
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCancel.Location = New System.Drawing.Point(427, 193)
-        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(125, 28)
         Me.btnCancel.TabIndex = 5
@@ -124,7 +124,7 @@ Partial Class frmLoginX
         '
         Me.LogoPictureBox.Image = Global.gpprojecttest.My.Resources.Resources.cinema_red
         Me.LogoPictureBox.Location = New System.Drawing.Point(0, 0)
-        Me.LogoPictureBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.LogoPictureBox.Margin = New System.Windows.Forms.Padding(4)
         Me.LogoPictureBox.Name = "LogoPictureBox"
         Me.LogoPictureBox.Size = New System.Drawing.Size(232, 238)
         Me.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -175,13 +175,13 @@ Partial Class frmLoginX
         Me.Controls.Add(Me.LogoPictureBox)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmLoginX"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Login Form"
+        Me.Text = "Cinema: Login Form"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CinemadbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CustomersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

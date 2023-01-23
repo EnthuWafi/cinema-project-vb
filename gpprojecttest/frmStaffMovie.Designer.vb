@@ -378,7 +378,7 @@ Partial Class frmStaffMovie
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffMovie"
-        Me.Text = "Add Movie"
+        Me.Text = "Staff: Add Movie"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()

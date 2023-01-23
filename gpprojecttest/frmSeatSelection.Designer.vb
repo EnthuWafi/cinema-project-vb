@@ -507,7 +507,7 @@ Partial Class frmSeatSelection
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmSeatSelection"
-        Me.Text = "Ticket: Seat Selection"
+        Me.Text = "Cinema: Seat Selection"
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
