@@ -186,7 +186,7 @@ Partial Class frmWelcome
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(82, 16)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "version 1.2.2"
+        Me.Label2.Text = "version 1.2.5"
         '
         'frmWelcome
         '
