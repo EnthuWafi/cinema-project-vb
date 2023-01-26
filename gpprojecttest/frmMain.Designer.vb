@@ -119,7 +119,7 @@ Partial Class frmMain
         '
         Me.lblTicketCount.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTicketCount.AutoSize = True
-        Me.lblTicketCount.Location = New System.Drawing.Point(569, 24)
+        Me.lblTicketCount.Location = New System.Drawing.Point(569, 20)
         Me.lblTicketCount.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblTicketCount.Name = "lblTicketCount"
         Me.lblTicketCount.Size = New System.Drawing.Size(80, 13)

@@ -363,8 +363,7 @@ Partial Class frmStaffMovie
         '
         'frmStaffMovie
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.DarkRed
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
         Me.ClientSize = New System.Drawing.Size(1035, 735)

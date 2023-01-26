@@ -22,6 +22,7 @@ Partial Class frmStaffTransaction
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmStaffTransaction))
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.dgvInvoice = New System.Windows.Forms.DataGridView()
         Me.invoiceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -30,12 +31,12 @@ Partial Class frmStaffTransaction
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnClearTable = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.PurchasesTableAdapter = New gpprojecttest.cinemadbDataSetTableAdapters.purchasesTableAdapter()
         Me.CinemadbDataSet = New gpprojecttest.cinemadbDataSet()
         Me.TableAdapterManager = New gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager()
-        Me.btnClearTable = New System.Windows.Forms.Button()
         Me.GroupBox4.SuspendLayout()
         CType(Me.dgvInvoice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -137,6 +138,17 @@ Partial Class frmStaffTransaction
         Me.GroupBox3.TabIndex = 28
         Me.GroupBox3.TabStop = False
         '
+        'btnClearTable
+        '
+        Me.btnClearTable.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnClearTable.Location = New System.Drawing.Point(666, 42)
+        Me.btnClearTable.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnClearTable.Name = "btnClearTable"
+        Me.btnClearTable.Size = New System.Drawing.Size(157, 48)
+        Me.btnClearTable.TabIndex = 22
+        Me.btnClearTable.Text = "Clear Table"
+        Me.btnClearTable.UseVisualStyleBackColor = True
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -180,17 +192,6 @@ Partial Class frmStaffTransaction
         Me.TableAdapterManager.ticket_priceTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = gpprojecttest.cinemadbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'btnClearTable
-        '
-        Me.btnClearTable.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnClearTable.Location = New System.Drawing.Point(666, 42)
-        Me.btnClearTable.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnClearTable.Name = "btnClearTable"
-        Me.btnClearTable.Size = New System.Drawing.Size(157, 48)
-        Me.btnClearTable.TabIndex = 22
-        Me.btnClearTable.Text = "Clear Table"
-        Me.btnClearTable.UseVisualStyleBackColor = True
-        '
         'frmStaffTransaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -201,6 +202,7 @@ Partial Class frmStaffTransaction
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox2)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.Name = "frmStaffTransaction"

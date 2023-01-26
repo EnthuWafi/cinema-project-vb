@@ -87,6 +87,7 @@ Partial Class frmWelcome
         '
         'lblWelcome
         '
+        Me.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.BackColor = System.Drawing.SystemColors.Control
         Me.lblWelcome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -100,6 +101,7 @@ Partial Class frmWelcome
         '
         'btnSignUp
         '
+        Me.btnSignUp.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.btnSignUp.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnSignUp.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -113,6 +115,7 @@ Partial Class frmWelcome
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Corbel", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(277, 148)
@@ -124,6 +127,7 @@ Partial Class frmWelcome
         '
         'btnLogin
         '
+        Me.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.btnLogin.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -137,6 +141,7 @@ Partial Class frmWelcome
         '
         'picGTA
         '
+        Me.picGTA.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.picGTA.BackColor = System.Drawing.Color.Snow
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -151,6 +156,7 @@ Partial Class frmWelcome
         '
         'lblMain2
         '
+        Me.lblMain2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.lblMain2.AutoSize = True
         Me.lblMain2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblMain2.Location = New System.Drawing.Point(265, 343)
@@ -162,6 +168,9 @@ Partial Class frmWelcome
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.BackColor = System.Drawing.Color.WhiteSmoke
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.lblMain2)
@@ -180,6 +189,7 @@ Partial Class frmWelcome
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(644, 343)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -190,8 +200,7 @@ Partial Class frmWelcome
         '
         'frmWelcome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(912, 512)

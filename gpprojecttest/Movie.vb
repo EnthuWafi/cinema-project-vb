@@ -24,7 +24,7 @@
         'anchors and direction
         flowLayout.Anchor = AnchorStyles.Top + AnchorStyles.Left
         flowLayout.FlowDirection = FlowDirection.TopDown
-        flowLayout.Size = New Size(300, 350)
+        flowLayout.Size = New Size(325, 350)
         flowLayout.Margin = New Padding(50, 10, 50, 20)
 
         Dim picBox As New PictureBox

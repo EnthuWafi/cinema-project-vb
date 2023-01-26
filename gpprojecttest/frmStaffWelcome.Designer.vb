@@ -29,10 +29,10 @@ Partial Class frmStaffWelcome
         Me.mnuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblWelcome = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.lblMain2 = New System.Windows.Forms.Label()
         Me.btnEnter = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.picGTA = New System.Windows.Forms.PictureBox()
         Me.mnuMain.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.picGTA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,18 +57,19 @@ Partial Class frmStaffWelcome
         'mnuFileCustomer
         '
         Me.mnuFileCustomer.Name = "mnuFileCustomer"
-        Me.mnuFileCustomer.Size = New System.Drawing.Size(180, 22)
+        Me.mnuFileCustomer.Size = New System.Drawing.Size(153, 22)
         Me.mnuFileCustomer.Text = "&Customer Path"
         '
         'mnuExit
         '
         Me.mnuExit.Name = "mnuExit"
         Me.mnuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
-        Me.mnuExit.Size = New System.Drawing.Size(180, 22)
+        Me.mnuExit.Size = New System.Drawing.Size(153, 22)
         Me.mnuExit.Text = "E&xit"
         '
         'lblWelcome
         '
+        Me.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.BackColor = System.Drawing.SystemColors.Control
         Me.lblWelcome.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -96,40 +97,9 @@ Partial Class frmStaffWelcome
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = " "
         '
-        'lblMain2
-        '
-        Me.lblMain2.AutoSize = True
-        Me.lblMain2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMain2.Location = New System.Drawing.Point(283, 367)
-        Me.lblMain2.Name = "lblMain2"
-        Me.lblMain2.Size = New System.Drawing.Size(239, 16)
-        Me.lblMain2.TabIndex = 6
-        Me.lblMain2.Text = "2022 (C) SANWAD ENTERTAINMENT"
-        '
-        'btnEnter
-        '
-        Me.btnEnter.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEnter.Location = New System.Drawing.Point(284, 238)
-        Me.btnEnter.Name = "btnEnter"
-        Me.btnEnter.Size = New System.Drawing.Size(236, 68)
-        Me.btnEnter.TabIndex = 5
-        Me.btnEnter.Text = "ENTER"
-        Me.btnEnter.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Corbel", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(236, 149)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(333, 19)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "CINEMA MANAGEMENT SYSTEM (STAFF ONLY)"
-        '
         'picGTA
         '
+        Me.picGTA.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.picGTA.BackColor = System.Drawing.Color.Snow
         Me.picGTA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.picGTA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
@@ -142,16 +112,51 @@ Partial Class frmStaffWelcome
         Me.picGTA.TabIndex = 7
         Me.picGTA.TabStop = False
         '
+        'lblMain2
+        '
+        Me.lblMain2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.lblMain2.AutoSize = True
+        Me.lblMain2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMain2.Location = New System.Drawing.Point(283, 367)
+        Me.lblMain2.Name = "lblMain2"
+        Me.lblMain2.Size = New System.Drawing.Size(239, 16)
+        Me.lblMain2.TabIndex = 6
+        Me.lblMain2.Text = "2022 (C) SANWAD ENTERTAINMENT"
+        '
+        'btnEnter
+        '
+        Me.btnEnter.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnEnter.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEnter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEnter.Location = New System.Drawing.Point(284, 238)
+        Me.btnEnter.Name = "btnEnter"
+        Me.btnEnter.Size = New System.Drawing.Size(236, 68)
+        Me.btnEnter.TabIndex = 5
+        Me.btnEnter.Text = "ENTER"
+        Me.btnEnter.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Corbel", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(236, 149)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(333, 19)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "CINEMA MANAGEMENT SYSTEM (STAFF ONLY)"
+        '
         'frmStaffWelcome
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackgroundImage = Global.gpprojecttest.My.Resources.Resources.netflix_img
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(912, 512)
         Me.Controls.Add(Me.lblWelcome)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.mnuMain)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmStaffWelcome"
         Me.Text = "GTA Cinema: Staff"

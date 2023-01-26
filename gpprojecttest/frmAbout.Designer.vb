@@ -31,6 +31,7 @@ Partial Class frmAbout
         '
         'lblIntro
         '
+        Me.lblIntro.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblIntro.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblIntro.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIntro.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -43,6 +44,7 @@ Partial Class frmAbout
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox1.Image = Global.gpprojecttest.My.Resources.Resources.GTAlogo
         Me.PictureBox1.Location = New System.Drawing.Point(265, 37)
@@ -55,6 +57,7 @@ Partial Class frmAbout
         '
         'lblIntro2
         '
+        Me.lblIntro2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblIntro2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.lblIntro2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblIntro2.ForeColor = System.Drawing.SystemColors.ButtonFace
@@ -78,6 +81,7 @@ Partial Class frmAbout
         Me.Controls.Add(Me.lblIntro)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "frmAbout"
